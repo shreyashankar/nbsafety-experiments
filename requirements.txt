@@ -1,10 +1,13 @@
 black
 fuzzyset
+ipykernel
+ipython
 jupytext
 kaggle
 matplotlib
 nbsafety
 numpy
 pandas
+scikit-learn
 scipy
 seaborn
