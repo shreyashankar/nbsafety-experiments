@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 from functools import wraps
 from IPython import get_ipython
+from pprint import pprint
 
 import argparse
+import ast
 import copy
 import logging
 import numpy as np
@@ -12,8 +14,7 @@ import pandas as pd
 import re
 import signal
 import sqlite3
-
-import signal
+import sys
 
 
 class TimeoutException(Exception):
@@ -68,7 +69,7 @@ LINE_FILTER_RE = re.compile(
 def get_df():
     conn = sqlite3.connect("./data/traces.sqlite", isolation_level=None)
     df = pd.read_sql_query(
-        f"SELECT cell_execs.* from cell_execs INNER JOIN good_sessions ON cell_execs.trace == good_sessions.trace AND cell_execs.session == good_sessions.session",
+        f"SELECT cell_execs.* from cell_execs",
         conn,
     )
     get_ipython().run_line_magic("matplotlib", "inline")
@@ -100,8 +101,9 @@ def modify_cell_source(cell_source):
 try:
 {cell_source}
 except Exception as e:
-    success = False""".strip()
-    return cell_source
+    print(e)
+    success = False"""
+    return cell_source.strip()
 
 
 @timeout(seconds=15)
@@ -111,45 +113,60 @@ def timeout_run_cell(cell_id, cell_source, safety=None):
         return False
     else:
         safety.set_active_cell(cell_id, position_idx=cell_id)
-        get_ipython().run_cell_magic(safety.cell_magic_name, None, cell_source)
+        res = get_ipython().run_cell_magic(safety.cell_magic_name, None, cell_source)
         return safety.test_and_clear_detected_flag()
 
 
+# ipython needs this
+success = True
+
+
 def run_cells(cell_num_to_code, verify_slicer=False):
+    global success
     safety = nbsafety.safety.NotebookSafety.instance(
         cell_magic_name="_NBSAFETY_STATE", skip_unsafe=False, store_history=False
     )
     successful_execs = {}
-    successful_cell_counter = 1
     all_cell_counter = 1
-    for _, code in cell_num_to_code.items():
+    cells_ran = []
+    for cell_num, code in cell_num_to_code.items():
         success = True
-        timeout_run_cell(all_cell_counter, code, safety=safety)
-        all_cell_counter += 1
-        if success:
-            successful_execs[successful_cell_counter] = code
-            successful_cell_counter += 1
+
+        try:
+            ast.parse(code)
+            timeout_run_cell(all_cell_counter, code, safety=safety)
+            cells_ran.append(cell_num)
+            successful_execs[all_cell_counter] = code
+            all_cell_counter += 1
+        except:
+            success = False
+
+        # if success:
+        #     cells_ran.append(cell_num)
+        #     successful_execs[all_cell_counter - 1] = code
+        # else:
+        #     if verify_slicer:
+        #         print("FAILED!!!")
+        #         print(code)
 
     if not verify_slicer:
-        cell_deps = safety.get_cell_dependencies(max(successful_execs.keys()))
-        all_successful_execs = len(successful_execs.keys())
+        cell_deps = safety.get_cell_dependencies(len(successful_execs.keys()))
+
         slice_size = len(cell_deps.keys())
         # Verify dynamic slicer is can run without errors
         num_successful_execs_in_slice = run_cells(cell_deps, verify_slicer=True)
-        return (all_successful_execs, num_successful_execs_in_slice, slice_size)
+        return (cells_ran, num_successful_execs_in_slice, slice_size)
 
     return len(successful_execs.keys())
 
 
 def modify_all_cell_source(cell_num_to_code):
     res = {}
-    new_cell_num = 1
-    for _, code in cell_num_to_code.items():
+    for cell_num, code in cell_num_to_code.items():
         code = modify_cell_source(code)
         if code == "":
             continue
-        res[new_cell_num] = code
-        new_cell_num += 1
+        res[cell_num] = code
     return res
 
 

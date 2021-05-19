@@ -4,13 +4,7 @@ import sqlite3
 import subprocess
 
 logging.basicConfig(level=logging.INFO)
-conn = sqlite3.connect("./data/traces.sqlite", isolation_level=None)
-df = pd.read_sql_query(
-    f"SELECT cell_execs.* from cell_execs INNER JOIN good_sessions ON cell_execs.trace == good_sessions.trace AND cell_execs.session == good_sessions.session",
-    conn,
-)
-distinct_trace_sessions = df[["trace", "session"]].drop_duplicates()
-print(distinct_trace_sessions)
+distinct_trace_sessions = pd.read_csv("./data/sessions.csv").drop_duplicates()
 
 # Read file
 f = open("stats.txt", "r+")
@@ -20,7 +14,9 @@ processed_trace_sessions = [
     (int(line[0].strip()), int(line[1].strip())) for line in lines
 ]
 
-for i, row in distinct_trace_sessions.iterrows():
+for _, row in distinct_trace_sessions.iterrows():
+    if int(row["trace"]) < 397:
+        continue
     if (int(row["trace"]), int(row["session"])) in processed_trace_sessions:
         logging.info(
             f"trace {row['trace']}, session {row['session']} already processed"

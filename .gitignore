@@ -4,3 +4,4 @@
 *.sqlite
 data/**
 .ipynb_checkpoints/
+*node_modules*
