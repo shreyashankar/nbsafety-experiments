@@ -1,6 +1,7 @@
 #!/usr/bin/env ipython3
 # -*- coding: utf-8 -*-
 from functools import wraps
+from io import StringIO
 from IPython import get_ipython
 from pprint import pprint
 
@@ -16,6 +17,18 @@ import signal
 import sqlite3
 import sys
 
+# Context manager to capture output
+class Capturing(list):
+    def __enter__(self):
+        self._stdout = sys.stdout
+        sys.stdout = self._stringio = StringIO()
+        return self
+
+    def __exit__(self, *args):
+        self.extend(self._stringio.getvalue().splitlines())
+        del self._stringio  # free up some memory
+        sys.stdout = self._stdout
+
 
 class TimeoutException(Exception):
     pass
@@ -24,7 +37,7 @@ class TimeoutException(Exception):
 def timeout(seconds=10):
     def decorator(func):
         def _handle_timeout(signum, frame):
-            raise TimeoutException()
+            logging.error("Timed out")
 
         def wrapper(*args, **kwargs):
             signal.signal(signal.SIGALRM, _handle_timeout)
@@ -86,7 +99,9 @@ def modify_cell_source(cell_source):
         stripped = line.strip()
         match = IPYTHON_RE.match(stripped)
         if match is not None:
-            if "pylab" not in line and ("time" not in line or "timedelta" in line):
+            if "pylab" not in line and (
+                "time" not in line or "timedelta" in line
+            ):
                 continue
         match = LINE_FILTER_RE.match(stripped)
         if match is not None:
@@ -97,67 +112,94 @@ def modify_cell_source(cell_source):
     cell_source = "\n".join(new_lines)
     if cell_source.strip() == "" or num_non_comment_lines == 0:
         return ""
-    cell_source = f"""
-try:
-{cell_source}
-except Exception as e:
-    print(e)
-    success = False"""
+    #     cell_source = f"""
+    # try:
+    # {cell_source}
+    # except Exception as e:
+    #     print(e)
+    #     success = False"""
     return cell_source.strip()
 
 
-@timeout(seconds=15)
+@timeout(seconds=30)
 def timeout_run_cell(cell_id, cell_source, safety=None):
     if safety is None:
         get_ipython().run_cell(cell_source, silent=True)
         return False
     else:
         safety.set_active_cell(cell_id, position_idx=cell_id)
-        res = get_ipython().run_cell_magic(safety.cell_magic_name, None, cell_source)
+        get_ipython().run_cell_magic(safety.cell_magic_name, None, cell_source)
         return safety.test_and_clear_detected_flag()
 
 
-# ipython needs this
-success = True
-
-
 def run_cells(cell_num_to_code, verify_slicer=False):
-    global success
     safety = nbsafety.safety.NotebookSafety.instance(
-        cell_magic_name="_NBSAFETY_STATE", skip_unsafe=False, store_history=False
+        cell_magic_name="_NBSAFETY_STATE",
+        skip_unsafe=False,
+        store_history=False,
     )
     successful_execs = {}
     all_cell_counter = 1
     cells_ran = []
-    for cell_num, code in cell_num_to_code.items():
-        success = True
+    cells_parsed = []
 
+    for cell_num, code in cell_num_to_code.items():
         try:
             ast.parse(code)
-            timeout_run_cell(all_cell_counter, code, safety=safety)
-            cells_ran.append(cell_num)
-            successful_execs[all_cell_counter] = code
-            all_cell_counter += 1
+            cells_parsed.append(cell_num)
         except:
-            success = False
+            pass
+    # with Capturing() as output:
+    for cell_num in cells_parsed:
+        code = cell_num_to_code[cell_num]
 
-        # if success:
-        #     cells_ran.append(cell_num)
-        #     successful_execs[all_cell_counter - 1] = code
-        # else:
-        #     if verify_slicer:
-        #         print("FAILED!!!")
-        #         print(code)
+        if cell_num == max(cells_parsed):
+            with Capturing() as output:
+                try:
+                    timeout_run_cell(all_cell_counter, code, safety=safety)
+                    cells_ran.append(cell_num)
+                    successful_execs[all_cell_counter] = code
+                    all_cell_counter += 1
+                except:
+                    pass
+
+        else:
+            try:
+                timeout_run_cell(all_cell_counter, code, safety=safety)
+                cells_ran.append(cell_num)
+                successful_execs[all_cell_counter] = code
+                all_cell_counter += 1
+            except:
+                pass
 
     if not verify_slicer:
-        cell_deps = safety.get_cell_dependencies(len(successful_execs.keys()))
+        cell_deps = safety.compute_slice(
+            len(successful_execs.keys()), stmt_level=True
+        )
 
         slice_size = len(cell_deps.keys())
-        # Verify dynamic slicer is can run without errors
-        num_successful_execs_in_slice = run_cells(cell_deps, verify_slicer=True)
-        return (cells_ran, num_successful_execs_in_slice, slice_size)
+        slice_cells = "\n".join(cell_deps.values())
+        num_lines_in_slice = len(slice_cells.split("\n"))
 
-    return len(successful_execs.keys())
+        # Verify dynamic slicer is can run without errors
+        slice_output, num_successful_execs_in_slice = run_cells(
+            cell_deps, verify_slicer=True
+        )
+
+        if slice_output != output:
+            logging.error(
+                f"Slice output {slice_output} is not the same as program output {output}"
+            )
+
+        return (
+            cells_ran,
+            num_successful_execs_in_slice,
+            slice_size,
+            num_lines_in_slice,
+            slice_output == output,
+        )
+
+    return output, len(successful_execs.keys())
 
 
 def modify_all_cell_source(cell_num_to_code):
@@ -172,14 +214,20 @@ def modify_all_cell_source(cell_num_to_code):
 
 def run_func(trace_id, session_id, group):
     cell_num_to_code = (
-        group.sort_values(by=["counter"], ascending=True)[["counter", "source"]]
+        group.sort_values(by=["counter"], ascending=True)[
+            ["counter", "source"]
+        ]
         .set_index("counter")
         .to_dict()["source"]
     )
     cell_num_to_code = modify_all_cell_source(cell_num_to_code)
-    all_successful_execs, num_successful_execs_in_slice, slice_size = run_cells(
-        cell_num_to_code=cell_num_to_code
-    )
+    (
+        all_successful_execs,
+        num_successful_execs_in_slice,
+        slice_size,
+        num_lines_in_slice,
+        correctness,
+    ) = run_cells(cell_num_to_code=cell_num_to_code)
     if num_successful_execs_in_slice != slice_size:
         logging.warning(
             f"Trace ID {trace_id}, session ID {session_id} had slice size {slice_size} but only {num_successful_execs_in_slice} cells in that slice successfully executed."
@@ -195,19 +243,13 @@ def run_func(trace_id, session_id, group):
                 all_successful_execs,
                 num_successful_execs_in_slice,
                 slice_size,
+                num_lines_in_slice,
+                correctness,
             )
         )
     )
     f.write("\n")
     f.close()
-
-    return (
-        trace_id,
-        session_id,
-        all_successful_execs,
-        num_successful_execs_in_slice,
-        slice_size,
-    )
 
 
 if __name__ == "__main__":
