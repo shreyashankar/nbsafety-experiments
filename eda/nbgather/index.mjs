@@ -18,15 +18,33 @@ db.all(sql, [], (err, rows) => {
 
     let ast = parse(source.join('\n'));
     let locations = slice(ast, new LocationSet(loc(ast.location.last_line - 1, 0)))
-    let numLinesNeeded = Object.keys(locations._items).length;
 
+
+    // console.log(source);
+
+    // Create array to sort
+    var locationArr = [];
+    for (var item in locations._items) {
+        locationArr.push(item.split(",").map(x => parseInt(x)));
+    }
+
+    function compareLocations(a, b) {
+        if (a[0] < b[0]) return -1;
+        if (a[0] > b[0]) return 1;
+        return 0;
+    }
+
+    locationArr.sort(compareLocations);
+
+    // For each element in the location array, index into the line list
+    let nbgatherSlice = locationArr.map((elem) => (
+        source.slice(elem[0] - 1, elem[2]).join("").slice(elem[1], elem[3])
+    ));
+
+    let numLinesNeeded = locationArr.length;
     fs.appendFileSync('nbgather_stats.txt', "(" + traceID + ", " + sessionID + ", " + numLinesNeeded + ")\n");
-})
 
-// let source_code = process.argv[process.argv.length - 1];
-// console.log(process.argv);
-// let ast = parse(['a = 1', 'b = a', 'c = 3'].join('\n'));
-// console.log(ast);
-// let locations = slice(ast, new LocationSet(loc(3, 0)));
-// console.log(locations);
-// let numLinesNeeded = Object.keys(locations._items).length;
+    // Write out slice
+    let sliceFilename = 'results/nbgather/' + traceID + '_' + sessionID + '.txt';
+    fs.writeFileSync(sliceFilename, nbgatherSlice.join("\n"));
+})

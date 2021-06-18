@@ -15,7 +15,7 @@ processed_trace_sessions = [
 ]
 
 for _, row in distinct_trace_sessions.iterrows():
-    if int(row["trace"]) < 428:
+    if int(row["trace"]) < 839:
         continue
     if (int(row["trace"]), int(row["session"])) in processed_trace_sessions:
         logging.info(

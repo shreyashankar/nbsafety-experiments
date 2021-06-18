@@ -154,12 +154,20 @@ def run_cells(cell_num_to_code, verify_slicer=False):
         code = cell_num_to_code[cell_num]
 
         if cell_num == max(cells_parsed):
+            # Capture output and split cell into two if there is > 1 line.
             with Capturing() as output:
+                code = code.split("\n")
+                code = ["\n".join(code[:-1]), code[-1]]
                 try:
-                    timeout_run_cell(all_cell_counter, code, safety=safety)
-                    cells_ran.append(cell_num)
-                    successful_execs[all_cell_counter] = code
-                    all_cell_counter += 1
+                    for c in code:
+                        if c.strip() == "":
+                            continue
+
+                        timeout_run_cell(all_cell_counter, c, safety=safety)
+                        if cell_num not in cells_ran:
+                            cells_ran.append(cell_num)
+                        successful_execs[all_cell_counter] = c
+                        all_cell_counter += 1
                 except:
                     pass
 
@@ -179,7 +187,10 @@ def run_cells(cell_num_to_code, verify_slicer=False):
 
         slice_size = len(cell_deps.keys())
         slice_cells = "\n".join(cell_deps.values())
-        num_lines_in_slice = len(slice_cells.split("\n"))
+        slice_cells = [
+            elem for elem in slice_cells.split("\n") if elem.strip() != ""
+        ]
+        num_lines_in_slice = len(slice_cells)
 
         # Verify dynamic slicer is can run without errors
         slice_output, num_successful_execs_in_slice = run_cells(
