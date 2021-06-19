@@ -1,0 +1,50 @@
+import qutip as q
+q.tensor([q.sigmaz()] * 2  + [q.qeye(2)] * 3)
+q.tensor([q.sigmax()] * 2  + [q.qeye(2)] * 3)
+q.tensor([q.sigmaz()] * 2  + [q.qeye(2)] * 3)
+slists = [[dd] * 2  + [q.qeye(2)] * 3 for dd in [q.sigmaz(), q.sigmay(), q.sigmax()]]
+def rotateAll(l):
+    L = len(l) -1
+    r = []
+    for i in range(L):
+        r = r + [l[-i:] + l[:-i]]
+    return r
+[e for e in itertools.combinations_with_replacement('A'*4 + 'B'*4, 4)]
+set([e for e in itertools.combinations_with_replacement('A'*4 + 'B'*4, 4)])
+set([e for e in itertools.combinations('A'*4 + 'B'*4, 4)])
+[e for e in itertools.combinations('A'*4 + 'B'*4, 4)]
+[e for e in itertools.product(['AB']*4)]
+[e for e in itertools.product([['AB']*4])]
+[e for e in itertools.product(tuple(['AB']*4))]
+[e for e in itertools.product('ABAB')]
+[e for e in itertools.product('AB','AB')]
+[e for e in itertools.product(*tuple(['AB','AB']))]
+[e for e in itertools.product(*tuple(['AB']*5))]
+[e for e in itertools.product(*tuple([[up, down]]*5))]
+[e for e in itertools.product(*tuple([[up, down]]*5))]
+basis = [q.tensor(e) for e in itertools.product(*tuple([[up, down]]*5))]
+basis = [e for e in itertools.product(*tuple([[up, down]]*5))]
+basis = [e for e in itertools.product(*[[up, down]]*5)]
+q.tensor(basis[0])
+q.tensor(basis[0])
+q.tensor([up] * 5)
+q.tensor(list(basis[0]))
+basis = [list(e) for e in itertools.product(*[[up, down]]*5)]
+basis = [q.tensor(list(e)) for e in itertools.product(*[[up, down]]*5)]
+[q.expect(q.sigmaz(), b) for b in basis]
+Sz = sum(map(q.tensor,rotateAll([q.sigmaz()]   + [q.qeye(2)] * 4)))
+[q.expect(Sz, b) for b in basis]
+mzlist = [q.expect(Sz, b) for b in basis]
+H = sum(slists)
+H.full()
+H.full()[idx, idx]
+H.full().transpose(idx)
+H.full()[:,:]
+H.full()[:,idx]
+H.full()[idx,idx]
+H.full()[idx,idx]
+H.full()[:,idx][idx,:]
+q.visualization.hinton(H.full()[:,idx][idx,:])
+q.visualization.hinton(H.full()[:,idx][idx,:])
+q.visualization.hinton(H.full()[:,idx][idx,:])
+H

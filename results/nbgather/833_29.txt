@@ -1,0 +1,45 @@
+class aaa(unicode):
+    def __new__(cls,*args, **kwargs):
+        return super(aaa,cls).__new___(cls,'asdf')
+    def __repr__(self):
+        return u'repr'
+    def __str__(self):
+        return u'str'
+    
+from IPython.core import prompts
+pr = prompts
+import time
+pr.PromptManager.in_template = '{asdf}'
+pr.prompt_abbreviations['asdf']=pr.LazyEvaluate(time.strftime, '%H-%M')
+import sys
+sys.getrefcount(aaa)
+class aaa(object):
+    pass
+sys.getrefcount(aaa)
+sys.getrefcount(aaa)
+sys.getrefcount(aaa)
+import gc
+l1 = gc.get_objects()
+import objgraph
+objgraph.count()
+objgraph.count('PromptManager')
+a = aaa()
+b = aaa()
+a.b = b
+objgraph.find_ref_chain(a,b)
+objgraph.find_backref_chain(a)
+objgraph.find_backref_chain(a, lambda x:True)
+objgraph.show_refs(a)
+objgraph.show_refs(a)
+objgraph.show_backrefs(aaa)
+objgraph.show_backrefs(aaa)
+objgraph.show_backrefs(pr.PromptManager)
+class Zxcvb(object):
+    pass
+zz = Zxcvb()
+objgraph.show_backrefs(Zxcvb)
+gc.get_debug()
+gc.get_referents(Zxcvb)
+gc.get_referents(zz)
+gc.get_referrers(pr.PromptManager)
+gc.get_referrers(Zxcvb)

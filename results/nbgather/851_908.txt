@@ -1,0 +1,23 @@
+np.log(.1)
+np.log(.2)
+np.log(.99)
+np.log(.999)
+np.log(.999999)
+c=0.01
+corig=c*np.log(c)-(1-c)*np.log(1-c)
+c*np.log(c)
+(1-c)*np.log(1-c)
+c*np.log(c)
+(1-c)*np.log(1-c)
+c=0.001
+c*np.log(c)
+(1-c)*np.log(1-c)
+c=0.00001
+print (c*np.log(c))/((1-c)*np.log(1-c))
+c=0.0001
+print (c*np.log(c))/((1-c)*np.log(1-c))
+c=0.001
+print (c*np.log(c))/((1-c)*np.log(1-c))
+print (c*np.log(c))/((1-c)*np.log(1-c))
+c=0.01
+print (c*np.log(c))/((1-c)*np.log(1-c))

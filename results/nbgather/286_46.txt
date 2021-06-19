@@ -1,0 +1,4 @@
+import numpy as np
+def FringeSep(Bproj,Freq):
+    return(np.arcsin(const.c.value/(Bproj*Freq)))
+Iridiumorb = 777.313*1.e3

@@ -1,0 +1,31 @@
+def rmse(actual_y, predicted_y):
+    """
+    Args:
+        predicted_y: an array of the prediction from the model
+        actual_y: an array of the groudtruth label
+        
+    Returns:
+        The root mean square error between the prediction and the groudtruth
+    """
+    #return np.sqrt((1/len(actual_y))*np.sum((actual_y-predicted_y)**2))
+    return np.sqrt(np.mean((actual_y-predicted_y)**2))
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.abs(test_rmse - 5.846401452163672) < 1e-3

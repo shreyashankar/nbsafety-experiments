@@ -1,0 +1,3 @@
+svc_2.score(X_train, y_train)
+svc_2.score(X_test, y_test)
+gs_svc.score(X_test, y_test)

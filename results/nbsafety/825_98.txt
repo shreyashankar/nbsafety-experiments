@@ -1,0 +1,6 @@
+import pandas as pd
+from pandas import DataFrame, Series
+df = pd.DataFrame({'col1': [2, 3, 4], 'col2': ['a', 'b', 'c'], 'col3': [1, 2, 3]})
+i = df.loc[:, ('col1', 'col2')]
+i.loc['col1'] = 3
+i

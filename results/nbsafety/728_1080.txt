@@ -1,0 +1,4 @@
+def rotate(l, n=1):
+    ' Shifts the index of all elements in the list, \n            putting the n-th element at the beginning.\n        '
+    return (l[(- n):] + l[:(- n)])
+q.expect(q.tensor(rotate(xOpList, n=N/2)), q.Qobj(geval))

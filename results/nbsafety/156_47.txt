@@ -1,0 +1,18 @@
+class hlist(list):
+    def __init__(self, *args):
+        list.__init__(self, *args)
+        types = set([type(v) for v in self])
+        if (len(types) != 1):
+            raise TypeError('All elements of the list must have the same type.')
+mixed_number_list = hlist((1.0, 2, 3))
+class hlist(list):
+    def __init__(self, *args):
+        list.__init__(self, *args)
+        numeric_types = {int, float, complex}
+        types = [type(v) for v in self]
+        types = [('numeric' if (t in numeric_types) else t) for t in types]
+        unique_types = set(types)
+        if (len(unique_types) != 1):
+            raise TypeError('All elements of the list must have the same type.')
+mixed_number_list = hlist((1.0, 2, 3))
+mixed_number_list

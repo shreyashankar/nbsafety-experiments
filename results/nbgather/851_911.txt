@@ -1,0 +1,18 @@
+np.loadtxt("phase_diagram.weight.ag_solvus_v1_K.dat")
+cc=np.loadtxt("phase_diagram.weight.ag_solvus_v1_K.dat")
+wag=107.8682
+wcu=63.546
+cag=cc
+np.array([(cag[:,0]*100/wag)/(cag[:,0]*100/wag+(1-cag[:,0])*100/wcu),cag[:,1]])
+np.transpose(np.array([(cag[:,0]*100/wag)/(cag[:,0]*100/wag+(1-cag[:,0])*100/wcu),cag[:,1]]))
+ag_a = np.transpose(np.array([(cag[:,0]*100/wag)/(cag[:,0]*100/wag+(1-cag[:,0])*100/wcu),cag[:,1]]))
+np.savetxt("ag_a",ag_a)
+np.savetxt("ag_a",ag_a,fmt="%.6f %.6f")
+np.savetxt("ag_a",ag_a,fmt="%.6f %.3f")
+ag_a = np.transpose(np.array([(cag[:,0]*100/wag)/(cag[:,0]*100/wag+(1-cag[:,0])*100/wcu),cag[:,1]]))
+ccu = np.loadtxt("phase_diagram.weight.cu_solvus_v1_K.dat")
+cu_a = np.transpose(np.array([(ccu[:,0]*100/wcu)/(ccu[:,0]*100/wcu+(1-ccu[:,0])*100/wag),ccu[:,1]]))
+np.savetxt("cu_a",cu_a,fmt="%.6f %.3f")
+ccu = np.loadtxt("phase_diagram.weight.ag_solvus_v1_K.dat")
+cu_a = np.transpose(np.array([(ccu[:,0]*100/wcu)/(ccu[:,0]*100/wcu+(1-ccu[:,0])*100/wag),ccu[:,1]]))
+np.savetxt("ag_aa",cu_a,fmt="%.6f %.3f")

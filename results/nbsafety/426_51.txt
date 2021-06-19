@@ -1,0 +1,4 @@
+import numpy as np
+from pandas import DataFrame
+df = DataFrame(np.random.randn(4, 3), index=list('aabb'))
+df.index.all

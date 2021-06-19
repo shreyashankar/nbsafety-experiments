@@ -1,0 +1,7 @@
+class myclass():
+    attr1 = 'Hi'
+    def __init__(self):
+        self.max_iterations = 4
+        self.min_iterations = 1
+a = myclass()
+a.min_iterations

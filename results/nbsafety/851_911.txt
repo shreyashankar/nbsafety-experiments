@@ -1,0 +1,1 @@
+np.savetxt("ag_aa",cu_a,fmt="%.6f %.3f")

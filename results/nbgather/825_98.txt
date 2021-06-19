@@ -1,0 +1,15 @@
+import pandas as pd
+from pandas.util.testing import assert_frame_equal
+type(df.sample(1, weights=s))
+df.sample(1, weights=s)
+assert(df.loc[[9]], df.sample(1, weights=s))
+assert_frame_equal(df.loc[[9]], df.sample(1, weights=s))
+assert assert_frame_equal(df.loc[[9]], df.sample(1, weights=s))
+assert_frame_equal(df.loc[[9]], df.sample(1, weights=s))
+df2 = pd.DataFrame({'col1':[5,6,7]})
+isinstance(s, pd.Series())
+df = pd.DataFrame({'col1':[2,3,4], 'col2':['a','b','c'], 'col3':[1,2,3]})
+df = pd.DataFrame({'col1':[2,3,4], 'col2':['a','b','c'], 'col3':[1,2,3]})
+i = df.loc[:,('col1','col2')]
+i.loc['col1']=3
+i

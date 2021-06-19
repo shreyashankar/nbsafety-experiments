@@ -1,0 +1,42 @@
+def update(w, X, y, t):
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.inv(H).dot(graient)
+init_w = array([1,1,1,1,1])
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.inv(H).dot(graient)
+update(init_w, X, t)
+update(init_w, X, t)
+update(init_w, X, t)
+update(init_w, X, t)
+update(init_w, X, t)
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.inv(H).dot(gradient)
+update(init_w, X, t)
+update(init_w, X, t)
+w = update(init_w, X, t)
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.solve(H, gradient)
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.solve(H, gradient)
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.solve(H, gradient)
+def determine(sigmod_value):
+    return 1 if sigmod_value >= 0.5 else 0
+predictions = [determine(f(w, phi_i(d))) for d in concatnate([test_c1, test_c2])]
+hits = len(filter(lambda d: d[0] == d[1], zip(predictions, correct_labels)))

@@ -1,0 +1,2 @@
+bags = [['salt', 'pepper'], ['pen', 'eraser', 'ruler']]
+bags[1][2]

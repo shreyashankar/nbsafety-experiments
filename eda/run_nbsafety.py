@@ -208,6 +208,7 @@ def run_cells(cell_num_to_code, verify_slicer=False):
             slice_size,
             num_lines_in_slice,
             slice_output == output,
+            slice_cells,
         )
 
     return output, len(successful_execs.keys())
@@ -238,6 +239,7 @@ def run_func(trace_id, session_id, group):
         slice_size,
         num_lines_in_slice,
         correctness,
+        slice_cells,
     ) = run_cells(cell_num_to_code=cell_num_to_code)
     if num_successful_execs_in_slice != slice_size:
         logging.warning(
@@ -260,6 +262,11 @@ def run_func(trace_id, session_id, group):
         )
     )
     f.write("\n")
+    f.close()
+
+    # Write out slice
+    f = open(f"results/nbsafety/{trace_id}_{session_id}.txt", "w+")
+    f.write("\n".join(slice_cells))
     f.close()
 
 

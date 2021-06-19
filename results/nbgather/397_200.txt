@@ -1,0 +1,22 @@
+df = pd.DataFrame({'A' : ['foo','bar','foo','bar','foo','bar','foo','foo'],
+                   'B' : ['one','one','two','three','two','two','one','three'],
+                   'C' : np.random.randn(8),
+                   'D' : np.random.randn(8)
+        
+    })
+lst=[1,2,3,1,2,3]
+s = pd.Series([1,2,3,10,20,30],lst)
+df2=pd.DataFrame({'X':['B','B','A','A'], 'Y':[1,2,3,4]})
+df3 = pd.DataFrame({'X':['A','B','A','B'],'Y':[1,4,3,2]})
+n=10
+weight=np.random.normal(166,20,size=n)
+height=np.random.normal(60,10,size=n)
+time=pd.data_range('1/1/2000',periods=n)
+time=pd.date_range('1/1/2000',periods=n)
+gender=tm.choice(['male','female'],size=n)
+gender=np.choice(['male','female'],size=n)
+gender=np.random.choice(['male','female'],size=n)
+df=pd.DataFrame({'height':height,'weight':weight,
+                 'gender': gender},index=time)
+gb=df.groupby('gender')
+grouped=df.groupby(['A'])

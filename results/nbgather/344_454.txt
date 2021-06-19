@@ -1,0 +1,2 @@
+import chainer
+chainer.__version__

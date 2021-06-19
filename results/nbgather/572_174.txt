@@ -1,0 +1,2 @@
+calibFileNoWl = wsm.read_arc_file(wsm.baseDir + 'new.fits', sexParamFile, True)
+calibFileNoWl = wsm.read_arc_file(wsm.baseDir + 'new.fits', sexParamFile, True)

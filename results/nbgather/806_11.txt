@@ -1,0 +1,76 @@
+T_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-V_freefall)) - accel_at_zero)/jerk_at_zero
+D_stop = np.abs(v_initial*T_stop - 0.5*g*T_stop**2 - f_engine/burn_rate**2*((burn_rate*T_stop - m_rocket)*np.log(m_rocket/(m_rocket-burn_rate*T_stop)) + burn_rate*T_stop))
+def d(t_fire):
+    v = v_initial - g * t_fire
+    t_stop = t_stopping_burn(t_fire)
+    d_stop = np.abs(v*t_stop - 0.5*g*t_stop**2 + f_engine/burn_rate**2*(burn_rate*t_stop - (m_rocket - burn_rate*t_stop)*np.log(m_rocket/(m_rocket-burn_rate*t_stop))))
+    return d_stop
+def t_stopping_burn(t_fire):
+    v = v_initial - g * t_fire
+    t_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-v)) - accel_at_zero)/jerk_at_zero
+    t_stop = newton(v_from_initial(v), t_stop_approx, a)
+    return t_stop
+t_fire = np.sqrt((v_initial/g)**2 + 2*(h - (v_initial**2/(2*a)))/(g*(g/a + 1))) - (v_initial/g)
+t_fire = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f/m_rocket - g))))/(g*(g/(f/m_rocket - g) + 1))) - (v_initial/g)
+t_fire = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f/m_rocket - g) + 1))) - (v_initial/g)
+t_fire = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) - (v_initial/g)
+t_fire = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) - (v_initial/g)
+t_fire = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) + (v_initial/g)
+t_fire_nofuel = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) + (v_initial/g)
+t_fire_nofuel = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) + (v_initial/g)
+T_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-V_freefall)) - accel_at_zero)/jerk_at_zero
+D_stop = np.abs(v_initial*T_stop - 0.5*g*T_stop**2 - f_engine/burn_rate**2*((burn_rate*T_stop - m_rocket)*np.log(m_rocket/(m_rocket-burn_rate*T_stop)) + burn_rate*T_stop))
+def d(t_fire):
+    v = v_initial - g * t_fire
+    t_stop = t_stopping_burn(t_fire)
+    d_stop = np.abs(v*t_stop - 0.5*g*t_stop**2 + f_engine/burn_rate**2*(burn_rate*t_stop - (m_rocket - burn_rate*t_stop)*np.log(m_rocket/(m_rocket-burn_rate*t_stop))))
+    return d_stop
+def t_stopping_burn(t_fire):
+    v = v_initial - g * t_fire
+    t_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-v)) - accel_at_zero)/jerk_at_zero
+    t_stop = newton(v_from_initial(v), t_stop_approx, a)
+    return t_stop
+t_fire = newton(lambda t: x(t) - d(t), 10)
+t_fire_nofuel = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) + (v_initial/g)
+T_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-V_freefall)) - accel_at_zero)/jerk_at_zero
+D_stop = np.abs(v_initial*T_stop - 0.5*g*T_stop**2 - f_engine/burn_rate**2*((burn_rate*T_stop - m_rocket)*np.log(m_rocket/(m_rocket-burn_rate*T_stop)) + burn_rate*T_stop))
+def d(t_fire):
+    v = v_initial - g * t_fire
+    t_stop = t_stopping_burn(t_fire)
+    d_stop = np.abs(v*t_stop - 0.5*g*t_stop**2 + f_engine/burn_rate**2*(burn_rate*t_stop - (m_rocket - burn_rate*t_stop)*np.log(m_rocket/(m_rocket-burn_rate*t_stop))))
+    return d_stop
+def t_stopping_burn(t_fire):
+    v = v_initial - g * t_fire
+    t_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-v)) - accel_at_zero)/jerk_at_zero
+    t_stop = newton(v_from_initial(v), t_stop_approx, a)
+    return t_stop
+t_fire = newton(lambda t: x(t) - d(t), 10)
+t_fire_nofuel = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) + (v_initial/g)
+T_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-V_freefall)) - accel_at_zero)/jerk_at_zero
+D_stop = np.abs(v_initial*T_stop - 0.5*g*T_stop**2 - f_engine/burn_rate**2*((burn_rate*T_stop - m_rocket)*np.log(m_rocket/(m_rocket-burn_rate*T_stop)) + burn_rate*T_stop))
+def d(t_fire):
+    v = v_initial - g * t_fire
+    t_stop = t_stopping_burn(t_fire)
+    d_stop = np.abs(v*t_stop - 0.5*g*t_stop**2 + f_engine/burn_rate**2*(burn_rate*t_stop - (m_rocket - burn_rate*t_stop)*np.log(m_rocket/(m_rocket-burn_rate*t_stop))))
+    return d_stop
+def t_stopping_burn(t_fire):
+    v = v_initial - g * t_fire
+    t_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-v)) - accel_at_zero)/jerk_at_zero
+    t_stop = newton(v_from_initial(v), t_stop_approx, a)
+    return t_stop
+t_fire = newton(lambda t: x(t) - d(t), 10)
+t_fire_nofuel = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) + (v_initial/g)
+T_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-V_freefall)) - accel_at_zero)/jerk_at_zero
+D_stop = np.abs(v_initial*T_stop - 0.5*g*T_stop**2 - f_engine/burn_rate**2*((burn_rate*T_stop - m_rocket)*np.log(m_rocket/(m_rocket-burn_rate*T_stop)) + burn_rate*T_stop))
+def d(t_fire):
+    v = v_initial - g * t_fire
+    t_stop = t_stopping_burn(t_fire)
+    d_stop = np.abs(v*t_stop - 0.5*g*t_stop**2 + f_engine/burn_rate**2*(burn_rate*t_stop - (m_rocket - burn_rate*t_stop)*np.log(m_rocket/(m_rocket-burn_rate*t_stop))))
+    return d_stop
+def t_stopping_burn(t_fire):
+    v = v_initial - g * t_fire
+    t_stop_approx = (np.sqrt(accel_at_zero**2 + 2*jerk_at_zero*(v_desired-v)) - accel_at_zero)/jerk_at_zero
+    t_stop = newton(v_from_initial(v), t_stop_approx, a)
+    return t_stop
+t_fire_nofuel = np.sqrt((v_initial/g)**2 + 2*(x_initial - (v_initial**2/(2*(f_engine/m_rocket - g))))/(g*(g/(f_engine/m_rocket - g) + 1))) + (v_initial/g)
+t_stopping_burn(t_fire_nofuel)

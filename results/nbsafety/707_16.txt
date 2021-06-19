@@ -1,0 +1,3 @@
+import numpy as np
+(xx, yy) = np.meshgrid(range(4), range(4))
+xx*yy

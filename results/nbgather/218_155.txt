@@ -1,0 +1,63 @@
+def wiener(tmax, n):
+    """Return one realization of a Wiener process with n steps and a max time of tmax."""
+    t=np.linspace(start=0,stop=tmax,num=n)
+    h=t[1]-t[0]
+    W=np.random.normal(loc=0,scale=h,size=n-1)
+    W=np.insert(W,0,[0.0])
+    W=np.cumsum(W)
+def wiener(tmax, n):
+    """Return one realization of a Wiener process with n steps and a max time of tmax."""
+    t=np.linspace(start=0,stop=tmax,num=n)
+    h=t[1]-t[0]
+    W=np.random.normal(loc=0,scale=h,size=n-1)
+    W=np.cumsum(W)
+    W=np.insert(W,0,[0.0])
+    return t.W
+t,W=wiener(1.0,1000)
+def wiener(tmax, n):
+    """Return one realization of a Wiener process with n steps and a max time of tmax."""
+    t=np.linspace(start=0,stop=tmax,num=n)
+    h=t[1]-t[0]
+    W=np.random.normal(loc=0,scale=h,size=n-1)
+    W=np.cumsum(W)
+    W=np.insert(W,0,[0.0])
+    return t,W
+t,W=wiener(1.0,1000)
+def wiener(tmax, n):
+    """Return one realization of a Wiener process with n steps and a max time of tmax."""
+    t=np.linspace(start=0,stop=tmax,num=n)
+    h=np.sqrt(t[1]-t[0])
+    W=np.random.normal(loc=0,scale=h,size=n-1)
+    W=np.cumsum(W)
+    W=np.insert(W,0,[0.0])
+    return t,W
+t,W=wiener(1.0,1000)
+def wiener(tmax, n):
+    """Return one realization of a Wiener process with n steps and a max time of tmax."""
+    t=np.linspace(start=0,stop=tmax,num=n)
+    h=np.sqrt(t[1]-t[0])
+    h=np.std(t)
+    W=np.random.normal(loc=0,scale=h,size=n-1)
+    W=np.cumsum(W)
+    W=np.insert(W,0,[0.0])
+    return t,W
+t,W=wiener(1.0,1000)
+def wiener(tmax, n):
+    """Return one realization of a Wiener process with n steps and a max time of tmax."""
+    t=np.linspace(start=0,stop=tmax,num=n)
+    h=np.sqrt(t[1]-t[0])
+    h=np.var(t)
+    W=np.random.normal(loc=0,scale=h,size=n-1)
+    W=np.cumsum(W)
+    W=np.insert(W,0,[0.0])
+    return t,W
+t,W=wiener(1.0,1000)
+def wiener(tmax, n):
+    """Return one realization of a Wiener process with n steps and a max time of tmax."""
+    t=np.linspace(start=0,stop=tmax,num=n)
+    h=np.sqrt(t[1]-t[0])
+    W=np.random.normal(loc=0,scale=h,size=n-1)
+    W=np.cumsum(W)
+    W=np.insert(W,0,[0.0])
+    return t,W
+t,W=wiener(1.0,1000)

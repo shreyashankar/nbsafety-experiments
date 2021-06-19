@@ -1,0 +1,5 @@
+resampled = close.resample('m').ohlc()
+close.plot();
+(close.max() - close.min())/close.min()
+close.to_period('A')
+close.to_period('A').groupby(level=0).first()

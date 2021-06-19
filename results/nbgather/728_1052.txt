@@ -1,0 +1,4 @@
+result = {}
+result.keys()
+result.keys()
+result[(1,0.5,1)]

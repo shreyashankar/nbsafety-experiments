@@ -1,0 +1,16 @@
+import itertools
+def problem_59():
+    afile = open('data/cipher.txt')
+    alist = afile.read().split(',')
+    for cipher in itertools.permutations(range(97, 123), 3):
+        string = ''
+        for i in range(len(alist)):
+            char = (int(alist[i]) ^ cipher[(i % 3)])
+            if (char > 126):
+                break
+            string += chr(char)
+        if (' the ' in string):
+            print(cipher)
+        if (' the ' in string):
+            return sum([ord(i) for i in string])
+problem_59()

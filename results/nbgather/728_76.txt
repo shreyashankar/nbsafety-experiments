@@ -1,0 +1,15 @@
+N = 100
+for alpha in alpha_list:
+    V_0 = alpha
+    for q in np.arange(0,100,1):
+        H = Qobj(np.diag( (2 * l + q / k) ** 2  + V_0 * 0.5 ) + np.diag( [- alpha * 0.5] * (N -1)  ,1) + np.diag([- V_0 * 0.5] * (N-1), -1) ) 
+        q_list.append( H.eigenenergies()[:3] )
+for alpha in alpha_list:
+    V_0 = alpha
+    for q in np.arange(0,100,1):
+        H = Qobj(np.diag( (2 * l + q / k) ** 2  + V_0 * 0.5 ) + np.diag( [- alpha * 0.5] * (N -1)  ,1) + np.diag([- V_0 * 0.5] * (N-1), -1) ) 
+        q_list.append( H.eigenenergies()[:3] )
+plt.plot(q_list,E_list)
+for e in E_list:
+    plt.plot(q_list,E_list)
+q_list

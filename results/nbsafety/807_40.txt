@@ -1,0 +1,1 @@
+hits = len(filter(lambda d: d[0] == d[1], zip(predictions, correct_labels)))

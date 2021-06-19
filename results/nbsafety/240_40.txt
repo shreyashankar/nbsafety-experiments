@@ -1,0 +1,8 @@
+def sumOfMultiplesOfTwoFactors(f1, f2, num):
+    sum2F = 0
+    m = (f1 * f2)
+    for i in range(0, (num + 1)):
+        if ((i * m) < num):
+            sumf2 += (i * m)
+    return sum2F
+assert sumOfMultiplesOfTwoFactors(3,5,1000) == 33165, "error sumOfMultiplesOfTwoFactors(3,5,1000)"

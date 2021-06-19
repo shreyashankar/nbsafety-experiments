@@ -1,0 +1,4 @@
+import gc
+class Zxcvb(object):
+    pass
+gc.get_referrers(Zxcvb)

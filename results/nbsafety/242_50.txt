@@ -1,0 +1,2 @@
+import numpy as np
+np.random.choice(['m','f'], 20, p=[0.25,0.75])

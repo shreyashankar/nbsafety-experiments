@@ -1,0 +1,10 @@
+import numpy as np
+data = np.random.randn(1000)
+def gaussian(x, m, s):
+    return np.exp(((- ((x - m) ** 2)) / (s ** 2)))
+def likelihood(data, amp, mu, std, datastd=1):
+    x = np.linspace(0, 100, len(data))
+    peak = (amp * gaussian(x, mu, std))
+    residuals = (data - peak)
+    return np.exp((- np.sum(((residuals ** 2) / (datastd ** 2)))))
+likelihood(data+peak, 10, 500, 10)

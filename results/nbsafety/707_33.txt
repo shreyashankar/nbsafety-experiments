@@ -1,0 +1,6 @@
+import numpy as np
+import seaborn as sns
+x = np.random.rand(100, 100)
+y = np.random.rand(100, 100)
+z = np.random.rand(100, 100)
+sns.scatter(x,y,z)

@@ -1,0 +1,1 @@
+pd.get_dummies(df.mobile)

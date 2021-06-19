@@ -1,0 +1,2 @@
+ex4_r = ((6.8 + 1.7) + 1)
+Markdown("**Die Wassertiefe sollte mindestens " + str(ex4_r) + " betragen**")

@@ -1,0 +1,5 @@
+df = pd.DataFrame(data_details)
+df = pd.DataFrame(data_details)
+df = pd.DataFrame(data_details)
+df = pd.DataFrame(data_details)
+df.head()

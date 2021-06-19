@@ -1,0 +1,77 @@
+tries = 1000
+results = np.random.permutation(3) * 5
+answer = Table().with_columns("trial", np.arange(tries)+1, "guess", np.arange(tries)+1, "exposed", np.arange(tries)+1, "remaining", np.arange(tries)+1)
+guess = results[:, 0]
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", np.array(map(myprint, guess)), 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+np.array(map(myprint, guess))
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+exposed = results[:, 2]
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+tries = 1000
+np.random(3)
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+tries = 1000
+guess = results[:, 0]
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+tries = 10
+guess = results[:, 0]
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+tries = 10
+guess = results[:, 0]
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", exposed, 
+    "remaining",remaining))
+remaining

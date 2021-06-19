@@ -1,0 +1,19 @@
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier(n_estimators=10)
+clf = clf.fit(clf_data,clf_target)
+df_test.head()
+df_test.count()
+df_test.head()
+df_test.groupby(by=['Sex','Survived']).count()[['Sex','Survived']]
+df_test.groupby(by=['Sex','Survived']).count()[['Sex','Survived']]
+clf = clf.fit(clf_data,clf_target)
+df_test.head(n=1)
+df_test.count()
+df_test.describe()
+df_test_1 = df_test.fillna(35) # might be better to filin with average
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier(n_estimators=10)
+clf = clf.fit(clf_data,clf_target)
+clf_test_predict = clf.predict(clf_test_data)
+df_test_1['Survived'] = clf_test_predict
+df_test_1.head()

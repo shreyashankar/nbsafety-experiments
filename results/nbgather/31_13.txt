@@ -1,0 +1,21 @@
+from sklearn.datasets import load_breast_cancer
+cancer=load_breast_cancer()
+df = pd.DataFrame(cancer.data, columns = cancer.feature_names)
+mf = pd.DataFrame(cancer.data, columns = cancer.feature_names)
+data = pd.DataFrame(cancer.feature_names) #to display the labels
+lf = pd.DataFrame(cancer.target)
+lf = pd.DataFrame(cancer.target, columns = cancer.feature_names)
+lf = pd.DataFrame(cancer.target)
+df2 = DataFrame(X_train)
+df2 = pdDataFrame(X_train)
+df2 = pd.DataFrame(X_train)
+df = pd.DataFrame(cancer.data)
+df = pd.DataFrame(cancer.data, columns = cancer.feature_names)
+data = pd.DataFrame(cancer.feature_names) #to display the labels
+lf = pd.DataFrame(cancer.target)
+df2 = pd.DataFrame(X_train)
+df5= pd.DataFrame(Y_test)
+log_reg = LogisticRegression()
+log_reg.score(X_train,Y_test)
+log_reg.score(X_train,Y_train)
+log_reg.score(X_test,Y_test)

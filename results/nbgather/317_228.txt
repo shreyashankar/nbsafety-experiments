@@ -1,0 +1,19 @@
+import itertools as it
+list(zip(it.count(), 'a', 'b', 'c'))
+list(map(pow, range(10), it.repeat(2)))
+list(it.accumulate([1, 2, 3, 4, 5]))
+list(it.accumulate(['A', 'B', 'C', 'D']))
+list(it.accumulate([3,1,4,2,7,3,8,5,9], max))
+list(it.chain('ABC', 'DEF'))
+list(it.chain([1,2,3],[4,5,6],[7,8,9]))
+list(it.dropwhile(lambda x: x<3, [1,2,3,4,5]))
+list(it.takewhile(lambda x: x<3, [1,2,3,4,5]))
+list(it.filterfalse(lambda x: x%2==0, range(10)))
+for key, grp in it.groupby([1,1,1,2,2,2,3]):
+for key, grp in it.groupby([1,2,1,2,1,2,3]):
+def group_sorted(iterable, key=None):
+    return it.groupby(sorted(iterable, key=key), key=key)
+pin = [7,5,2,8]
+list(it.permutations(pin))
+list(it.combinations(lst, 2))
+list(it.combinations('ABCD', 2))

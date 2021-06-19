@@ -1,0 +1,5 @@
+a=list(range(1,3))
+random.sample(a,1)
+random.sample(a,1)
+import random
+random.sample(a,1)

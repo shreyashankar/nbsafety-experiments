@@ -1,0 +1,3 @@
+import unittest2
+tc = unittest2.TestCase()
+tc = unittest2.TestCase

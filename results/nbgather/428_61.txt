@@ -1,0 +1,4 @@
+from pandas import Series, DataFrame
+import numpy as np
+frame = DataFrame(np.arange(6).reshape(3,2), index=[2,0,1])
+frame.irow(0)

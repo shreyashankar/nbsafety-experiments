@@ -1,0 +1,26 @@
+def vector_norm(v):
+    'Compute the L2 norm of a 1d NumPy array v.'
+    return (np.sum((v ** 2)) ** (1 / 2))
+def inner_product(v, w):
+    'Compute the inner/dot product of two 1d NumPy arrays v, w.'
+    n = (v * w)
+    val = np.sum(n)
+    return val
+def similarity(v, w):
+    'Compute the cosine similarity of two 1d NumPy arrays v, w.'
+    return (inner_product(v, w) / (vector_norm(v) * vector_norm(w)))
+def most_similar(word, wordvecs):
+    'Find the most similar word in wordvecs to the input word.\n        \n        Parameters\n        ==========\n        word : str\n            A single input word.\n        wordvecs : dict\n            A dict whose keys are words and values are word vectors.\n        \n        Return\n        ======\n        (word, similarity)\n        '
+    maxSim = (- 10)
+    maxWord = None
+    keyList = list(wordvecs.keys())
+    for w in keyList:
+        if (word == w):
+            continue
+        else:
+            sim = similarity(wordvecs[word], wordvecs[w])
+            if (sim > maxSim):
+                maxSim = sim
+                maxWord = w
+    return (maxWord, maxSim)
+most_similar('horse', wordvecs)

@@ -1,0 +1,5 @@
+from pandas import Series, DataFrame
+sdata = {'a' : 1, 'b': 2, 'c':3}
+keys = ['a', 'b', 'd']
+obj4 = Series(sdata, keys)
+obj4.isnull()

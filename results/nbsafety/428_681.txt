@@ -1,0 +1,3 @@
+import math
+omega = 7.292e-05
+2*omega*math.sin(math.pi)

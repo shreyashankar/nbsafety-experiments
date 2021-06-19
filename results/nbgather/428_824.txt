@@ -1,0 +1,676 @@
+housing = pd.io.parsers.read_csv('housing.txt', sep='\s+')
+np.correlate(housing['crime'], housing['medianValue'])  
+np.correlate(housing["crime"], housing["medianValue"])  
+np.correlate(housing['crime'], housing['medianValue'])  
+housing.corr()
+housing.corr()
+housing.corr()
+corr = housing.corr()
+def plotScatter(df, target):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    """
+    
+    rows = np.ceil(df.shape[-1]/3.0)
+np.ceil(14/3.0)
+def plotScatter(df, target):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+int(np.ceil(14/3.0))
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.names):
+        if attrib == target:
+            continue
+        axes[ix].scatter(df[attrib], df[target], c='gray', markersize=25)
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.names):
+        if attrib == target:
+            continue
+        axes[ix].scatter(df[attrib], df[target], c='gray', markersize=25)
+        axes[ix].set_xlabel(attrib)
+        axes[ix].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        axes[ix].scatter(df[attrib], df[target], c='gray', markersize=25)
+        axes[ix].set_xlabel(attrib)
+        axes[ix].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[ix].scatter(df[attrib], df[target], c='gray', markersize=25)
+        axes[ix].set_xlabel(attrib)
+        axes[ix].set_ylabel(target)    
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[ix].scatter(df[attrib], df[target], c='gray', markersize=25)
+        axes[ix].set_xlabel(attrib)
+        axes[ix].set_ylabel(target)    
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', markersize=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=4):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    f.tight_layout()
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols, figsize=(10,6))
+    f.tight_layout()
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols, figsize=(12,6))
+    f.tight_layout()
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    f.set_size_inches(10,6)
+    f.tight_layout()
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+plt.rcParams['figure.figsize'] = 10, 8
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    f.tight_layout()
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib)
+        axes[row, col].set_ylabel(target)    
+plotScatter(housing, 'medianValue')
+plotScatter(housing, 'medianValue')
+plotScatter(housing, 'medianValue')
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    f.tight_layout()
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib, fontsize=20)
+        axes[row, col].set_ylabel(target, fontsize=20)    
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib, fontsize=20)
+        axes[row, col].set_ylabel(target, fontsize=20) 
+        
+        
+    f.tight_layout()
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib, fontsize=16)
+        axes[row, col].set_ylabel(target, fontsize=16) 
+        
+        
+    f.tight_layout()
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        #axes[row, col].set_xlabel(attrib, fontsize=16)
+        #axes[row, col].set_ylabel(target, fontsize=16) 
+        
+        
+    f.tight_layout()
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=25)
+        axes[row, col].set_xlabel(attrib, fontsize=12)
+        axes[row, col].set_ylabel(target, fontsize=12) 
+        
+        
+    f.tight_layout()
+s = corr.sort()
+s = corr.sort(ascending=False)
+s = corr.sort(ascending=False).head(2)
+corr.sort(ascending=False).head(2)
+corr.rank()
+corr.max()
+s = corr.sort()
+s = corr.sort(['crime'])
+s = corr.sort(columns=['crime'])
+s = corr.sort(columns=corr.columns)
+s = corr.sort()
+s = corr.sort(crime)
+s = corr.sort(columns=['crime'])
+for c in corr.columns:
+    corr.sort(columns=[c])
+for c in corr.columns:
+    corr.sort(columns=[c])
+corr.sort(columns=['crime'])
+corr.sort(columns=['crime']).head(2)
+corr.sort(columns=['crime']).tail(2)
+np.abs(corr.sort(columns=['crime']))
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=40)
+        axes[row, col].set_xlabel(attrib, fontsize=12)
+        axes[row, col].set_ylabel(target, fontsize=12) 
+        
+        
+    f.tight_layout()
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+
+    
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=50)
+        axes[row, col].set_xlabel(attrib, fontsize=12)
+        axes[row, col].set_ylabel(target, fontsize=12) 
+        
+        
+    f.tight_layout()
+np.abs(corr.sort(columns=['crime', 'residential']))
+np.dat(b,b)
+np.dot(b,b)
+np.dot(A,A)
+np.linalg.lstsq(A, b)
+a = np.linalg.lstsq(A, b)
+def LR_solve(X, y):
+    """ Solves a linear regression problem.
+    
+    params:
+    -------
+    * X - Input matrix where each row corresponds to an example.
+    * y - Target values
+    
+    returns:
+    --------
+    * w - Vector of fitting coefficients for least squares fit
+    
+    notes:
+    ------
+    * A^*A\hat{x} = A^*b
+      \hat{x} = A^* A A^* b
+    """
+    A = np.ones_like(X)
+    A[:, 1:-1] = X[:, 1:-1]
+    rtn = np.linalg.lstsq(X, y)
+    
+    return rtn[0]
+LR_solve(A, b)
+w = LR_solve(A, b)
+A = np.array([[0, 6], [1, 0], [2, 0]])
+w = LR_solve(A, b)
+A = np.array([[0, 6], [1, 0], [2, 0]])
+w = LR_solve(A, b)
+def LR_solve(X, y):
+    """ Solves a linear regression problem.
+    
+    params:
+    -------
+    * X - Input matrix where each row corresponds to an example.
+    * y - Target values
+    
+    returns:
+    --------
+    * w - Vector of fitting coefficients for least squares fit
+    
+    notes:
+    ------
+    * A^*A\hat{x} = A^*b
+      \hat{x} = A^* A A^* b
+    """
+    A = np.ones_like(X)
+    A[:, 1:-1] = X[:, 1:-1]
+    rtn = np.linalg.lstsq(A, y)
+    
+    return rtn[0]
+w = LR_solve(A, b)
+w = LR_solve(A, b)
+w = LR_solve(A, b)
+w = LR_solve(A, b)
+np.linalg.lstsq(A, b)
+w = LR_solve(A, b)
+w = LR_solve(A, b)
+np.ones(A.shape[0])
+w = LR_solve(A, b)
+w = LR_solve(A, b)
+X = np.array([ np.ones(A.shape[0])])
+np.array([ np.ones(A.shape[0])])
+np.array([ np.ones(A.shape[0]), A])
+np.array(A)
+np.array([A[:,0], A[:,0]])
+np.array([A[:,0], A[:,0]]).shape
+np.array([A[:,0], A[:,0]])
+np.array([[A[:,0]], [A[:,0]]])
+np.array([A[:,1], A[:,1]]).T
+np.hstack( np.ones(A.shape[0]), A)
+np.hstack( np.ones((A.shape[0]), A))
+np.hstack( (np.ones(A.shape[0]), A) )
+o = np.ones(A.shape[0])
+np.hstack( (np.ones(A.shape[0]).T, A) )
+np.hstack( (o,o) )
+np.hstack( (o.T,o.T) )
+np.vstack( (o.T,o.T) )
+np.vstack( (o,o) )
+np.hstack( (o,o) )
+o = np.array([[1],[2],[3]])
+np.hstack( (o,o) )
+o1 = np.ones((3,1))
+np.hstack( (o, o1))
+np.hstack( (o, o1, A))
+w = LR_solve(A, b)
+A = np.array([[0], [1], [2]])
+w = LR_solve(A, b)
+a = np.linalg.lstsq(A, b)
+X = housing[:-1]
+def main3_2(trainFile, testFile, columnNames=None):
+    """ Driver function that loads training and test sets and computes MSE of predictor.
+    
+    params:
+    -------
+    * trainFile - Path to training set
+    * testFile - Path to test set
+    
+    returns:
+    --------
+    * w - Training weights
+    * test_MSE - MSE for test set
+    * train_MSE - MSE for training set
+    
+    notes:
+    ------
+    * Target assumed to be last column in data sets.
+    """
+    # Load and prep data
+    trainingSet = pd.io.parsers.read_csv(trainFile, sep='\s+')
+    testSet = pd.io.parsers.read_csv(testFile, sep='\s+')
+    if columnNames:
+        trainingSet.columns = columnNames
+        testSet.columns = columnNames
+        
+    X = trainingSet[:-1]
+    y = trainingSet[-1]
+    
+    # Generate weights
+    w = LR_solve(X, y)
+linalg.lstsq(A, b)
+np.linalg.lstsq(A, b)
+A = np.hstack( (np.ones(440,1), traininSet.ix[:, :-1]))
+A = np.hstack( (np.ones(440,1), trainingSet.ix[:, :-1]))
+A = np.hstack( (np.ones(440,1), trainingSet.ix[:, :-1]) )
+np.linalg.lstsq(A, b)
+A = np.hstack( (np.ones(440,1), trainingSet.ix[:, :-1]) )
+testA = np.genfromtext('./housing_test.txt')
+testA = np.genfromtxt('./housing_test.txt')
+def LR_solve(X, y):
+    """ Solves a linear regression problem.
+    
+    params:
+    -------
+    * X - Input matrix where each row corresponds to an example.
+    * y - Target values
+    
+    returns:
+    --------
+    * w - Vector of fitting coefficients for least squares fit
+    
+    notes:
+    ------
+    * A^*A\hat{x} = A^*b
+      \hat{x} = A^* A A^* b
+    """
+    A = np.hstack( (np.ones((X.shape[0],1)), X) )
+    rtn = np.linalg.lstsq(A, y)
+    
+    return rtn[0]
+out = main3_2('./housing_train.txt', './housing_test.txt')
+out[0]

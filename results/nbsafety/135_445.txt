@@ -1,0 +1,3 @@
+import os
+THIS_PID = os.getpid()
+os.execl('/usr/bin/ps', THIS_PID)

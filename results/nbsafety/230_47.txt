@@ -1,0 +1,1 @@
+S1.subs({l1: lam, l2: 1/sqrt_(lam), l3: 1/sqrt_(lam)}).as_coeff_Add()

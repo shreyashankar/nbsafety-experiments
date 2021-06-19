@@ -16,11 +16,15 @@ let sql = "select source from cell_execs where trace=" + traceID + " and session
 db.all(sql, [], (err, rows) => {
     let source = rows.map(elem => elem.source);
 
-    let ast = parse(source.join('\n'));
+    let ast = parse(source.join('\n').trim());
     let locations = slice(ast, new LocationSet(loc(ast.location.last_line - 1, 0)))
+    let splitSource = source.join('\n').trim().split('\n');
+    // console.log(splitSource);
 
-
-    // console.log(source);
+    let splitSourceMap = new Map();
+    for (let idx = 0; idx < splitSource.length; idx++) {
+        splitSourceMap.set(idx, false);
+    }
 
     // Create array to sort
     var locationArr = [];
@@ -35,13 +39,41 @@ db.all(sql, [], (err, rows) => {
     }
 
     locationArr.sort(compareLocations);
+    // console.log(locationArr);
 
     // For each element in the location array, index into the line list
-    let nbgatherSlice = locationArr.map((elem) => (
-        source.slice(elem[0] - 1, elem[2]).join("").slice(elem[1], elem[3])
-    ));
+    // note that we are ignoring elem[1] and elem[3] here because we 
+    // are not calling .slice(elem[1], elem[3])
+    let nbgatherSlice = locationArr.flatMap((elem) => {
+        var currSlice = [];
 
-    let numLinesNeeded = locationArr.length;
+        // var splitSourceCopy = [...splitSource];
+        // splitSourceCopy[elem[0] - 1] = splitSourceCopy[elem[0] - 1].slice(elem[1]);
+        // splitSourceCopy[elem[2] - 1] = splitSourceCopy[elem[2] - 1].slice(0, elem[3]);
+
+        // Check to see if slice is already included
+        let beginIndex = elem[0] - 1;
+        let endIndex = elem[3] === 0 ? elem[2] - 1 : elem[2];
+
+        for (var i = beginIndex; i < endIndex; i++) {
+            if (splitSourceMap[i] === true) {
+                continue;
+            }
+
+            splitSourceMap[i] = true;
+            currSlice.push(splitSource[i]);
+        }
+
+        // return splitSourceCopy.slice(elem[0] - 1, elem[2]).join('\n').trim().split('\n');
+        // console.log(elem);
+        // console.log(currSlice);
+        // console.log(currSlice.join('\n').trim().split('\n'));
+        return currSlice;
+    });
+
+    // console.log(nbgatherSlice);
+
+    let numLinesNeeded = nbgatherSlice.length;
     fs.appendFileSync('nbgather_stats.txt', "(" + traceID + ", " + sessionID + ", " + numLinesNeeded + ")\n");
 
     // Write out slice

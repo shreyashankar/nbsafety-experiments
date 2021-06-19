@@ -1,0 +1,58 @@
+class OutlierReplacer(BaseEstimator, TransformerMixin):
+    def __init__(self, q_lower, q_upper):
+        self.q_lower = q_lower
+        self.q_upper = q_upper
+    
+    def fit(self, X, y=None):
+        self.upper = np.percentile(X, self.q_upper, axis=0)
+        self.lower = np.percentile(X, self.q_lower, axis=0)
+        
+        return self
+class OutlierReplacer(BaseEstimator, TransformerMixin):
+    def __init__(self, q_lower, q_upper):
+        self.q_lower = q_lower
+        self.q_upper = q_upper
+    
+    def fit(self, X, y=None):
+        self.upper = np.percentile(X, self.q_upper, axis=0)
+        self.lower = np.percentile(X, self.q_lower, axis=0)
+        
+        return self
+    
+    def transform(self, X):
+        Xt = X.copy()
+        ind_lower = X < self.lower
+        ind_upper = X > self.upper
+        
+        for i in range(X.shape[-1]):
+            Xt[ind_lower[:, i], i] = self.lower[i]
+            Xt[ind_upper[:, i], i] = self.upper[i]
+        
+        return Xt
+class MeanRegressor(BaseEstimator, RegressorMixin):
+    def __init__(self):
+        pass
+    
+    def fit(self, X, y):
+        self.y_mean = np.mean(y)
+        
+        return self
+class MeanRegressor(BaseEstimator, RegressorMixin):
+    def __init__(self):
+        pass
+    
+    def fit(self, X, y):
+        self.y_mean = np.mean(y)
+        
+        return self
+    
+    def predict(self, X):
+        return self.y_mean*np.ones(X.shape[0])
+pipe.score(X, y)
+pipe.predict(X)
+mc.predict_proba(X)
+mc.predict_proba(X)
+mc.predict_proba(X)
+y_proba = mc.predict_proba(X)
+y_proba.sum()
+y_proba.sum(axis=1)

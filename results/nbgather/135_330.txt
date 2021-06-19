@@ -1,0 +1,21 @@
+l = '68 f6 eb b4 fe 7f 00 00'
+l.split()
+l = l.split()
+" ".join(l)
+"".join(l)
+l = '0x'+"".join(l)
+l = int(l, base=16)
+l = "{0:_d}".format(l)
+l = "{,}".format(l)
+l = "{0:,}".format(l)
+l = "{:,}".format(l)
+l = "{:,}".format(int(l))
+import math
+l = l.replace(',', '')
+math.log10(l)
+m = '58 36 c0 90 ff 7f 00 00'
+m = m.replace(' ', '')
+m = '0x'+m
+m = int(m, base=16)
+l = int(l)
+l - m

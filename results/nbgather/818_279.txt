@@ -1,0 +1,3 @@
+from jinja2 import Template
+txt = open('home.html')
+t = Template(txt.read())

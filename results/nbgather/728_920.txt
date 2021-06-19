@@ -1,0 +1,3 @@
+superblock_H(sys,env)
+superblock_H(sys,env)
+eigen, eigstat = superblock_H(sys,env).groundstate()

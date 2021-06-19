@@ -1,0 +1,28 @@
+import numpy as np
+Y = np.array([1, None, 3, None, 5])
+import pylab as plt
+plt.plot(Y,Y)
+plt.show()
+Y = np.zeors((10,1))
+Y = np.zerois((10,1))
+Y = np.zeros((10,1))
+Y[[1,3,5,7,9]] = None
+plt.plot(Y,Y)
+plt.show()
+time = np.arange(0,10,1)
+Y = np.zeros((10,1))
+Y[[0,2,4,6,8]] = [[2,4,6,8,10]]
+for i in range(0,10):
+    if i%2: Y[i] = i
+    else: Y[i] = None
+plt.plot(time,Y)
+plt.show()
+X = np.arange(0,10,10)
+plt.plot(time,X)
+X = np.arange(0,10,1)
+plt.plot(time,X)
+plt.show()
+NUM_COLORS = 8
+cgen = (plt.cm(1.*i/NUM_COLORS) for i in range(NUM_COLORS))
+cgen.next()
+cgen.next

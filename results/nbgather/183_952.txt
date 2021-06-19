@@ -1,0 +1,2 @@
+from bitwise import bitenum
+bitenum.BitWiseEnum.bit8 == 128

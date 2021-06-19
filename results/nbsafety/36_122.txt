@@ -1,0 +1,1 @@
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))

@@ -1,0 +1,2 @@
+import datetime
+str(datetime.timedelta(hours=tmp['time'].values[0]))

@@ -1,0 +1,4 @@
+import numpy as np
+m = np.random.rand(2, 2)
+a = np.random.rand(2, 2)
+np.dot(a, m)

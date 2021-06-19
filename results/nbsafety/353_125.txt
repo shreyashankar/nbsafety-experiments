@@ -1,0 +1,2 @@
+from IPython.display import SVG
+SVG(svg_document.tostring())

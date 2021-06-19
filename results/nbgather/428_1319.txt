@@ -1,0 +1,11 @@
+import numpy as np
+a = np.random.randint(1, 10, 3)
+x = a
+us_x = x
+s_x = np.array([1, 5, 10])
+salt = np.arange(9).reshape(3,3)
+stmp = interp1d( s_x, salt[:, 0])
+from scipy.interpolate import interp1d
+stmp = interp1d( s_x, salt[:, 0])
+stmp(us_x)
+us_x

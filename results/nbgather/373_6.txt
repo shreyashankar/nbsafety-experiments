@@ -1,0 +1,6 @@
+import numpy as np
+A = np.linalg(1,2)
+A = np.zeros((2,2))
+A[:,1] = 2
+B = A
+np.multiply(A,B)

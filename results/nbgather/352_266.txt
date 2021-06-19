@@ -1,0 +1,22 @@
+points = [
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+]
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)
+find_diamonds(points)

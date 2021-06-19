@@ -1,0 +1,4 @@
+l = [1, 2, 1, 3]
+l.sort()
+l.reverse()
+l

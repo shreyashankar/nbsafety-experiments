@@ -1,0 +1,8 @@
+df = DataFrame({'age':np.random.randint(0,65,40)})
+df.head()
+bins = [0,20,40,60,65]
+df.labels = pd.cut(df.age, bins)
+df = DataFrame({'mobile':np.random.choice(['ios','android','windows'],20)})
+pd.get_dummies(df.mobile)
+df = DataFrame({'mobile':np.random.choice(['ios','android','windows'],20)})
+pd.get_dummies(df.mobile)

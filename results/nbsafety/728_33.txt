@@ -1,0 +1,1 @@
+(a * a_dag - a_dag * a)

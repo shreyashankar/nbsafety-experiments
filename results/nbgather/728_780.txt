@@ -1,0 +1,9 @@
+y = [DeltaRepPiecewise(x,ep) for ep in [0.9,0.5,0.3]]
+y = np.array([DeltaRepPiecewise(x,ep) for ep in [0.9,0.5,0.3]])
+y = np.array([DeltaRepPiecewise(x,ep) for ep in [0.9,0.5,0.3]]).T
+from scipy import integrate
+integrate.quad(test, -numpy.inf, numpy.inf, args=0.1)
+integrate.quad(test, -numpy.inf, numpy.inf, args=1)
+integrate.quad(test, -numpy.inf, numpy.inf, args=10)
+[integrate.quad(test, -numpy.inf, numpy.inf, args=s)[0] for s in np.linspace(0.01,10,5)[::-1]]
+np.linspace(0.01,10,5)[::-1]

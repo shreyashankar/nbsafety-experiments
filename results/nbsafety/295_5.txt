@@ -1,0 +1,2 @@
+import itertools
+list(itertools.chain.from_iterable([ range(10), range(10,20) ]))

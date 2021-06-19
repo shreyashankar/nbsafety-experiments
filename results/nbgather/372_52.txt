@@ -1,0 +1,6 @@
+import numpy as np
+B = np.zrray([0])
+A = np.magic((10,2,100))
+A = np.random((10,2,100))
+A = np.rand((10,2,100))
+2* np.pi

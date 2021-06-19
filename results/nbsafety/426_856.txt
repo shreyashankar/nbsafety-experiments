@@ -1,0 +1,2 @@
+import scipy.stats as stats
+stats.norm(0,1).ppf(0.975)

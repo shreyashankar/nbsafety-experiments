@@ -1,0 +1,3 @@
+import numpy as np
+ky = np.linspace(0.1, 3.9, 20)
+ky[12]

@@ -1,0 +1,29 @@
+import argparse
+parser.add_argument(
+        "-a", "--add", nargs="+", type=str, dest="addentry", help="Add a new entry",
+    )
+parser = argparse.ArgumentParser(
+        description="Add or manage JSON style notes", prog="dictnotes"
+
+        )
+parser.add_argument(
+        "-a", "--add", nargs="+", type=str, dest="addentry", help="Add a new entry",
+    )
+parser.add_argument(
+        "-l",
+        "--list",
+        action="store_true",
+        dest="list",
+        help="List entries as raw JSON",
+    )
+parser.parse_known_args()
+parser.parse_args()
+parser.parse_args(["-a", "asdas", "bbbb", "ccccc"])
+args = parser.parse_args(["-a", "asdas", "bbbb", "ccccc"])
+args.list()
+args._get_args()
+args.__sizeof__()
+args.__dict__()
+args.__contains__()
+args.tag()
+vars(args)

@@ -1,0 +1,11 @@
+end = "['web', 'www', 'cba']"
+end.strip()
+end.strip("[")
+end.strip("[").strip("]")
+end.strip("[").strip("]").strip("'")
+end.strip("[']")
+end.strip("[']\"")
+end.replace("[", "").replace("]", "").replace("'", "")
+es = end.replace("[", "").replace("]", "").replace("'", "")
+import re
+re.sub(r"['\[\]]", r"",end)

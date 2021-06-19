@@ -1,0 +1,8 @@
+import armadillo
+modelf = "/home/daniel/repositories/cds_user_apps/trunk/sus/l1/models/l1susmc1.mdl"
+model = armadillo.Model(modelf)
+from armadillo import CONFIGURATION
+path = CONFIGURATION.get("paths", 'lib')
+lfname = armadillo.find_library("cdsIPCx", path)
+library = armadillo.Model(lfname)
+library.connections[0].start

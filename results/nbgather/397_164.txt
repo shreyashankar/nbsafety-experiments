@@ -1,0 +1,24 @@
+def hat(x,a,b):
+    return -a*x**2 + b*x
+interact(hat,b=1.0,a=5.0,x=(-3,3))
+plt(hat,b=1.0,a=5.0,x=(-3,3))
+plt.plot(range(-3,-3),hat(a,b))
+plt.plot(range(-3,-3),hat(a,b))
+plt.plot(np.range(-3,3),hat(np.range(-3,3),a,b))
+plt.plot(range(-3,3),hat(range(-3,3),a,b))
+plt.plot(x,hat(x),a,b)
+plt.plot(x,hat(x),a,b)
+plt.plot(x,hat(x,a,b))
+plt.plot(x,hat(x,a,b),'--r')
+plt.plot(x, hat(x,a,b))
+def hat(x,a,b):
+    return -a* x**2 + b*x
+plt.plot(x, hat(x,a,b))
+def hat(x,a,b):
+    return -a* np.pow(x,2) + b*x
+def hat(x,a,b):
+    return -a* pow(x,2) + b*x
+plt.plot(np.arange(-3,3),hat(x,a,b))
+def hat(x,a,b):
+    return -a* x*x + b*x
+plt.plot(np.arange(-3,3),hat(x,a,b))

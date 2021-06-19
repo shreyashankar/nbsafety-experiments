@@ -1,0 +1,10 @@
+inst = ec2.launch_instance('test-launchscript')
+import paramiko
+ssh = paramiko.SSHClient()
+ssh.connect(inst.public_dns_name, username='duffy', password=raw_input())
+ssh.connect(inst.public_dns_name, username='duffy', password=raw_input())
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(inst.public_dns_name, username='duffy', password=raw_input())
+ssh.exec_command('ls')
+stdin, stdout, stderr = ssh.exec_command('ls')
+stdout.read()

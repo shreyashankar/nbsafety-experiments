@@ -1,0 +1,4 @@
+from IPython.display import SVG
+SVG(_)
+plt = _
+plt.hold()

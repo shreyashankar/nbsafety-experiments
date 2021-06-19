@@ -1,0 +1,22 @@
+class Room():
+    OFFLINE = 1
+    ONLINE = 2
+    IN_SPLITFIRE = 3
+    IN_CHAINRAIN = 4
+    statusCodes = {OFFLINE: 'Room Offline', ONLINE: 'Room Online, active', IN_SPLITFIRE: 'Splitfire Protocol in progress', IN_CHAINRAIN: 'Chainrain Protocol in progress'}
+    def __init__(self, roomName):
+        self.roomName = roomName
+        self.activeUserCount = 0
+        self.activeUsers = list()
+        self.status = Room.ONLINE
+        self.status_message = Room.statusCodes[self.status]
+    def changeStatus(statusCode):
+        backup_self = self
+        try:
+            self.status = statusCode
+            self.status_message = Room.statusCodes[self.status]
+        except Exception as err:
+            logger.fatal(('Error changing room status from %s to %s' % (backup_self.status, self.status)))
+            self = backup_self
+r = Room('download1')
+r

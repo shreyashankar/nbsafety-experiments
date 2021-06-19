@@ -1,0 +1,4 @@
+plt.ion()
+plt.ion(0)
+plt.ion()
+plt.ioff()

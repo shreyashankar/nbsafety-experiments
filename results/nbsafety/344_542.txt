@@ -1,0 +1,2 @@
+import scipy.misc as scm
+scm.comb(1000000, 2)

@@ -1,0 +1,1 @@
+gs_svc.score(X_test, y_test)

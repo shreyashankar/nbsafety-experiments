@@ -1,0 +1,14 @@
+def genE(lcm,limit):
+    while True:
+        r = random.randint(limit,limit*0x1000000000001)
+        d = gmpy2.next_prime(r)
+        e = gmpy2.invert(d,lcm)
+        if isPrime(e):
+            break
+    return e
+iroot(n, 3)
+gmpy2.iroot(n, 3)
+d1 < gmpy2.iroot(n, 3)
+d1 < gmpy2.iroot(n, 3.2)
+gmpy2.root(n, 3.4)
+gmpy2.root(n, 3)

@@ -1,0 +1,3 @@
+position = 0
+walk = [position]
+walk.min()

@@ -1,0 +1,9 @@
+from ipywidgets import interact, fixed
+def plot_chi_squared(k, mu, sigma):
+    'Plot the chi-squared distribution as a distplot with 300 points.'
+    X = chi_squared(k, 300)
+    sns.distplot(X, bins=20, rug=True)
+    print('mean =', X.mean(), 'var =', X.var())
+    plt.xlim(0, 20.0)
+    plt.xlabel('chi-squared distribution')
+interact(plot_chi_squared, 7);

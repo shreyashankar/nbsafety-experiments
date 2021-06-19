@@ -1,0 +1,4 @@
+spread = np.matrix(sim2) - np.matrix(sim1)
+spread = [sim2 - sim1 for sim1,sim2 in zip(sim1,sim2)]
+sns.distplot(spread)
+(spread < 0).sum()

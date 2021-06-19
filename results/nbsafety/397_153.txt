@@ -1,0 +1,5 @@
+def plot_cdf(data, **kwargs):
+    'Plot the CDF of a 1d distribution of data.\n        \n        You can use kwargs to pass keyword arguments to the Matplotlib plotting function.\n        '
+    m = len(data)
+    plt.step(sorted(data), np.arange(m), **kwargs)
+plot_cdf(my_npy)

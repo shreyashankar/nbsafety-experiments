@@ -1,0 +1,2 @@
+keywords = '\n    abstract\tcontinue\tfor\tnew\tswitch\n    assert***\tdefault\tgoto*\tpackage\tsynchronized\n    boolean\tdo\tif\tprivate\tthis\n    break\tdouble\timplements\tprotected\tthrow\n    byte\telse\timport\tpublic\tthrows\n    case\tenum****\tinstanceof\treturn\ttransient\n    catch\textends\tint\tshort\ttry\n    char\tfinal\tinterface\tstatic\tvoid\n    class\tfinally\tlong\tstrictfp**\tvolatile\n    const*\tfloat\tnative\tsuper\twhile'
+keywords.split()

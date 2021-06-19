@@ -1,0 +1,22 @@
+x = "{3,9,20,#,#,15,7}"
+x.rpartition()
+x.split()
+x.split()
+x.partition()
+x.partition('.')
+x.partition(',')
+np.array(x)
+np.array(x, ',')
+np.array(x, dtype=int)
+np.array(x, dtype=str)
+x.strip()
+liat(x)
+x.split(',')
+x.rfind('{', '')
+x.find('{')
+x.rfind('{')
+x.rfind('}')
+x.find('}')
+y = x.split(',')
+y = x[1:-1]
+y

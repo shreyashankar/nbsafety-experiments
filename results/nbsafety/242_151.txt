@@ -1,0 +1,4 @@
+def hat(x, a, b):
+    return (((- a) * (x ** 2)) + (b * (x ** 4)))
+x = np.linspace((- 3), 3, num=50)
+plt.plot(x, hat(x,a,b))

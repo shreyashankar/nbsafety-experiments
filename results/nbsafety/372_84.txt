@@ -1,0 +1,5 @@
+import numpy as np
+mean = np.asarray([0.0, 0.0])
+sigma = np.array([1, 1])
+cov = np.diag(sigma)
+np.random.multivariate_normal(mean, cov, 4).T

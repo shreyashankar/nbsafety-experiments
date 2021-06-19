@@ -1,0 +1,4 @@
+import pylab as plt
+NUM_COLORS = 8
+cgen = (plt.cm(((1.0 * i) / NUM_COLORS)) for i in range(NUM_COLORS))
+cgen.next

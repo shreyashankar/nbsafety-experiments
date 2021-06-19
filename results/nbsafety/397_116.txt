@@ -1,0 +1,8 @@
+def probability(lamb, occurances):
+    prob = (lamb ** occurances)
+    prob *= np.exp((- lamb))
+    fac = 1
+    for i in range(1, (occurances + 1)):
+        fac *= i
+    return (prob / fac)
+print("Probability of team2 of winning: ", probability(5, 5))

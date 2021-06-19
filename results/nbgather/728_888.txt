@@ -1,0 +1,6 @@
+np.array(5)
+np.array([x,y]).T
+np.array([x,y+1]).T
+list(np.array([x,y+1]).T)
+list0 = [[a,b] for a,b in list(np.array([x,y+1]).T)]
+list0

@@ -1,0 +1,7 @@
+import path
+p=path.path('/')
+p.joinpath('tmp')
+p.joinpath('tmp').joinpath('hello')
+p.joinpath('tmp').joinpath('hello').joinpath('google')
+p.exists()
+p.listdir()

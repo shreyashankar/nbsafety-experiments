@@ -1,0 +1,10 @@
+cols = ['A', 'B', 'C']
+values = np.random.randn(1000, 3)
+data_df = pd.DataFrame(values, columns=cols)
+countries = np.array(['US', 'Uk', 'GR', 'JP'])
+key = countries[np.random.randint(0, 4, 1000)]
+grouped = data_df.groupby(key)
+f = (lambda x: x.fillna(x.mean))
+transformed = grouped.transform(f)
+grouped_trans = transformed.groupby(key)
+grouped_trans.mean()

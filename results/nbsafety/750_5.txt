@@ -1,0 +1,5 @@
+def some_exponent(exponent):
+    def func(x):
+        return (x ** exponent)
+    return func
+some_exponent(2)(2), some_exponent(3)(2)

@@ -1,0 +1,9 @@
+training_set_size, train_scores, test_scores = learning_curve(
+    est,  #<- the ML model used to predict
+    X,    #<- dataset passed to this model
+    y,    #<- labels passed to this model
+    train_sizes=np.linspace(.1, 1, 2) #<- 
+)
+X_outliers = X[ocsvm.predict(X) == -1]
+X_outliers = X[ocsvm.predict(X) == -1]
+X_5 = X[y == 5]

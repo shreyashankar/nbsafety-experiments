@@ -1,0 +1,15 @@
+from zambi import ZambiConn
+cm = ZambiConn()
+conn = cm.get_connection('opsqa')
+conn.get_all_security_groups('devzzz')[0]
+sg = conn.get_all_security_groups('devzzz')[0]
+conn.get_all_security_groups()
+conn.get_all_security_groups()
+conn.get_all_security_groups()[0]
+type = conn.get_all_security_groups()[0]
+type(conn.get_all_security_groups()[0])
+type(conn.get_all_security_groups()[0])
+sg_names = conn.get_all_security_groups()
+conn.get_all_security_groups('devzzz')
+sg = conn.get_all_security_groups('devzzz')
+sg.status

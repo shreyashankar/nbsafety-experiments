@@ -1,0 +1,18 @@
+index = pd.date_range('1/1/2000', periods=8)
+s = pd.Series(np.random.randn(5), index=['a', 'b', 'c', 'd', 'e'])
+df = pd.DataFrame(np.random.randn(8, 3), index=index, columns=['A', 'B', 'C'])
+wp = pd.Panel(np.random.randn(2, 5, 4), items=['Item', 'Item2'],
+              major_axis=pd.date_range('1/1/2000', periods=5),
+              minor_axis=['A','B','C','D'])
+long_series = pd.Series(np.random.randn(1000))
+df = pd.DataFrame({'one' : pd.Series(np.random.randn(3), index=['a', 'b', 'c']),
+                   'two' : pd.Series(np.random.randn(4), index=['a', 'b', 'c', 'd']),
+                   'three' : pd.Series(np.random.randn(3), index=['b', 'c', 'd'])})
+df_orig = pd.DataFrame([[1, 1.5]], columns=['int', 'float'])
+df2 = pd.DataFrame({'x': [1, 2, 3], 'y': [4, 5, 6]})
+df2_t = pd.DataFrame(dict((idx,values) for idx, values in df2.iterrows()))
+s = pd.Series(pd.date_range('20130101 09:10:12', periods=4))
+s = pd.Series(pd.date_range('20130101', periods=4))
+s = pd.Series(pd.period_range('20130101', periods=4))
+s = pd.Series(pd.period_range('20130101', periods=4, freq='D'))
+s.dt.seconds

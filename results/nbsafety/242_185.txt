@@ -1,0 +1,2 @@
+s = pd.Series(pd.period_range('20130101', periods=4, freq='D'))
+s.dt.seconds

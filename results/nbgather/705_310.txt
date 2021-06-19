@@ -1,0 +1,37 @@
+s1 = pd.Series(['a', 'b', 'c', 'd', 'e', 'f', 'g'],
+              index = ['Sunday', 'Monday', 'Tuesday', "Wednesday", 'Thursday', 'Friday', 'Saturday'])
+df1 = pd.DataFrame({'gender' : np.random.choice(['f', 'm'], size = 10)})
+df1 = pd.DataFrame({'gender' : np.random.choice(['f', 'm'], size = 10), 'age' : np.random.randint(0, high = 101, size = 10)})
+df1 = pd.DataFrame({'gender' : np.random.choice(['f', 'm'], size = 10), 'age' : np.random.randint(0, high = 101, size = 10)}, columns = ['gender', 'age'])
+df1 = pd.DataFrame(
+    {'gender' : np.random.choice(['f', 'm'], size = 10), 
+     'age' : np.random.randint(0, high = 101, size = 10),
+     'cell_phone' : np.random.choice(['ios', 'android', 'windows'], size = 10)
+    }, columns = ['gender', 'age', 'cell_phone'], index = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+df1 = pd.DataFrame(
+    {'gender' : np.random.choice(['f', 'm'], size = 10), 
+     'age' : np.random.randint(0, high = 101, size = 10),
+     'cell_phone' : np.random.choice(['ios', 'android', 'windows'], size = 10).asarray(categorical)
+    }, columns = ['gender', 'age', 'cell_phone'], index = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+df1 = pd.DataFrame(
+    {'gender' : np.random.choice(['f', 'm'], size = 10), 
+     'age' : np.random.randint(0, high = 101, size = 10),
+     'cell_phone' : np.random.choice(['ios', 'android', 'windows'], size = 10).astype(categorical)
+    }, columns = ['gender', 'age', 'cell_phone'], index = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+df1 = pd.DataFrame(
+    {'gender' : np.random.choice(['f', 'm'], size = 10), 
+     'age' : np.random.randint(0, high = 101, size = 10),
+     'cell_phone' : np.random.choice(['ios', 'android', 'windows'], size = 10).astype('categorical')
+    }, columns = ['gender', 'age', 'cell_phone'], index = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+df1 = pd.DataFrame(
+    {'gender' : np.random.choice(['f', 'm'], size = 10), 
+     'age' : np.random.randint(0, high = 101, size = 10),
+     'cell_phone' : np.random.choice(['ios', 'android', 'windows'], size = 10).astype('category')
+    }, columns = ['gender', 'age', 'cell_phone'], index = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+df1 = pd.DataFrame(
+    {'gender' : np.random.choice(['f', 'm'], size = 10), 
+     'age' : np.random.randint(0, high = 101, size = 10),
+     'cell_phone' : np.random.choice(['ios', 'android', 'windows'], size = 10).astype('category')
+    }, columns = ['gender', 'age', 'cell_phone'], index = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+df3 = df1.loc[:, ['gender', 'age']]
+df3

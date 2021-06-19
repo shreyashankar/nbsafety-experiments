@@ -1,0 +1,4 @@
+reduced_data = pca.fit_transform(X_train)
+reduced_data = PCA(n_components=1).fit_transform(X_train)
+scatter(X_train)
+pl.scatter(X_train[:, 0], X_train[:, 1], .8)

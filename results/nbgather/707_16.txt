@@ -1,0 +1,16 @@
+import numpy as np
+f_mid = np.empty([500, 2], dtype=float)
+f_mid[:,:] = 0; f_mid[250-5:250+6, 0] = 1.0
+plot(f_mid)
+plt.plot(f_mid)
+import matplotlib.pyplot as plt
+ft = np.fft.fft(f_mid[:,0])
+plot(ft)
+plt.plot(real(ft))
+plt.plot(re(ft))
+plt.plot(np.im(ft))
+xx,yy = np.meshgrid(range(4), range(4))
+mult(xx,yy)
+np.mult(xx,yy)
+dot(xx,yy)
+xx*yy

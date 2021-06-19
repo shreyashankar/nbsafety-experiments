@@ -1,0 +1,6 @@
+plt.close()
+plt.yscale('log')
+plt.yscale('log')
+plt.tight_layout()
+plt.savefig('prestest')
+plt.plot(a[:,5])

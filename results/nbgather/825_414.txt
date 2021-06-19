@@ -1,0 +1,2 @@
+import random
+random.sample(set([1,2,3,4]), 2)

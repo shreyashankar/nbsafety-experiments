@@ -1,0 +1,24 @@
+dtime.Date("today") + 7
+dtime.Date("today") + '7d'
+(dtime.Date("today") + '7d').info()
+(dtime.Date("today") + '7d').show()
+dt = dtime
+dt.nextbusday("today")
+dt.nextbusday(dt.dtime("today"))
+reload(dt)
+dt.daysaddbu(dt.dtime("today"), 12)
+reload(dt)
+dt.daysaddbu(dt.dtime("today"), 12)
+dt.daysaddbu(dt.dtime("today"), 12)
+reload(dt)
+dt.daysaddbu(dt.dtime("today"), 12)
+reload(dt)
+dt.daysaddbu(dt.dtime("today"), 12)
+reload(dt)
+dt.daysaddbu(dt.dtime("today"), 12)
+dt.daysaddbu(dt.dtime("today"), 7)
+dt.daysaddbu(dt.dtime("today"), 12)
+reload(dt)
+dt.Date("today")+'7bu'
+reload(dt)
+dt.Date("today")+'7bu'

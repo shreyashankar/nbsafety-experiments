@@ -1,0 +1,6 @@
+import numpy as np
+np.rand((2, 3))
+m = np.random.rand(2, 2)
+a = np.random.rand(2, 2)
+np.dot(a.transpose(), m)
+np.dot(a, m)

@@ -1,0 +1,5 @@
+from pandas import DataFrame,Series
+df = DataFrame({'A': ['A1', 'A2', 'A3', 'A4'], 'B': ['B1', 'B2', 'B3', 'B4'], 'C': ['C1', 'C2', 'C3', 'C4']})
+import random
+d =range(df.shape[0])
+random.sample(list(d),2)

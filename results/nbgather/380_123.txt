@@ -1,0 +1,4 @@
+IPCA = []
+dates, ipca = IPCA(*zip)
+dates, ipca = zip(*IPCA)
+ipca

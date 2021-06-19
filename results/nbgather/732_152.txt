@@ -1,0 +1,1 @@
+execfile('bin/activate_this.py', dict(__file__='bin/activate_this.py'))

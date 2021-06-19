@@ -1,0 +1,4 @@
+import numpy as np
+A = np.zeros((2, 2))
+B = A
+np.multiply(A,B)

@@ -1,0 +1,33 @@
+index = pd.date_range('1/1/2000', periods=8)
+s = pd.Series(np.random.randn(5), index=['a', 'b', 'c', 'd', 'e'])
+df = pd.DataFrame(np.random.randn(8, 3), index=index, columns=['A', 'B', 'C'])
+wp = pd.Panel(np.random.randn(2, 5, 4), items=['Item', 'Item2'],
+              major_axis=pd.date_range('1/1/2000', periods=5),
+              minor_axis=['A','B','C','D'])
+long_series = pd.Series(np.random.randn(1000))
+df = pd.DataFrame({'one' : pd.Series(np.random.randn(3), index=['a', 'b', 'c']),
+                   'two' : pd.Series(np.random.randn(4), index=['a', 'b', 'c', 'd']),
+                   'three' : pd.Series(np.random.randn(3), index=['b', 'c', 'd'])})
+row = df.ix[1]
+column = df['two']
+df.sub(row, axis='columns')
+df.sub(row, axis=1)
+df.sub(column, axis='index')
+df.sub(column, axis=0)
+dfmi = df.copy()
+df2.ne(df)
+s = pd.Series(np.random.permutation(10))
+df = pd.DataFrame({'a': [-2, -1, 1, 10, 8, 11, -1],
+                   'b': list('abdceff'),
+                   'c': [1.0, 2.0, 4.0, 3.2, np.nan, 3.0, 4.0]})
+dft = pd.DataFrame(dict(A = np.random.rand(3),
+                           B = 1,
+                           C = 'foo',
+                       D = pd.Timestamp('20010102'),
+                       E = pd.Series([1.0]*3).astype('float32'),
+                                    F = False,
+                                    G = pd.Series([1]*3,dtype='int8')))
+pd.Series([1, 2, 3, 4, 5, 6.])
+pd.Series([1, 2, 3, 6., 'foo'])
+df1 = pd.DataFrame(np.random.randn(8, 1), columns=['A'], dtype='float32')
+df3 = df1.reindex_like(df2).fillna(value=0.0) + df2

@@ -1,0 +1,14 @@
+from ipywidgets import interact
+def char_probs(s):
+    'Find the probabilities of the unique characters in the string s.\n        \n        Parameters\n        ----------\n        s : str\n            A string of characters.\n        \n        Returns\n        -------\n        probs : dict\n            A dictionary whose keys are the unique characters in s and whose values\n            are the probabilities of those characters.\n        '
+    dic = {}
+    count = len(s)
+    for ele in s:
+        if (ele in dic):
+            dic[ele] += 1
+        else:
+            dic[ele] = 1
+    for keys in dic:
+        dic[keys] /= count
+    return dic
+interact(char_probs, s=('aaabbb', 'addcccddee'))

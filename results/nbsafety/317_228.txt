@@ -1,0 +1,2 @@
+import itertools as it
+list(it.combinations('ABCD', 2))

@@ -1,0 +1,6 @@
+from sklearn import datasets
+import matplotlib.pyplot as plt
+boston = datasets.load_boston()
+iris = datasets.load_iris()
+plt.legend(iris.target_names)
+plt.show()

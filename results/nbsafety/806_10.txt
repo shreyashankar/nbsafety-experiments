@@ -1,0 +1,7 @@
+t_fire = 20.0
+def t_stopping_burn(t_fire):
+    v = (v_initial - (g * t_fire))
+    t_stop_approx = ((np.sqrt(((accel_at_zero ** 2) + ((2 * jerk_at_zero) * (v_desired - v)))) - accel_at_zero) / jerk_at_zero)
+    t_stop = newton(v_from_initial(v), t_stop_approx, a)
+    return t_stop
+(m_rocket - burn_rate * t_stopping_burn(t_fire))/m_rocket

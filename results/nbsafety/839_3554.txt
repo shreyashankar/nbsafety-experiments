@@ -1,0 +1,1 @@
+gmpy2.root(n, 3)

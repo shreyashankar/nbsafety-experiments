@@ -1,0 +1,3 @@
+import argparse
+parser = argparse.ArgumentParser(description='hello')
+parser.print_usage()

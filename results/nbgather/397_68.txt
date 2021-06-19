@@ -1,0 +1,24 @@
+def gen_files(files):
+    iter_files = iter(files)
+    
+    while True:
+        try:
+            file = next(iter_files)
+        except:
+            break
+        else:
+            with open(file, 'r') as f:
+                lines = f.read()
+            iter_lines = iter(lines.split('\n'))
+            while True:
+                try:
+                    line = next(iter_lines)
+                except:
+                    f.close()
+                    break
+                else:
+                    yield line
+def files_to_lines(files):
+    lines = gen_files(files)
+    return lines
+list(files_to_lines(['file1.txt', 'file2.txt']))

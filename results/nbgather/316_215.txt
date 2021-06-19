@@ -1,0 +1,3 @@
+def a(a,b):
+    return a and b
+a(False, 'a')

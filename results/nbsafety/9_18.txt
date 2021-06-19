@@ -1,0 +1,2 @@
+import math
+float(math.factorial(2)) / math.factorial(3)

@@ -1,0 +1,1 @@
+map(debug_print_job, _broker._session_job.query(KongJob).filter(KongJob.status == KongJob.job_status_ready).order_by(KongJob.id).all())

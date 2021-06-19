@@ -1,0 +1,7 @@
+l = [1, 2, 1, 3]
+l.index(1)
+l.index(1, 1)
+l.index(6)
+l.sort()
+l.reverse()
+l

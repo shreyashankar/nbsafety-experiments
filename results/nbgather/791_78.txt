@@ -1,0 +1,7 @@
+import numpy as np
+a = np.arrary([1,2,3,4])
+b = np.arrary([1,2,3,4])
+a = np.arrary([1,2,3,4])
+b = np.arrary([1,2,3,4])
+c  = np.array([[1,2],[3,4]])
+c[:,0]

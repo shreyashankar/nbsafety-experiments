@@ -1,0 +1,3 @@
+C.mean()
+np.nanmean(C)
+C[1::].mean()

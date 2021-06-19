@@ -1,0 +1,2 @@
+import networkx as nx
+nx.read_graphml("/Users/pharaoh/dev/padis/gitpadis/graphs/3by3grid-3dns.graphml")

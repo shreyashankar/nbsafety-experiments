@@ -1,0 +1,14 @@
+plist = []
+for i in range(1,10):
+    for j in range(1,10):
+        plist.append(i+(j-1)*10)
+plist = map(lambda x: x-1, plist)
+plist = list(plist)
+comm2 = "echo 'hi'"
+out = [' ']*100
+for j,i in enumerate(plist):
+    out[i] = comm2[j]
+''.join(out)
+''.join(out)
+''.join(out)
+out

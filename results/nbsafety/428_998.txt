@@ -1,0 +1,5 @@
+import numpy as np
+faceNodes = np.array([[0, 3, 4], [0, 4, 1], [1, 4, 5], [1, 5, 2], [3, 6, 7], [3, 7, 4], [4, 7, 8], [4, 8, 5], [6, 9, 10], [6, 10, 7], [7, 10, 11], [7, 11, 8]])
+row = np.arange(12)
+region_var_nodes = np.vstack([row, row, row])
+region_var_nodes[:, faceNodes].mean(axis=2)

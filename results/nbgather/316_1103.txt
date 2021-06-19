@@ -1,0 +1,17 @@
+from lxml.html import parse
+a = "<h1>Тридцатиградусная жара вернется в Москву в эти выходные</h1><p>В эти выходные в Москву вновь вернется тридцатиградусная жара, похолодание ожидается в понедельник, 8 августа. Об этом сообщает Гидрометцентр России.</p><p>В пятницу, 5 августа, на столичный регион начнет оказывать влияние антициклон, осадки закончатся, а температура будет расти. Ночью столбик термометра покажет плюс 14−16 градусов в Москве и плюс 11−16 градусов в Подмосковье. Днем прогнозируется плюс 26−28 градусов и плюс 23−28 градусов соответственно.</p><p><embed type=\"rich_weather\" image=\"https://pogoda.mail.ru/img/weather_icon/png/160_outline/07.png\" name=\"Москва, 5&nbsp;августа\" description=\"+27, облачно\" url=\"https://pogoda.mail.ru/prognoz/moskva/14dney/\" /></p><p>В выходные погода будет жаркой. Ночные температуры составят плюс 16−18 градусов в столице, в центре города до плюс 21 градуса в субботу и до плюс 22 градусов в воскресенье. Днем 6 августа столбик термометра поднимется до плюс 28−30 градусов в Москве и плюс 25−30 по области, а 7 августа ожидается плюс 31−33 градусов и плюс 28−33 градусов соответственно. Местами кратковременный дождь и гроза с порывами ветра до 12−17 м/с ожидаются лишь днем в воскресенье.</p><p><embed type=\"rich_weather\" image=\"https://pogoda.mail.ru/img/weather_icon/png/160_outline/05.png\" name=\"Москва, 6&nbsp;августа\" description=\"+29, облачность\" url=\"https://pogoda.mail.ru/prognoz/moskva/14dney/\" /></p><p><embed type=\"rich_weather\" image=\"https://pogoda.mail.ru/img/weather_icon/png/160_outline/05.png\" name=\"Москва, 7&nbsp;августа\" description=\"+33, облачность\" url=\"https://pogoda.mail.ru/prognoz/moskva/14dney/\" /></p><p>В понедельник, 8 августа, за холодным фронтом показания термометров почти приблизятся к норме. Временами ожидаются дожди, а температуры понизятся до плюс 11−16 градусов ночью и 20−25 днем. Во вторник, 9 августа, прогнозируется небольшой кратковременный дождь. Ночные температуры составят плюс 10−15 градусов, днем будет 22−27 тепла.</p>"
+doc = parse(a).getroot()
+from lxml import etree
+parser = etree.HTMLParser()
+from io import StringIO
+doc = parse(a)
+tree = etree.parse(StringIO(a), parser)
+doc = parse(StringIO(a))
+doc = parse(StringIO(a))
+doc = parse(StringIO(a))
+doc.xpath('//etree')
+doc.xpath("//h1")
+doc.xpath("//embed")
+b = doc.xpath("//embed")
+from lxml import html
+isinstance(b[0], html.HtmlElement)

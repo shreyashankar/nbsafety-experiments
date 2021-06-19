@@ -1,0 +1,29 @@
+y_model = a*X**2+b*X+c
+plt.scatter(X,y_model)
+y_model = a*X**2+b*X+c
+plt.scatter(X,y_model)
+y_model = a*X**2+b*X+c+noise
+plt.scatter(X,y_model)
+y_model = a*X**2+b*X+c+noise
+plt.scatter(X,y_model)
+y_model = a*X**2+b*X+c+noise
+plt.scatter(X,y_model)
+def y_model(X,a,b,c,noise):
+    y_model = a*X**2+b*X+c+noise
+    return y_model
+plt.scatter(X,y_model(X,a,b,c,noise))
+plt.scatter(X,Y)
+Y = y_model(X,a,b,c,noise)
+plt.scatter(X,Y)
+def y_model(X,a,b,c,noise):
+    y_model = a*X**2+b*X+c+noise
+    return y_model
+Y = y_model(X,a,b,c,noise)
+plt.scatter(X,Y)
+opt.curve_fit(y_model,X,Y)
+def y_model(X,a,b,c,noise):
+    y_model = a*X**2+b*X+c+noise
+    return y_model
+Y = y_model(X,a,b,c,noise)
+plt.scatter(X,Y)
+opt.curve_fit(y_model,X,Y)

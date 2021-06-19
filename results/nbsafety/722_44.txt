@@ -1,0 +1,4 @@
+def ff(x):
+    scaled = ((x * (np.pi / 2)) / 13)
+    return (20 * np.cos(scaled))
+ff(8)

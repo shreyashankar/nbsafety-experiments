@@ -1,0 +1,5 @@
+from pandas import DataFrame, Series
+df = DataFrame({'col1': [5, 6, 7], 'col2': ['a', 'b', 'c']}, index=[9, 5, 3])
+s3 = Series([1, 0], index=[3, 5])
+s3.index.values.sort()
+len(df.index.difference(s3.index))

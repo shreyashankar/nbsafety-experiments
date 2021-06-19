@@ -1,0 +1,25 @@
+import struct
+platform_c_maxint = 2 ** (struct.Struct('i').size * 8 - 1) - 1
+struct.Struct('i')
+struct.Struct('i').size
+struct.Struct('l')
+struct.Struct('l').size
+struct.Struct('l').size * 8
+struct.Struct('l').size * 8 - 1
+s = struct.Struct('@u')
+s = struct.Struct('@I')
+s.pack(b'\xff\xff\xff\xff')
+s.pack('@4I', b'\xff\xff\xff\xff')
+s.pack(0xFFFFFFFF)
+a = []
+s.unpack('I', a)
+s.unpack('I')
+s.unpack()
+s.unpack(a)
+a = bytearray()
+s.unpack(a)
+a = bytearray(4)
+s.unpack(a)
+s.unpack(a)
+s.unpack(b'\xff\xff\xff\xff')
+s.pack(100)

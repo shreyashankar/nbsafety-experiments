@@ -1,0 +1,2 @@
+data = [{'id': 'aa', 'visitn': (np.arange(0, 8) + 1), 'waso': np.zeros(8, dtype=np.float32)}]
+waso_mask = data[3]['waso'].copy()

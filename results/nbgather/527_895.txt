@@ -1,0 +1,7 @@
+expr = a*x+b; expr
+expr.as_coefficient(b)
+expr.as_coefficient(x)
+from IPython.html.widgets import interact
+def factorit(n):
+    display(Eq(x**n-1, factor(x**n-1)))
+interact(factorit, n=(2,40));

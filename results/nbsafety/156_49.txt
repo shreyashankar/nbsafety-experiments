@@ -1,0 +1,27 @@
+def change_evens_to_zeros(lst):
+    replace_zeros = [(v if ((v % 2) != 0) else 0) for v in lst]
+    return lst
+change_evens_to_zeros(range(10))
+change_evens_to_zeros((1, 2, 3, 4, 5, 6, 7))
+change_evens_to_zeros((1, 2, 3, 4))
+def change_evens_to_zeros(lst):
+    lst = list()
+    replace_zeros = [(v if ((v % 2) != 0) else 0) for v in lst]
+    return lst()
+change_evens_to_zeros(range(10))
+def change_evens_to_zeros(lst):
+    lst = []
+    replace_zeros = [(v if ((v % 2) != 0) else 0) for v in lst]
+    return lst
+change_evens_to_zeros(range(10))
+def change_evens_to_zeros(lst):
+    lst = []
+    replace_zeros = [(v if ((v % 2) != 0) else 0) for v in lst]
+    return replace_zeros
+change_evens_to_zeros(range(10))
+change_evens_to_zeros(range(10))
+def change_evens_to_zeros(list):
+    replace_zeros = [(v if ((v % 2) != 0) else 0) for v in list]
+    return replace_zeros
+change_evens_to_zeros(range(10))
+change_evens_to_zeros(range(20))

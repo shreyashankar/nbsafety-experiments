@@ -1,0 +1,5 @@
+import numpy as np
+a = np.random.randint(1, 10, 3)
+x = a
+us_x = x
+us_x

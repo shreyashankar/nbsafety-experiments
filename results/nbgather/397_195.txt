@@ -1,0 +1,7 @@
+emails = 'BartSimpson@gmail.com, LisaSimpson@stanford.edu, MILHOUSE@yahoo.com'
+parts = emails.split(',')
+data = DataFrame({'email':emails.split(',')})
+data.email = data.email.str.lower().str.strip()
+data['username'] = data.email.str.split('@').map(lambda x: x[0])
+data['domain'] = data.email.str.split('@').map(lambda x: x[1])
+data

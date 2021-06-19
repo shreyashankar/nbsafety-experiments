@@ -1,0 +1,12 @@
+import scipy as sp
+x=sp.linspace(0,4*sp.pi,20)
+y=sp.cos(x)
+a=sp.zeros([4,4])
+a=sp.zeros([4,4])
+a=sp.array(4,4,1)
+sx=1
+nx=10
+wx=0.2
+dx=sx/nx
+nx=sp.round_(wx/dx)
+nx

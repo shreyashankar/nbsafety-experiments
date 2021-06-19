@@ -1,0 +1,3 @@
+import numpy as np
+arr = np.random.randn(5, 4)
+arr.mean(axis=1)

@@ -1,0 +1,11 @@
+from collections import OrderedDict
+class DefaultOrderedDict(OrderedDict):
+    def __missing__(self, key):
+        self[key] = list()
+        return list()
+data = DefaultOrderedDict()
+for k in ['y', 'o', 't']:
+    print([(o[k] if (k in o) else (- 1)) for o in json_array])
+for k in ['y', 'o', 't']:
+    data[k].append([(o[k] if (k in o) else (- 1)) for o in json_array])
+data

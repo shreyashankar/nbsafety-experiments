@@ -1,0 +1,2 @@
+t1 = np.random.random((10, 3))
+pd.DataFrame(t1).set_index(0, inplace=False)

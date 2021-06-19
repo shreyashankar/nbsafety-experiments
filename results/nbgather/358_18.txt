@@ -1,0 +1,10 @@
+import pandas as pd
+lispoktab=pd.read_html( "https://pt.wikipedia.org/wiki/Lista_de_epis%C3%B3dios_de_Pok%C3%A9mon")
+df=lispoktab[0]
+df.columns=df.ix[0] # muda o nome das colunas
+df=df.drop(0) # elimina a primeira linha
+df['Episódios']=[episodio[0:-7] for episodio in df['Episódios']] # elimina parte final
+df["# Episódios"]=df["Último"]-df["Primeiro"]+1
+df['dblfaults'] = (df['player1 double faults'] / 
+                   df['player1 total points total'])
+df['dblfaults'].tail()

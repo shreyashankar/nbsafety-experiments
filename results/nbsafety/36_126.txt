@@ -1,0 +1,1 @@
+assert np.abs(test_rmse - 5.846401452163672) < 1e-3

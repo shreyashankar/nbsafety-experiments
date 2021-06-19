@@ -1,0 +1,4 @@
+import argparse
+parser = argparse.ArgumentParser(description='Add or manage JSON style notes', prog='dictnotes')
+args = parser.parse_args(['-a', 'asdas', 'bbbb', 'ccccc'])
+vars(args)

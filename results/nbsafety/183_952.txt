@@ -1,0 +1,1 @@
+bitenum.BitWiseEnum.bit8 == 128

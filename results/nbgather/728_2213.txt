@@ -1,0 +1,4 @@
+plt.show()
+plt.show()
+plt.show()
+plt.show()

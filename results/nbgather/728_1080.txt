@@ -1,0 +1,13 @@
+def rotate(l,n=1):
+    """ Shifts the index of all elements in the list, 
+        putting the n-th element at the beginning.
+    """
+    return l[-n:] + l[:-n]
+ew, geval = sci.sparse.linalg.eigsh(H.data,which='SR',k=1,tol=1e-5,maxiter=1e5,ncv=5,
+                                       return_eigenvectors=True)
+expect(rotate(xOpList, n=3), geval)
+q.expect(rotate(xOpList, n=3), geval)
+q.expect(q.tensor(rotate(xOpList, n=3)), geval)
+q.expect(q.tensor(rotate(xOpList, n=3)), Qobj(geval))
+q.expect(q.tensor(rotate(xOpList, n=3)), q.Qobj(geval))
+q.expect(q.tensor(rotate(xOpList, n=N/2)), q.Qobj(geval))

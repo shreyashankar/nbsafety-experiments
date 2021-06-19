@@ -1,0 +1,8 @@
+import ConfigParser
+c = ConfigParser.ConfigParser()
+c.read('/Users/escobedoj/dev/git/s3-policies/webprod/cgm-cloudtrail/086441151436-root.ini')
+c.sections()
+c.sections()
+c.items('s3:GetBucketAcl')
+c.read('/Users/escobedoj/dev/git/s3-policies/opsqa/cgm-jesco-test/opsqa-devjmp.ini')
+c.sections()

@@ -1,0 +1,44 @@
+from ipywidgets import interact, fixed
+def chi_squared(k, size=1):
+    """Return random numbers drawn from the chi-squared distribution.
+    
+    Parameters
+    ----------
+    k: int
+        The degrees of freedom of the distribution.
+    size: int
+        The number of random numbers to return as an array.
+    """
+    k = 7
+    X = 0.0
+    result = []
+    for s in range(size):
+        for i in range(k):
+            X += (np.random.normal(0,1))**2
+        result.append(X)
+    return result
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    sns.distplots(chi_squared(k,300))
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    sns.distplot(chi_squared(k,300))
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    sns.distplot(chi_squared(k,300))
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    sns.distplot(chi_squared(k,300))
+    plt.xlabel("Point Spread")
+    plt.ylabel("Frequency")
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    sns.distplot(chi_squared(k,300))
+    plt.xlabel("?????????????")
+    plt.ylabel("?????????????")
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    sns.distplot(chi_squared(k,300))
+    plt.xlabel("?????????????")
+    plt.ylabel("?????????????")
+interact(plot_chi_squared, k=(-1000, 1000, 10));

@@ -1,0 +1,33 @@
+def change_evens_to_zeros(list):
+    replace_zeros = [(v if ((v % 2) != 0) else 0) for v in list]
+    return replace_zeros
+change_evens_to_zeros(range(20))
+def change_evens_to_zeros(list):
+    replace_zeros = [(v if ((v % 2) != 0) else 0) for v in list]
+    return replace_zeros
+assert (change_evens_to_zeros(range(10)) == [0, 1, 0, 3, 0, 5, 0, 7, 0, 9])
+def change_evens_to_zeros(list):
+    numeric_types = {int, float, complex}
+    types = [type(v) for v in list]
+    types = [('numeric' if (t in numeric_types) else t) for t in types]
+    unique_types = set(types)
+    if (len(unique_types) != 1):
+        raise TypeError('All elements of the list must have the same type.')
+    else:
+        replace_zeros = [(v if ((v % 2) != 0) else 0) for v in list]
+    return replace_zeros
+assert (change_evens_to_zeros(range(10)) == [0, 1, 0, 3, 0, 5, 0, 7, 0, 9])
+assert (change_evens_to_zeros([1, 2, 3, 4, 'five']) == 'Can not transform list with non-numeric elements')
+def change_evens_to_zeros(list):
+    numeric_types = {int, float, complex}
+    types = [type(v) for v in list]
+    types = [('numeric' if (t in numeric_types) else t) for t in types]
+    unique_types = set(types)
+    if (len(unique_types) != 1):
+        raise TypeError('Can not transform list with non-numeric elements')
+    else:
+        replace_zeros = [(v if ((v % 2) != 0) else 0) for v in list]
+    return replace_zeros
+assert (change_evens_to_zeros([1, 2, 3, 4, 'five']) == 'Can not transform list with non-numeric elements')
+change_evens_to_zeros(range(10))
+change_evens_to_zeros([1,2,3,4,"five"])

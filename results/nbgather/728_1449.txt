@@ -1,0 +1,15 @@
+import numpy as np
+psi = q.tensor([np.random.rand(2) for i in range(6)])
+psi = q.tensor([q.Qobj(np.random.rand(2)) for i in range(6)])
+q.Qobj(np.random.rand(2))
+q.Qobj(np.random.rand(2).T)
+q.Qobj(np.random.rand(2))
+q.Qobj(np.random.rand(2).T)
+q.Qobj(np.random.rand(1,2))
+q.Qobj(np.random.rand(2,1))
+psi = q.tensor([q.Qobj(np.random.rand(2,1)) for i in range(6)])
+psi.norm()
+psi.full().reshape(8,8)
+np.linalg.svd(psi.full().reshape(8,8))
+uvd = np.linalg.svd(psi.full().reshape(8,8))
+uvd[0].shape

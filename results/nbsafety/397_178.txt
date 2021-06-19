@@ -1,0 +1,2 @@
+x = np.random.uniform((- 5), 5)
+fitx,fity = opt.curve_fit(f,x,y,p0=(-4,-2))

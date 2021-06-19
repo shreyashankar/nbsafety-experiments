@@ -1,0 +1,14 @@
+df = pd.read_table("HT_Sensor_dataset.dat", sep='\s+', header=0, index_col=None)
+df_data = pd.read_table("HT_Sensor_dataset.dat", sep='\s+', header=0, index_col=None)
+df_metadata = pd.read_table("HT_Sensor_metadata.dat", sep='\s+', header=0, index_col=None)
+df_metadata.head()
+vc = df_metadata['date'].value_counts()
+vc.head()
+vc.head()
+df_metadata_1 = df_metadata[df_metadata['date'] == vc.index[0]]
+df_metadata_1.sort_values(by='t0')
+import datetime
+str(datetime.timedelta(hours=tmp['time'].values[0]))
+df_metadata_1['date'].values[0] + str(datetime.timedelta(hours=tmp['time'].values[0]))
+df_metadata_1['date'].values[0] + " " + str(datetime.timedelta(hours=tmp['time'].values[0]))
+str(datetime.timedelta(hours=tmp['time'].values[0]))

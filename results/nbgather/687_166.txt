@@ -1,0 +1,17 @@
+bools[0] = False
+cords = cords+[10000]
+cords = cords+[10000,10000]
+cords = cords+[10000,10000]
+cords = cords+[10000,10000]
+cords = cords+[10000,10000]
+cords = cords+[10000,10000,10000]
+cords = cords+[10000,10000,10000]
+cords = cords+[10000,10000]
+cords = cords+[10000,10000]
+for i,b in enumerate(bools[:-2]):
+    if b==False:
+        if cords[i]-cords[i-1] < cords[i+1]-cords[i]:
+            n += cords[i]-cords[i-1]
+        else:
+            n += cords[i+1]-cords[i]
+print(n)
