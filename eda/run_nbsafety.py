@@ -187,6 +187,7 @@ def run_cells(cell_num_to_code, verify_slicer=False):
 
         slice_size = len(cell_deps.keys())
         slice_cells = "\n".join(cell_deps.values())
+        # Filter out whitespace
         slice_cells = [
             elem for elem in slice_cells.split("\n") if elem.strip() != ""
         ]
