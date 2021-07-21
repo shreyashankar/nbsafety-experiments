@@ -14,7 +14,6 @@ data = np.random.choice(["H","T"], n)
 data = np.random.choice(["H","T"], n)
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -24,7 +23,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -35,7 +33,6 @@ def bootstrap_function(data, f, n):
         np.append(result, np.array([np.random.choice(data) for r in range(data)]))
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -45,7 +42,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -57,7 +53,6 @@ def bootstrap_function(data, f, n):
     return result
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -67,7 +62,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -75,14 +69,12 @@ def bootstrap_function(data, f, n):
     """
     result = np.array(None)
     for sample in range(n):
-        
         resample = np.array([np.random.choice(data) for r in range(data)])
         resample_functioned = f()
         np.append(result, )
     return result
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -92,7 +84,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -100,14 +91,12 @@ def bootstrap_function(data, f, n):
     """
     result = np.array(None)
     for sample in range(n):
-        
         resample = np.array([np.random.choice(data) for r in range(data)])
         resample_functioned = f()
         np.append(result, resample_functioned)
     return result
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -117,7 +106,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -125,14 +113,12 @@ def bootstrap_function(data, f, n):
     """
     result = np.array(None)
     for sample in range(n):
-        
         resample = np.array(np.random.choice(data) for r in range(data))
         resample_functioned = f()
         np.append(result, resample_functioned)
     return result
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -142,7 +128,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -150,14 +135,12 @@ def bootstrap_function(data, f, n):
     """
     result = np.array(None)
     for sample in range(n):
-        
         resample = np.array( [np.random.choice(data) for r in range(len(data))] )
         resample_functioned = f()
         np.append(result, resample_functioned)
     return result
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -167,7 +150,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -175,14 +157,12 @@ def bootstrap_function(data, f, n):
     """
     result = np.array(None)
     for sample in range(n):
-        
         resample = np.array( [np.random.choice(data) for r in range(len(data))] )
         resample_functioned = f(resample)
         np.append(result, resample_functioned)
     return result
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -192,7 +172,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -209,7 +188,6 @@ def bootstrap_data(data):
     return np.array( [np.random.choice(data) for r in range(len(data))] )
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -219,7 +197,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray
@@ -245,7 +222,6 @@ def bootstrap_data(data):
     return np.array( [np.random.choice(data) for r in range(len(data))] )
 def bootstrap_function(data, f, n):
     """Compute a function on data bootstrapped n times.
-    
     Parameters
     ----------
     data: ndarray
@@ -255,7 +231,6 @@ def bootstrap_function(data, f, n):
         argument (the data) and return a float.
     n: int
         The number of times to resample the data
-        
     Returns
     -------
     result: ndarray

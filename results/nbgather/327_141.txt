@@ -4,7 +4,6 @@ parser.add_argument(
     )
 parser = argparse.ArgumentParser(
         description="Add or manage JSON style notes", prog="dictnotes"
-
         )
 parser.add_argument(
         "-a", "--add", nargs="+", type=str, dest="addentry", help="Add a new entry",

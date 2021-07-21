@@ -71,7 +71,8 @@ db.all(sql, [], (err, rows) => {
         return currSlice;
     });
 
-    // console.log(nbgatherSlice);
+    // Filters out any empty lines
+    nbgatherSlice = nbgatherSlice.join("\n").split(/\n/).filter(x => x.trim().length > 0);
 
     let numLinesNeeded = nbgatherSlice.length;
     fs.appendFileSync('nbgather_stats.txt', "(" + traceID + ", " + sessionID + ", " + numLinesNeeded + ")\n");

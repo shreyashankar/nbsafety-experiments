@@ -1,12 +1,10 @@
 from ipywidgets import interact
 def char_probs(s):
     """Find the probabilities of the unique characters in the string s.
-    
     Parameters
     ----------
     s : str
         A string of characters.
-    
     Returns
     -------
     probs : dict
@@ -15,114 +13,94 @@ def char_probs(s):
     """
     dic = {}
     count = len(s)
-    
     for ele in s:
         if ele in dic:
             dic[ele] += 1
         else:
             dic[ele] = 1
-    
     for keys in dic:
         dic[keys] /= count
-        
     return dic
-        
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_prbs(d)
     dic = np.array(dic)
-    
     return np.log2(dic[0], dic[1])
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     dic = np.array(dic)
-    
     return np.log2(dic[0], dic[1])
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     dic = np.array(dic)
-    
     arr = np.log2(dic[0],dic[1])
     return arr
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     r1,r2 = np.array(dic)
-    
     arr = np.log2(r1,r2)
     return arr
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     r1 = np.array(dic)
-    
     arr = np.log2(r1[1])
     return arr
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     r1 = np.array(dic)
-    
     arr = np.log2(r1)
     return arr
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     arr = [dic[ele] for ele in dic]
-    
-    
     arr = np.log2(arr)
     return arr
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     arr = [dic[ele] for ele in dic]
-    
     arr = np.log2(arr)
     return np.array(arr)
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     dic = char_probs(d)
     arr = [dic[ele] for ele in dic]
-    
     r = np.log2(arr)
     return r
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     arr = [d[ele] for ele in d]
-    
     r = np.log2(arr)
     return r
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     arr = [d[ele] for ele in d]
-    
     r = np.log2(arr)
     return r
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     arr = [d[ele] for ele in d]
-    
     r = np.log2(arr)* np.pi * -1
     return r
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     arr = [d[ele] for ele in d]
-    
     r = np.log2(arr)* arr
     return r
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     arr = [d[ele] for ele in d]
-    
     r = np.log2(arr)* arr*-1
     return r
 def entropy(d):
     """Compute the entropy of a dict d whose values are probabilities."""
     arr = [d[ele] for ele in d]
-    
     r = np.log2(arr)* arr*-1
     r = r.sum()
     return r

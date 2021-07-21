@@ -9,7 +9,6 @@ long_series = pd.Series(np.random.randn(1000))
 df = pd.DataFrame({'one':pd.Series(np.random.randn(3),index=['a','b','c']),
                    'two':pd.Series(np.random.randn(4),index=['a','b','c','d']),
                    'three':pd.Series(np.random.randn(3),index=['b','c','d'])
-        
     })
 index = pd.date_range('1/1/2000', periods=8)
 s=pd.Series(np.random.randn(5), index=['a','b','c','d','e'])
@@ -21,7 +20,6 @@ long_series = pd.Series(np.random.randn(1000))
 df = pd.DataFrame({'one':pd.Series(np.random.randn(3),index=['a','b','c']),
                    'two':pd.Series(np.random.randn(4),index=['a','b','c','d']),
                    'three':pd.Series(np.random.randn(3),index=['b','c','d'])
-        
     })
 row = df.ix[1]
 column = df['two']
@@ -180,7 +178,6 @@ df = pd.DataFrame({'string': list('abc'),
                    'bool2':[False,True,False],
                    'dates':pd.date_range('now',periods=3).values,
                    'category':pd.Series(list("ABC")).astype('category')
-        
     })
 df['uint64'] = np.arange(3,6).astype('u8')
 def subdtypes(type):

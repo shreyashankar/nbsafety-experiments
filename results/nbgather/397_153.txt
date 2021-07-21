@@ -1,6 +1,5 @@
 def uniform2(mu, sigma, size=1):
     """Return uniform random variates with mean mu and standard dev sigma."""
-    
     b = np.sqrt(sigma**2 + mu)
     return b
 def uniform2(mu, sigma, size=1):
@@ -23,7 +22,6 @@ def uniform2(mu, sigma, size=1):
     return var
 def normal2(mu, sigma, size=1):
     """Return random variates from N(mu, sigma^2) using the CLT.
-    
     Parameters
     ----------
     mu : float
@@ -44,7 +42,6 @@ def normal2(mu, sigma, size=1):
     return np.array(r)
 def normal2(mu, sigma, size=1):
     """Return random variates from N(mu, sigma^2) using the CLT.
-    
     Parameters
     ----------
     mu : float
@@ -59,12 +56,10 @@ def normal2(mu, sigma, size=1):
     Add μ
     As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
     """
-    
     r = uniform2(mu,sigma)
     return np.array(r)
 def plot_cdf(data, **kwargs):
     """Plot the CDF of a 1d distribution of data.
-    
     You can use kwargs to pass keyword arguments to the Matplotlib plotting function.
     """
     m = len(data)

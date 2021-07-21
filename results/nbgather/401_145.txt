@@ -5,7 +5,6 @@ class Cell:
         self.synapses = []
         self.build_morphology(filename)
         self.biophysics()
-        
     def build_morphology(self, filename):
         h.load_file('import3d.hoc')
         h.load_file('stdlib.hoc')
@@ -14,7 +13,6 @@ class Cell:
         morph_reader.input(filename)
         i3d = h.Import3d_GUI(morph_reader, 0)
         i3d.instantiate(self) # Notice this change to be able to instantiate several cells
-    
     def biophysics(self):
         for sec in h.allsec():
             sec.Ra = 100    # Axial resistance in Ohm * cm
@@ -23,27 +21,23 @@ class Cell:
             for seg in sec:
                 seg.pas.g = 0.00003
                 seg.pas.e = -75
-        
         # Insert passive current in the dendrite
         for sec in self.soma:
             sec.insert('hh')
             for seg in sec:
                 seg.hh.gnabar = 0.12  # Sodium conductance in S/cm2
                 seg.hh.gkbar = 0.036  # Potassium conductance in S/cm2
-        
         if hasattr(self, 'apic'):
             for sec in self.apic:
                 sec.insert('hh')
                 for seg in sec:
                     seg.hh.gnabar = 0.12  # Sodium conductance in S/cm2
                     seg.hh.gkbar = 0.036  # Potassium conductance in S/cm2
-        
         for sec in self.dend:
             sec.insert('hh')
             for seg in sec:
                 seg.hh.gnabar = 0.12  # Sodium conductance in S/cm2
                 seg.hh.gkbar = 0.036  # Potassium conductance in S/cm2
-                
         for sec in self.axon:
             sec.insert('hh')
             for seg in sec:    
@@ -51,25 +45,19 @@ class Cell:
                 seg.hh.gkbar = 0.036  # Potassium conductance in S/cm2
 def connect(source, target, weight = None, delay = 5, source_sec = None, source_neurite = 'axon', target_sec = None, target_neurite = 'dend',decay_time = 0.1, V_rev = 0):
     rng = np.random.default_rng()
-    
     if weight is None:
         weight = rng.uniform() # random weight
-    
     target_neurite_ = getattr(target, target_neurite)
     if target_sec is None:
         target_sec = rng.integers(0,len(target_neurite_)) # random dendritic section
-    
     source_neurite_ = getattr(source, source_neurite)
     if source_sec is None:
         source_sec = rng.integers(0,len(source_neurite_)) # random axonal section
-    
     target_syn = h.ExpSyn(target_neurite_[target_sec](0.5))
     target.synapses.append(target_syn) # store synapse
-    
     netcon = h.NetCon(source_neurite_[source_sec](0.5)._ref_v, target_syn, sec=source_neurite_[source_sec])
     netcon.weight[0] = weight
     netcon.delay = delay
-    
     print('Connected cells %s -> %s with weight %g and delay %g, from %s[%d] to %s[%d]' % (source.name,target.name,weight,delay,source_neurite,source_sec,target_neurite,target_sec))
     return netcon
 exc_pairs = [[e1,e2],[e1,e3],[e2,e3]]
@@ -90,57 +78,41 @@ for pair in exc_pairs:
                     nc = connect(target, source, weight=G_ee, delay=Latency_ee, delay_std=Latency_ee_std, target_neurite=neurite, decay_time=Decay_ee, decay_std=Decay_ee_std)
 def connect(source, target, weight = None, weightStd = 1, delay = 5, delayStd = 1, source_sec = None, source_neurite = 'axon', target_sec = None, target_neurite = 'dend',decay_time = 0.1, decay_std = 1, V_rev = 0):
     rng = np.random.default_rng()
-    
     if weight is None:
         weight = rng.uniform() # random weight
     else:
         weight = rng.normal(weight,weightStd)
     if weight < 0:
         weight = 0
-        
     delay = rng.normal(delay,delayStd)
     if delay < 0:
         delay = 0
-    
     decay_time = rng.normal(decay_time,decay_std)
     if decay_time < 0:
         decay_time = 0
-    
-    
     target_neurite_ = getattr(target, target_neurite)
     if target_sec is None:
         target_sec = rng.integers(0,len(target_neurite_)) # random dendritic section
-    
     source_neurite_ = getattr(source, source_neurite)
     if source_sec is None:
         source_sec = rng.integers(0,len(source_neurite_)) # random axonal section
-    
     target_syn = h.ExpSyn(target_neurite_[target_sec](0.5))
-    
     target_syn.e = V_rev
     target_syn.tau = decay_time
-    
     target.synapses.append(target_syn) # store synapse
-    
     netcon = h.NetCon(source_neurite_[source_sec](0.5)._ref_v, target_syn, sec=source_neurite_[source_sec])
     netcon.weight[0] = weight
     netcon.delay = delay
-    
     print('Connected cells %s -> %s with weight %g and delay %g, from %s[%d] to %s[%d]' % (source.name,target.name,weight,delay,source_neurite,source_sec,target_neurite,target_sec))
     return netcon
 def getTargetNeurites(source,target):
-    
     type_index = {'excitatory':0, 'inhibitory':1}
-    
     source_type_idx, target_type_idx = type_index[source.type], type_index[target.type]
-    
     contactList = []
-    
     if target.type == 'inhibitory':
         neuriteList = ['soma','dend']
     else:
         neuriteList = ['soma','dend','apic']
-        
     for n,neurite in enumerate(neuriteList):
         contacts = expected_contacts[source_type_idx, target_type_idx, n]
         contact_std = expected_contacts_std[source_type_idx, target_type_idx, n]
@@ -149,10 +121,7 @@ def getTargetNeurites(source,target):
         if contacts < 0:
             contacts = 0
     contactList.append(contacts)
-
-        
     return neuriteList, contactList
-    
 exc_pairs = [[e1,e2],[e1,e3],[e2,e3]]
 for pair in exc_pairs:
     if rng.random() < P_ee_pair:
@@ -181,18 +150,13 @@ for i, source in enumerate(cells):
             for k in range(0,contactList[n]):
                 nc = connect(target, source, weight=G_i, weightStd=G_i_std, target_neurite=neurite, decay_time=Decay_i, decay_std=Decay_i_std, V_rev = Vrev_i)
 def getTargetNeurites(source,target):
-    
     type_index = {'excitatory':0, 'inhibitory':1}
-    
     source_type_idx, target_type_idx = type_index[source.type], type_index[target.type]
-    
     contactList = []
-    
     if target.type == 'inhibitory':
         neuriteList = ['soma','dend']
     else:
         neuriteList = ['soma','dend','apic']
-        
     for n,neurite in enumerate(neuriteList):
         contacts = expected_contacts[source_type_idx, target_type_idx, n]
         contact_std = expected_contacts_std[source_type_idx, target_type_idx, n]
@@ -201,10 +165,7 @@ def getTargetNeurites(source,target):
         if contacts < 0:
             contacts = 0
         contactList.append(contacts)
-
-        
     return neuriteList, contactList
-    
 for pair in exc_pairs:
     if rng.random() < P_ee_pair:
         if rng.random() > P_ee_unidirectional:

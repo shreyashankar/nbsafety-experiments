@@ -2,7 +2,6 @@ housing = pd.io.parsers.read_csv('housing.txt', sep='\s+')
 corr = housing.corr()
 def plotScatter(df, target, cols=3):
     """ Plot scatter plots for each attribute against target attribute
-    
     inputs:
     -------
     * df     - DataFrame of data
@@ -11,8 +10,6 @@ def plotScatter(df, target, cols=3):
     """
     rows = int(np.ceil(df.shape[-1]/3.0))
     f, axes = plt.subplots(rows, cols)
-
-    
     for ix, attrib in enumerate(housing.columns):
         if attrib == target:
             continue
@@ -21,23 +18,17 @@ def plotScatter(df, target, cols=3):
         axes[row, col].scatter(df[attrib], df[target], c='gray', s=50)
         axes[row, col].set_xlabel(attrib, fontsize=12)
         axes[row, col].set_ylabel(target, fontsize=12) 
-        
-        
     f.tight_layout()
-
 np.abs(corr.sort(columns=['crime', 'residential']))
 def LR_solve(X, y):
     """ Solves a linear regression problem.
-    
     params:
     -------
     * X - Input matrix where each row corresponds to an example.
     * y - Target values
-    
     returns:
     --------
     * w - Vector of fitting coefficients for least squares fit
-    
     notes:
     ------
     * A^*A\hat{x} = A^*b
@@ -48,43 +39,33 @@ def LR_solve(X, y):
     else:
         A = np.hstack( (np.ones((X.shape[0],1)), np.expand_dims(X,1)) )
     rtn = np.linalg.lstsq(A, y)
-    
     return rtn[0]
 def LR_predict(X, w):
     """ Returns prediction for input data using least squares weights w.
-    
     params:
     -------
     * X - Input matrix of test data
     * w - Weights for least squares fit
-    
     returns:
     --------
     * y - Predictions using LSF coefficients w
     """
     rtn = np.zeros((X.shape[0],))
-    
-    
     if len(X.shape) == 2:
  #       print 'Making prediction using %d weights' % len(w)
         rtn = w[0]
         for i in np.arange(1,len(w)):
             # Weights have extra term compared to data (w0) so there is an offset
             rtn += X[:,i-1]*w[i]
-       
     else:
 #    print 'Making prediction using %d weights' % 2
         rtn = w[0] + X[:]*w[1]
-    
-    
     return rtn
 def extendX(X):
     """ Expands X to include all linear and degree two polynomials.
-    
     params:
     -------
     X - Matrix of features
-    
     returns:
     expX - Expanded X that includes all linear *and* degree two polynomials
     """
@@ -95,47 +76,40 @@ def extendX(X):
     expX = np.ones( (rows, cols) )
     expX[:, 1:X.shape[1]+1] = X
     expCount = -1
-    
     for m in np.arange(X.shape[1]):
         for n in np.arange(m, X.shape[1]):
             expCount = expCount + 1
             expX[:,startExp+expCount] = X[:,m]*X[:,n]
-            
     return expX
 def predict(X, w):
     """ Predict class using weights """
     yhat = np.zeros( (X.shape[0],))
     h = sigmoid(np.dot(X, w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
     yhat = np.zeros( (X.shape[0],))
     h = sigmoid(np.dot(X, w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
     yhat = np.zeros( (X.shape[0],))
     h = sigmoid(np.dot(X, w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
     yhat = np.zeros( (X.shape[0],))
     h = sigmoid(np.dot(X, w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
     yhat = np.zeros( (X.shape[0],))
     h = sigmoid(np.dot(X, w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -143,7 +117,6 @@ def predict(X, w):
     X = np.r_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -151,21 +124,18 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 np.array(np.random.randint(12)).reshape(6,2)
 np.array(np.random.randint(12))
 def predict_class(X, mu, sigma, priors):
     a0 = np.log(priors[0]/priors[1]) - 0.5*(mu[0,:] + mu[1,:]).T*np.linalg.inv(sigma)*(mu[0,:]-mu[1,:])
     a = np.linalg.inv(sigma)*(mu[0,:] - mu[1,:])
-    
     pred = np.zeros((X.shape[0],))
     for row in np.arange(X.shape[0]):
         if (a0 + np.sum( a*X[row,:] )) > 0:
             pred[row] = 1
         else:
             pred[row] = 0
-            
     return pred                                                                           
 def predict(X, w):
     """ Predict class using weights """
@@ -173,7 +143,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -181,7 +150,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -189,7 +157,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -197,7 +164,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -205,7 +171,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -213,7 +178,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -221,7 +185,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -229,7 +192,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -237,7 +199,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -245,7 +206,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -253,7 +213,6 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
@@ -261,14 +220,12 @@ def predict(X, w):
     X = np.c_[ np.ones(X.shape[0],), X]
     h = sigmoid(X.dot(w))
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 def predict(X, w):
     """ Predict class using weights """
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -276,7 +233,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -284,7 +240,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -292,7 +247,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -300,7 +254,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -308,7 +261,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -316,7 +268,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -324,7 +275,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -332,7 +282,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w = main2_2()
 def predict(X, w):
@@ -340,7 +289,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat
 tr_y, tst_y, w, tr_h, te_h = main2_2()
 def predict(X, w):
@@ -348,7 +296,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(X > 0.5, 1, 0)
-        
     return yhat, h
 tr_y, tst_y, w, tr_h, te_h = main2_2()
 def predict(X, w):
@@ -356,7 +303,6 @@ def predict(X, w):
     yhat = np.zeros( (X.shape[0],))
     h = calc_yhat(X, w)
     yhat = np.where(h > 0.5, 1, 0)
-        
     return yhat, h
 def predict(X, w):
     """ Predict class using weights """
@@ -364,7 +310,6 @@ def predict(X, w):
     h = calc_yhat(X, w)
     yhat[h > 0.5] = 1
     yhat[h <= 0.5] = 0 
-        
     return yhat, h
 np.mean(train_y != train_b)
 np.mean(tr_y != train_b)
@@ -376,26 +321,21 @@ def main2_2():
     train_b = train[:, -1]
     test_X = test[:, :-1]
     test_b = test[:, -1]
-    
     # Find optimal weights
     nSamples, nFeatures = train_X.shape
     w = np.ones((nFeatures + 1,))
     w = GLR(train_X, train_b, w, alpha=2, steps=1, annealedLearning=True)
-    
     # Predictions
     train_y, tr_h = predict(train_X, w)
     test_y, te_h = predict(test_X, w)
     #print 'Train_y: ', train_y[:2]
     #print 'Test_y: ', test_y[:2]
-    
     # Test
     train_errors = np.mean(test_y != test_b)
     test_errors = np.mean(train_y != train_b) 
-    
     #print 'Test error rate: ', test_errors
     #print 'Train errors rate: ', train_errors
     #print ''
-    
     return train_y, test_y, w, tr_h, te_h
 def predict(X, w):
     """ Predict class using weights """
@@ -403,7 +343,6 @@ def predict(X, w):
     h = calc_yhat(X, w)
     yhat[h > 0.5] = 1
     yhat[h <= 0.5] = 0 
-        
     return yhat, h
 def main2_2():
     # Load data
@@ -413,26 +352,21 @@ def main2_2():
     train_b = train[:, -1]
     test_X = test[:, :-1]
     test_b = test[:, -1]
-    
     # Find optimal weights
     nSamples, nFeatures = train_X.shape
     w = np.ones((nFeatures + 1,))
     w = GLR(train_X, train_b, w, alpha=2, steps=1, annealedLearning=True)
-    
     # Predictions
     train_y, tr_h = predict(train_X, w)
     test_y, te_h = predict(test_X, w)
     #print 'Train_y: ', train_y[:2]
     #print 'Test_y: ', test_y[:2]
-    
     # Test
     train_errors = np.mean(test_y != test_b)
     test_errors = np.mean(train_y != train_b) 
-    
     #print 'Test error rate: ', test_errors
     #print 'Train errors rate: ', train_errors
     #print ''
-    
     return train_y, test_y, w, tr_h, te_h
 def predict(X, w):
     """ Predict class using weights """
@@ -440,7 +374,6 @@ def predict(X, w):
     h = calc_yhat(X, w)
     yhat[h > 0.5] = 1
     yhat[h <= 0.5] = 0 
-        
     return yhat, h
 np.mean(tr_y != train_b)
 def predict(X, w):
@@ -449,7 +382,6 @@ def predict(X, w):
     h = calc_yhat(X, w)
     yhat[h > 0.5] = 1
     yhat[h <= 0.5] = 0 
-        
     return yhat, h
 def predict(X, w):
     """ Predict class using weights """
@@ -457,7 +389,6 @@ def predict(X, w):
     h = calc_yhat(X, w)
     yhat[h > 0.5] = 1
     yhat[h <= 0.5] = 0 
-        
     return yhat, h
 def main2_2_2():
     # Load data
@@ -467,7 +398,6 @@ def main2_2_2():
     train_b = train[:, -1]
     test_X = test[:, :-1]
     test_b = test[:, -1]
-    
     # Find optimal weights
     nSamples, nFeatures = train_X.shape
     w = np.ones((nFeatures + 1,))
@@ -477,22 +407,17 @@ def main2_2_2():
     train_errors = np.zeros( (numIter,))
     for i in np.arange(steps/50):
         w = GLR(train_X, train_b, w, alpha=2, steps=steps, annealedLearning=True)
-    
         # Predictions
         train_y, tr_h = predict(train_X, w)
         test_y, te_h = predict(test_X, w)
         #print 'Train_y: ', train_y[:2]
         #print 'Test_y: ', test_y[:2]
-    
         # Test
         train_errors[i] = np.mean(test_y != test_b)
         test_errors[i] = np.mean(train_y != train_b) 
-    
         #print 'Test error rate: ', test_errors[i]
         #print 'Train errors rate: ', train_errors[i]
         #print 'weights: ', w
-    
-    
     # Plot
     fig, ax = plt.subplots()
     ax.plot(np.arange(numIter), test_errors, 'r', marker='o', label='Test')
@@ -508,7 +433,6 @@ def main2_2_2():
     train_b = train[:, -1]
     test_X = test[:, :-1]
     test_b = test[:, -1]
-    
     # Find optimal weights
     nSamples, nFeatures = train_X.shape
     w = np.ones((nFeatures + 1,))
@@ -518,22 +442,17 @@ def main2_2_2():
     train_errors = np.zeros( (numIter,))
     for i in np.arange(steps/50):
         w = GLR(train_X, train_b, w, alpha=2, steps=steps, annealedLearning=True)
-    
         # Predictions
         train_y, tr_h = predict(train_X, w)
         test_y, te_h = predict(test_X, w)
         #print 'Train_y: ', train_y[:2]
         #print 'Test_y: ', test_y[:2]
-    
         # Test
         train_errors[i] = np.mean(test_y != test_b)
         test_errors[i] = np.mean(train_y != train_b) 
-    
         #print 'Test error rate: ', test_errors[i]
         #print 'Train errors rate: ', train_errors[i]
         #print 'weights: ', w
-    
-    
     # Plot
     fig, ax = plt.subplots()
     ax.plot(np.arange(numIter), test_errors, 'r', marker='o', label='Test')
@@ -549,7 +468,6 @@ def main2_2_2():
     train_b = train[:, -1]
     test_X = test[:, :-1]
     test_b = test[:, -1]
-    
     # Find optimal weights
     nSamples, nFeatures = train_X.shape
     w = np.ones((nFeatures + 1,))
@@ -559,22 +477,17 @@ def main2_2_2():
     train_errors = np.zeros( (numIter,))
     for i in np.arange(steps/50):
         w = GLR(train_X, train_b, w, alpha=2, steps=steps, annealedLearning=True)
-    
         # Predictions
         train_y, tr_h = predict(train_X, w)
         test_y, te_h = predict(test_X, w)
         #print 'Train_y: ', train_y[:2]
         #print 'Test_y: ', test_y[:2]
-    
         # Test
         train_errors[i] = np.mean(test_y != test_b)
         test_errors[i] = np.mean(train_y != train_b) 
-    
         #print 'Test error rate: ', test_errors[i]
         #print 'Train errors rate: ', train_errors[i]
         #print 'weights: ', w
-    
-    
     # Plot
     fig, ax = plt.subplots()
     ax.plot([50*x for x in range(1,numIter+1)], test_errors, 'r', marker='o', label='Test')
@@ -584,12 +497,10 @@ def main2_2_2():
     return train_y, test_y, w, tr_h, te_h
 def calc_ccm(X, y):
     """ Calculates class conditional mean 
-    
     inputs:
     -------
     * X - Data
     * y - labels
-    
     returns:
     --------
     * mu - MLE of means of class conditional densities
@@ -597,10 +508,8 @@ def calc_ccm(X, y):
     classes = np.unique(y)
     nClasses = len(classes)
     mu = np.zeros((nClasses,X.shape[1]))
-    
     for i, cls in enumerate(classes):
         mu[i] = X[np.where(y==cls)[0],:].mean(axis=0)
-        
     return mu
 def calc_cov(X,y, mu):
     """ Calculate shared covariance matrix"""
@@ -611,16 +520,13 @@ def calc_cov(X,y, mu):
         x = X[np.where(y==cls)[0], :]
         sigma += np.dot((x - mu[i,:]).T,(x - mu[i,:]) )
     sigma /= (X.shape[0] - nClasses)
-    
     return sigma
 def calc_ccm(X, y):
     """ Calculates class conditional mean 
-    
     inputs:
     -------
     * X - Data
     * y - labels
-    
     returns:
     --------
     * mu - MLE of means of class conditional densities
@@ -628,10 +534,8 @@ def calc_ccm(X, y):
     classes = np.unique(y)
     nClasses = len(classes)
     mu = np.zeros((nClasses,X.shape[1]))
-    
     for i, cls in enumerate(classes):
         mu[i] = X[np.where(y==cls)[0],:].mean(axis=0)
-        
     return mu
 def calc_cov(X,y, mu):
     """ Calculate shared covariance matrix"""
@@ -642,23 +546,19 @@ def calc_cov(X,y, mu):
         x = X[np.where(y==cls)[0], :]
         sigma += np.dot((x - mu[i,:]).T,(x - mu[i,:]) )
     sigma /= (X.shape[0] - nClasses)
-    
     return sigma
 def max_likelihood(X, y):
     """ Calculates class conditional estimates.
-    
     params:
     -------
     * X - Data
     * y - labels
-    
     returns:
     --------
     * thetas - Estimates of model parameters
     """
     mu = calc_ccm(X, y)
     sigma = calc_cov(X, y, mu)
-    
     return mu, sigma
 def calc_priors(X, y):
     classes = np.unique(y)
@@ -683,17 +583,14 @@ def main4():
     train_X = train[:, :-1]    
     train_b = train[:, -1]
     test_b = test[:,-1]
-    
     # Calc stats
     train_mu, train_sigma = max_likelihood(train_X, train_b)
     train_priors = calc_priors(train_X, train_b)
     test_mu, test_sigma = max_likelihood(test_X, test_b)
     test_priors = calc_priors(test_X, test_b)
-    
     # Make predictions
     train_yhat = predict_class(train_X, train_mu, train_sigma, train_priors)
     test_yhat = predict_class(test_X, test_mu, test_sigma, test_priors)
-    
     # Print errors
     'Training classification error rate: %f' % calc_errors(train_yhat, train_b)
     'Test classification error rate: %f' % calc_errors(test_yhat, test_b) 
@@ -705,17 +602,14 @@ def main4():
     train_X = train[:, :-1]    
     train_b = train[:, -1]
     test_b = test[:,-1]
-    
     # Calc stats
     train_mu, train_sigma = max_likelihood(train_X, train_b)
     train_priors = calc_priors(train_X, train_b)
     test_mu, test_sigma = max_likelihood(test_X, test_b)
     test_priors = calc_priors(test_X, test_b)
-    
     # Make predictions
     train_yhat = predict_class(train_X, train_mu, train_sigma, train_priors)
     test_yhat = predict_class(test_X, test_mu, test_sigma, test_priors)
-    
     # Print errors
     'Training classification error rate: %f' % calc_errors(train_yhat, train_b)
     'Test classification error rate: %f' % calc_errors(test_yhat, test_b) 
@@ -727,17 +621,14 @@ def main4():
     train_X = train[:, :-1]    
     train_b = train[:, -1]
     test_b = test[:,-1]
-    
     # Calc stats
     train_mu, train_sigma = max_likelihood(train_X, train_b)
     train_priors = calc_priors(train_X, train_b)
     test_mu, test_sigma = max_likelihood(test_X, test_b)
     test_priors = calc_priors(test_X, test_b)
-    
     # Make predictions
     train_yhat = predict_class(train_X, train_mu, train_sigma, train_priors)
     test_yhat = predict_class(test_X, test_mu, test_sigma, test_priors)
-    
     # Print errors
     'Training classification error rate: %f' % calc_errors(train_yhat, train_b)
     'Test classification error rate: %f' % calc_errors(test_yhat, test_b) 

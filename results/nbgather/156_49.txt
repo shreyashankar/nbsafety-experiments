@@ -1,5 +1,4 @@
 def change_evens_to_zeros(list):
     replace_zeros = [v if v % 2 != 0 else 0 for v in list]
     return replace_zeros
-    
 change_evens_to_zeros(range(20))

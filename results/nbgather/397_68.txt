@@ -1,6 +1,5 @@
 def gen_files(files):
     iter_files = iter(files)
-    
     while True:
         try:
             file = next(iter_files)

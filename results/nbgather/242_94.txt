@@ -1,7 +1,6 @@
 from ipywidgets import interact, fixed
 def chi_squared(k, size=1):
     """Return random numbers drawn from the chi-squared distribution.
-    
     Parameters
     ----------
     k: int

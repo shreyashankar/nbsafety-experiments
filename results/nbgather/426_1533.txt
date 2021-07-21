@@ -9,21 +9,17 @@ def plot_scaling(old, new):
     sns.set(font_scale=2)
     sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -36,21 +32,17 @@ def plot_scaling(old, new):
     sns.set(font_scale=2)
     sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -63,21 +55,17 @@ def plot_scaling(old, new):
     sns.set(font_scale=2)
     sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -90,21 +78,17 @@ def plot_scaling(old, new):
     sns.set(font_scale=3)
     sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -117,21 +101,17 @@ def plot_scaling(old, new):
     sns.set(font_scale=3)
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -146,21 +126,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':3})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -175,21 +151,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':3})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -204,21 +176,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':3})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -233,21 +201,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':"3"})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -262,21 +226,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -291,21 +251,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -321,21 +277,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -352,21 +304,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -383,21 +331,17 @@ def plot_scaling(old, new):
     sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -415,21 +359,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -447,21 +387,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -479,21 +415,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -513,21 +445,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -549,21 +477,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -584,21 +508,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -619,21 +539,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o')
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -647,23 +563,18 @@ def plot_scaling_bars(old, new):
     sns.set(font_scale=2)
     sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old.mean(level='sim')
     new_mean = new.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
-    
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
 #    plt.errorbar(procs, old_mean.values, label='SELFE v3.1', marker='o')
     plt.errorbar(procs, old_mean.values, yerr=[old.min(level='sim').values, old.max(level='sim').values], label='SELFE v3.1', marker='o')
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1000])
     ax.set_yscale('log')
@@ -681,21 +592,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=20)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', linewidth=3)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -715,21 +622,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=20)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal', markersize=20)
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -749,21 +652,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=20)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o')
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal', markersize=20)
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -783,21 +682,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=20)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o', markersize=20)
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -817,21 +712,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=15)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o', markersize=15)
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -851,21 +742,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=15)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o', markersize=15)
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -885,21 +772,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(10,10))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=15, linewidth=3)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o', markersize=15, linewidth=3)
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -919,21 +802,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(5,5))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=15, linewidth=3)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o', markersize=15, linewidth=3)
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -953,21 +832,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(8,8))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=15, linewidth=3)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o', markersize=15, linewidth=3)
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')
@@ -987,21 +862,17 @@ def plot_scaling(old, new):
     #sns.set_style('darkgrid', {'axes.linewidth':'3'})
     #sns.set_style('whitegrid')
     f = plt.figure(figsize=(8,8))
-    
     old_mean = old_pd.mean(level='sim')
     new_mean = new_pd.mean(level='sim')
     procs = [2**n for n in range(11)]
-    
     plt.plot(procs, old_mean.values, label='SELFE v3.1', marker='o', markersize=15, linewidth=3)
     old_1cpu = old_mean.values[0]
     old_ideal = calc_ideal(old_1cpu)
     plt.plot(procs, old_ideal, color='grey', linestyle='--', label='SELFE v3.1 ideal')
-             
     new_1cpu = new_mean.values[0]
     new_ideal = calc_ideal(new_1cpu)
     plt.plot(procs, new_mean.values, label='SELFE v4.0', marker='o', markersize=15, linewidth=3)
     plt.plot(procs, new_ideal, color='grey', linestyle='-.', label='SELFE v4.0 ideal')
-    
     ax = plt.gca()
     ax.set_xlim([1, 1024])
     ax.set_yscale('log')

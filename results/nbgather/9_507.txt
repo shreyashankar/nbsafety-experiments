@@ -2,6 +2,5 @@ class DefaultOrderedDict(OrderedDict):
     def __missing__(self, key):
         self[key] = list()
         return list()
-    
 data = DefaultOrderedDict()
 data

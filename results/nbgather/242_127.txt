@@ -2,12 +2,10 @@ for i in dic:
 from ipywidgets import interact
 def char_probs(s):
     """Find the probabilities of the unique characters in the string s.
-    
     Parameters
     ----------
     s : str
         A string of characters.
-    
     Returns
     -------
     probs : dict

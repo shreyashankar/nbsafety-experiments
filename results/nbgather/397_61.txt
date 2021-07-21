@@ -1,7 +1,6 @@
 def gen(words, punctuation):
     a = list(punctuation)
     iter_words = iter(words)
-    
     while True:
         try:
             word = next(iter_words)
@@ -18,7 +17,6 @@ def gen(words, punctuation):
                 for index, item in enumerate(word):
                     if item == '-':
                         word[index] = ' '
-                        
                 word = ''.join(word)
                 word = word.split(' ')   
                 for item in word:
@@ -26,10 +24,8 @@ def gen(words, punctuation):
 def remove_punctuation(words, punctuation=PUNCTUATION):
     vals = gen(words, punctuation)
     return vals
-    
 def to_lower(words):
     iter_words = iter(words)
-    
     while True:
         try:
             word = next(iter_words)
@@ -39,17 +35,13 @@ def to_lower(words):
             word = list(word)
             for index, item in enumerate(word):
                 word[index] = item.lower()
-                
             word = ''.join(word)
             yield word
-                
-    
 def lower_words(words):
     words = to_lower(words)
     return words
 def remove_words(words, stop):
     iter_word = iter(words)
-    
     while True:
         try:
             word = next(iter_word)
@@ -59,12 +51,10 @@ def remove_words(words, stop):
             if stop:
                 if type(stop) != list:
                     stop = stop.split(' ')
-                    
                 if word not in stop:
                     yield word
             else:
                 yield word
-                
 def remove_stop_words(words, stop_words=None):
     vals = remove_words(words, stop_words)
     return vals
@@ -75,7 +65,6 @@ def tokenize_line(line, stop_words=None, punctuation=PUNCTUATION):
     return rev_stop
 def counting_words(words):
     curr_dict = {}
-    
     while True:
         try:
             word = next(words)
@@ -86,9 +75,7 @@ def counting_words(words):
                 curr_dict[word] += 1
             else:
                 curr_dict[word] = 1;
-                
     return curr_dict
-            
 def count_words(words):
     mydict = counting_words(words)
     return mydict

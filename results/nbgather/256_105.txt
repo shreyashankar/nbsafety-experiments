@@ -18,7 +18,6 @@ def eval_pdf(rv, num=4):
     mean, std = rv.mean(), rv.std()
     print ( type (rv) )
     print (mean, std)
-
     #<- move 4*std distance forth and back around mean, to sample 100 points uniformly.
     xs = numpy.linspace(mean - num*std, mean + num*std, 100)
     ys = rv.pdf(xs)
@@ -29,24 +28,19 @@ numpy.dstack([[1,2,3], [4,5,6]]).reshape(-1,2)
 numpy.dstack([[1,2,3], [4,5,6]])
 def CohenEffectSize(group1, group2):
     """Compute Cohen's d.
-
     group1: Series or NumPy array
     group2: Series or NumPy array
-
     returns: float
     """
     diff = group1.mean() - group2.mean()
-
     n1, n2 = len(group1), len(group2)
     var1 = group1.var()
     var2 = group2.var()
-
     pooled_var = (n1 * var1 + n2 * var2) / (n1 + n2)
     d = diff / numpy.sqrt(pooled_var)
     return d
 def overlap_superiority(control, treatment, n=1000):
     """Estimates overlap and superiority based on a sample.
-
     control: scipy.stats rv object
     treatment: scipy.stats rv object
     n: sample size
@@ -54,26 +48,21 @@ def overlap_superiority(control, treatment, n=1000):
     control_sample = control.rvs(n)
     treatment_sample = treatment.rvs(n)
     thresh = (control.mean() + treatment.mean()) / 2
-
     control_above = sum(control_sample > thresh)
     treatment_below = sum(treatment_sample < thresh)
     overlap = (control_above + treatment_below) / n
-
     superiority = (treatment_sample > control_sample).mean()
     return overlap, superiority
 def plot_pdfs(cohen_d=2):
     """Plot PDFs for distributions that differ by some number of stds.
-
     cohen_d: number of standard deviations between the means
     """
     control = scipy.stats.norm(0, 1)
     treatment = scipy.stats.norm(cohen_d, 1)
     xs, ys = eval_pdf(control)
     pyplot.fill_between(xs, ys, label='control', color=COLOR3, alpha=0.7)
-
     xs, ys = eval_pdf(treatment)
     pyplot.fill_between(xs, ys, label='treatment', color=COLOR2, alpha=0.7)
-
     o, s = overlap_superiority(control, treatment)
     pyplot.text(0, 0.05, 'overlap ' + str(o))
     pyplot.text(0, 0.15, 'superiority ' + str(s))
@@ -82,17 +71,14 @@ def plot_pdfs(cohen_d=2):
     #print('superiority', s)
 def plot_pdfs(ax,cohen_d=2):
     """Plot PDFs for distributions that differ by some number of stds.
-
     cohen_d: number of standard deviations between the means
     """
     control = scipy.stats.norm(0, 1)            #<- mean=0, std=1
     treatment = scipy.stats.norm(cohen_d, 1)    #<- mean=2, std=1
     xs, ys = eval_pdf(control)                  #<- sampling 1000 points(x,y) in [mean-4std, mean+4std] of control group;
     ax.fill_between(xs, ys, label='control', color=COLOR3, alpha=0.7)
-
     xs, ys = eval_pdf(treatment)                #<- sampling 1000 points(x,y) in [mean-4std, mean+4std] of experiment group;
     ax.fill_between(xs, ys, label='treatment', color=COLOR2, alpha=0.7)
-
     o, s = overlap_superiority(control, treatment)
     ax.text(0, 0.05, 'overlap ' + str(o))
     ax.text(0, 0.15, 'superiority ' + str(s))
@@ -101,17 +87,14 @@ def plot_pdfs(ax,cohen_d=2):
     #print('superiority', s)
 def plot_pdfs(ax,cohen_d=2):
     """Plot PDFs for distributions that differ by some number of stds.
-
     cohen_d: number of standard deviations between the means
     """
     control = scipy.stats.norm(0, 1)            #<- mean=0, std=1
     treatment = scipy.stats.norm(cohen_d, 1)    #<- mean=2, std=1
     xs, ys = eval_pdf(control)                  #<- sampling 1000 points(x,y) in [mean-4std, mean+4std] of control group;
     ax.fill_between(xs, ys, label='control', color=COLOR3, alpha=0.7)
-
     xs, ys = eval_pdf(treatment)                #<- sampling 1000 points(x,y) in [mean-4std, mean+4std] of experiment group;
     ax.fill_between(xs, ys, label='treatment', color=COLOR2, alpha=0.7)
-
     o, s = overlap_superiority(control, treatment)
     ax.text(0, 0.05, 'overlap ' + str(o))
     ax.text(0, 0.15, 'superiority ' + str(s))
@@ -128,39 +111,33 @@ def compute_sampling_distribution(n=100, iters=1000):
     return numpy.array(stats)
 class Resampler(object):
     """Represents a framework for computing sampling distributions."""
-
     def __init__(self, sample, xlim=None):
         """Stores the actual sample."""
         self.sample = sample
         self.n = len(sample)
         self.xlim = xlim
-
     def resample(self):
         """Generates a new sample by choosing from the original
         sample with replacement.
         """
         new_sample = numpy.random.choice(self.sample, self.n, replace=True)
         return new_sample
-
     def sample_stat(self, sample):
         """Computes a sample statistic using the original sample or a
         simulated sample.
         """
         return sample.mean()
-
     def compute_sampling_distribution(self, iters=1000):
         """Simulates many experiments and collects the resulting sample
         statistics.
         """
         stats = [self.sample_stat(self.resample()) for i in range(iters)]
         return numpy.array(stats)
-
     def plot_sampling_distribution(self):
         """Plots the sampling distribution."""
         sample_stats = self.compute_sampling_distribution()
         se = sample_stats.std()
         ci = numpy.percentile(sample_stats, [5, 95])
-
         pyplot.hist(sample_stats, color=COLOR2)
         pyplot.xlabel('sample statistic')
         pyplot.xlim(self.xlim)
@@ -169,26 +146,22 @@ class Resampler(object):
         pyplot.show()
 class Resampler(object):
     """Represents a framework for computing sampling distributions."""
-
     def __init__(self, sample, xlim=None):
         """Stores the actual sample."""
         self.sample = sample
         self.n = len(sample)
         self.xlim = xlim
-
     def resample(self):
         """Generates a new sample by choosing from the original
         sample with replacement.
         """
         new_sample = numpy.random.choice(self.sample, self.n, replace=True)
         return new_sample
-
     def sample_stat(self, sample):
         """Computes a sample statistic using the original sample or a
         simulated sample.
         """
         return sample.mean()
-
     def compute_sampling_distribution(self, iters=1000):
         """Simulates many experiments and collects the resulting sample
         statistics.
@@ -206,13 +179,11 @@ class Resampler(object):
             horizontalalignment='left',
             verticalalignment='top',
             transform=ax.transAxes)
-
     def plot_sampling_distribution(self):
         """Plots the sampling distribution."""
         sample_stats = self.compute_sampling_distribution()
         se = sample_stats.std()
         ci = numpy.percentile(sample_stats, [5, 95])
-
         pyplot.hist(sample_stats, color=COLOR2)
         pyplot.xlabel('sample statistic')
         pyplot.xlim(self.xlim)
@@ -232,39 +203,33 @@ def text(x, y, s):
         transform=ax.transAxes)
 class Resampler(object):
     """Represents a framework for computing sampling distributions."""
-
     def __init__(self, sample, xlim=None):
         """Stores the actual sample."""
         self.sample = sample
         self.n = len(sample)
         self.xlim = xlim
-
     def resample(self):
         """Generates a new sample by choosing from the original
         sample with replacement.
         """
         new_sample = numpy.random.choice(self.sample, self.n, replace=True)
         return new_sample
-
     def sample_stat(self, sample):
         """Computes a sample statistic using the original sample or a
         simulated sample.
         """
         return sample.mean()
-
     def compute_sampling_distribution(self, iters=1000):
         """Simulates many experiments and collects the resulting sample
         statistics.
         """
         stats = [self.sample_stat(self.resample()) for i in range(iters)]
         return numpy.array(stats)
-
     def plot_sampling_distribution(self):
         """Plots the sampling distribution."""
         sample_stats = self.compute_sampling_distribution()
         se = sample_stats.std()
         ci = numpy.percentile(sample_stats, [5, 95])
-
         pyplot.hist(sample_stats, color=COLOR2)
         pyplot.xlabel('sample statistic')
         pyplot.xlim(self.xlim)
@@ -273,39 +238,33 @@ class Resampler(object):
         pyplot.show()
 class Resampler(object):
     """Represents a framework for computing sampling distributions."""
-
     def __init__(self, sample, xlim=None):
         """Stores the actual sample."""
         self.sample = sample
         self.n = len(sample)
         self.xlim = xlim
-
     def resample(self):
         """Generates a new sample by choosing from the original
         sample with replacement.
         """
         new_sample = numpy.random.choice(self.sample, self.n, replace=True)
         return new_sample
-
     def sample_stat(self, sample):
         """Computes a sample statistic using the original sample or a
         simulated sample.
         """
         return sample.mean()
-
     def compute_sampling_distribution(self, iters=1000):
         """Simulates many experiments and collects the resulting sample
         statistics.
         """
         stats = [self.sample_stat(self.resample()) for i in range(iters)]
         return numpy.array(stats)
-
     def plot_sampling_distribution(self):
         """Plots the sampling distribution."""
         sample_stats = self.compute_sampling_distribution()
         se = sample_stats.std()
         ci = numpy.percentile(sample_stats, [5, 95])
-
         pyplot.hist(sample_stats, color=COLOR2)
         pyplot.xlabel('sample statistic')
         pyplot.xlim(self.xlim)
@@ -324,39 +283,33 @@ def text(x, y, s):
         verticalalignment='top')
 class Resampler(object):
     """Represents a framework for computing sampling distributions."""
-
     def __init__(self, sample, xlim=None):
         """Stores the actual sample."""
         self.sample = sample
         self.n = len(sample)
         self.xlim = xlim
-
     def resample(self):
         """Generates a new sample by choosing from the original
         sample with replacement.
         """
         new_sample = numpy.random.choice(self.sample, self.n, replace=True)
         return new_sample
-
     def sample_stat(self, sample):
         """Computes a sample statistic using the original sample or a
         simulated sample.
         """
         return sample.mean()
-
     def compute_sampling_distribution(self, iters=1000):
         """Simulates many experiments and collects the resulting sample
         statistics.
         """
         stats = [self.sample_stat(self.resample()) for i in range(iters)]
         return numpy.array(stats)
-
     def plot_sampling_distribution(self):
         """Plots the sampling distribution."""
         sample_stats = self.compute_sampling_distribution()
         se = sample_stats.std()
         ci = numpy.percentile(sample_stats, [5, 95])
-
         pyplot.hist(sample_stats, color=COLOR2)
         pyplot.xlabel('sample statistic')
         pyplot.xlim(self.xlim)
@@ -376,39 +329,33 @@ def text(x, y, s):
         transform=ax.transAxes)
 class Resampler(object):
     """Represents a framework for computing sampling distributions."""
-
     def __init__(self, sample, xlim=None):
         """Stores the actual sample."""
         self.sample = sample
         self.n = len(sample)
         self.xlim = xlim
-
     def resample(self):
         """Generates a new sample by choosing from the original
         sample with replacement.
         """
         new_sample = numpy.random.choice(self.sample, self.n, replace=True)
         return new_sample
-
     def sample_stat(self, sample):
         """Computes a sample statistic using the original sample or a
         simulated sample.
         """
         return sample.mean()
-
     def compute_sampling_distribution(self, iters=1000):
         """Simulates many experiments and collects the resulting sample
         statistics.
         """
         stats = [self.sample_stat(self.resample()) for i in range(iters)]
         return numpy.array(stats)
-
     def plot_sampling_distribution(self):
         """Plots the sampling distribution."""
         sample_stats = self.compute_sampling_distribution()
         se = sample_stats.std()
         ci = numpy.percentile(sample_stats, [5, 95])
-
         pyplot.hist(sample_stats, color=COLOR2)
         pyplot.xlabel('sample statistic')
         pyplot.xlim(self.xlim)

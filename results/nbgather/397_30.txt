@@ -22,35 +22,26 @@ d1000 = """
 """
 def greatest(s):
     e = s.split(' ')
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     [e.replace(char, '') for char in e if char == '\n']
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     [e.replace(char, '') for char in e if char == '\n']
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     [e.replace(char, '') for char in e if char.isdigit() == False]
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     [e.replace(char, '') for char in e if char == '\n']
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
@@ -58,114 +49,82 @@ def greatest(s):
     for char in e:
         if char == '\n':
             e = e.replace(char, '') 
-    
-            
     print(e)
 greatest(d1000)
 greatest(d1000)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         print(char)
         if char == '\n':
             e = e.replace(char, '')
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char == '\n':
             e = e.replace(char, '')
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char.isdigit() == False:
             e = e.replace(char, '')
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char.isdigit() == False:
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char.isdigit() == True:
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char.isdigit() == True:
             char.replace(char, '')
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char.isdigit() == True:
             char.replace(char, '')
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char == '\n':
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
-    
     for char in e:
         if char != '\n':
             print(char)
-    
-            
     print(e)
 greatest(d1000)
 def greatest(s):
@@ -176,7 +135,6 @@ def greatest(s):
     for i in range(0,10):
         n = e[i::]
         print(n)
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -187,7 +145,6 @@ def greatest(s):
     for i in range(0,10):
         n = e[i::]
         print(n)
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -197,8 +154,6 @@ def greatest(s):
     print(e[1::])
     print(e[2::])
     print(e[3::])
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -207,8 +162,6 @@ def greatest(s):
     print(e[1::])
     print(e[2::])
     print(e[3::])
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -217,60 +170,39 @@ def greatest(s):
     print(int(e)[1::])
     print(int(e)[2::])
     print(int(e)[3::])
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     val = 1
     print(''.join(e))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     val = 1
     print('\n'.join(e))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     val = 1
     print(''.join(e))
-    
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     val = 1
     print(''.join(e))
     print(int(e))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     val = 1
     s = ''.join(e)
     print(int(s))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     val = 1
     s = '\n'.join(e)
     print(int(s))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -278,41 +210,26 @@ def greatest(s):
     val = 1
     s = '\n'.join(e)
     print(int(s))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     e = ''.join(e)
     e = e.split('\n')
-    
     s = '\n'.join(e)
     print(int(s))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     e = ''.join(e)
     e = e.split('\n')
-    
     s = '\n'.join(e)
     print(e)
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     e = ''.join(e)
     e = e.split('\n')
-    
     print(e)
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -320,9 +237,6 @@ def greatest(s):
     e = e.split('\n')
     e = ''.join()
     print(e)
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -330,9 +244,6 @@ def greatest(s):
     e = e.split('\n')
     e = ''.join(e)
     print(e)
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
@@ -340,27 +251,19 @@ def greatest(s):
     e = e.split('\n')
     e = ''.join(e)
     print(int(e))
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     [print(char) for char in e]
-
-    
-        
 greatest(d1000)
 def greatest(s):
     e = s.split(' ')
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for char in e:
@@ -369,7 +272,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-        
     print(values[len(values) - 1])    
 greatest(d1000)
 def greatest(s):
@@ -377,7 +279,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for char in e:
@@ -386,7 +287,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-    
     print(values)
     print(values[len(values) - 1])    
 greatest(d1000)
@@ -395,7 +295,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for char in e:
@@ -404,7 +303,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(values[len(values) - 1])    
 greatest(d1000)
 def greatest(s):
@@ -412,13 +310,11 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
         for i in range(14):
                 print()
-                
     print(len(e))
 greatest(d1000)
 greatest(d1000)
@@ -427,7 +323,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -437,7 +332,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(values[len(values) - 1])    
 greatest(d1000)
 def greatest(s):
@@ -445,7 +339,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -455,7 +348,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(values[len(values) - 1])    
 greatest(d1000)
 def greatest(s):
@@ -463,7 +355,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     print(1000%13)
@@ -474,13 +365,11 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
         n = e[i::]
         print(n)
-
     print(1000%13)
     print(values[len(values) -1])   
 greatest(d1000)
@@ -489,7 +378,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -501,7 +389,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(1000%13)
     print(values[len(values) -1])   
 greatest(d1000)
@@ -510,7 +397,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -522,7 +408,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(1000%13)
     print(values[len(values) -1])   
 greatest(d1000)
@@ -531,7 +416,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -543,7 +427,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(1000%13)
     print(values[len(values) -1])   
 greatest(d1000)
@@ -552,7 +435,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -564,7 +446,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(1000%13)
     print(values[len(values) -1])   
 greatest(d1000)
@@ -573,7 +454,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -585,7 +465,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(1000%13)
     print(values[len(values) -1])   
 greatest(d1000)
@@ -594,7 +473,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -605,7 +483,6 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-
     print(1000%13)
     print(values[len(values) -1])   
 greatest(d1000)
@@ -614,7 +491,6 @@ def greatest(s):
     e = ''.join(e)
     e = e.split('\n')
     e = ''.join(e)
-    
     values = [0]
     val = 1
     for i in range(len(e)):
@@ -625,6 +501,5 @@ def greatest(s):
         if values[len(values) - 1] < val:
             values.append(val)
         val = 1
-        
     print(values[len(values) -1])   
 greatest(d1000)

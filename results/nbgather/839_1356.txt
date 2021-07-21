@@ -2,7 +2,6 @@ class Room:
     def __init__(self):
         self.a = 10
         self.b = 20
-    
 class Room:
     def __init__(self):
         self.a = 10
@@ -13,7 +12,6 @@ class Room:
             self.b = Room.asdf
         except Exception as err:
             print(err)
-            
 class Room:
     def __init__(self):
         self.a = 10
@@ -24,28 +22,23 @@ class Room:
             self.b = Room.asdf
         except Exception as err:
             print(err)
-            
 class Room:
-
     OFFLINE = 1
     ONLINE = 2
     IN_SPLITFIRE = 3
     IN_CHAINRAIN = 4
-
     statusCodes = {
         OFFLINE: "Room Offline",
         ONLINE: "Room Online, active",
         IN_SPLITFIRE: "Splitfire Protocol in progress",
         IN_CHAINRAIN: "Chainrain Protocol in progress"
     }
-
     def __init__(self, roomName):
         self.roomName = roomName
         self.activeUserCount = 0
         self.activeUsers = list()
         self.status = Room.ONLINE
         self.status_message = Room.statusCodes[self.status]
-
     def changeStatus(statusCode):
         backup_self = self
         try:
