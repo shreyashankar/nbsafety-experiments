@@ -1,0 +1,4 @@
+df2 = df[['col1', 'col2']]
+df2._is_view
+df2
+df2._is_view

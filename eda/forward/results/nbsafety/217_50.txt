@@ -1,0 +1,1 @@
+get_ipython().magic('timeit -n1 -r1 evs = np.linalg.eigvals(c)')

@@ -1,0 +1,8 @@
+s = np.multiply(s_x,s_y)
+s
+s
+s
+s
+s
+s
+s

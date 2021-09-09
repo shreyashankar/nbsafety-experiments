@@ -1,0 +1,1 @@
+sns.countplot(x=df.grade);

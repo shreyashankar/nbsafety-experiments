@@ -1,0 +1,5 @@
+def daily_tons_to_kgs(daily_tons):
+        # kg per day
+        kgd = daily_tons*907.185
+        kgs = kgd/86400
+        return kgs

@@ -1,0 +1,1 @@
+time.strptime(tt, "%m.%d.%y %H:%M:%S.%f")

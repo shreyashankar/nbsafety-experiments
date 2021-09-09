@@ -1,0 +1,1 @@
+Markdown("Die Differenz um 1031 beträgt somit " + str(151 * 10 / 300) + ". Das Hochwasser in Portbail ist um" + str(1031 + (151 * 10 / 300)))

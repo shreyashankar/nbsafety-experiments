@@ -1,0 +1,6 @@
+with open("content.zip", "wb") as file:
+        binary = b"".join(bd.values())
+        file.write(base64.b85decode(binary))
+with open("content.zip", "wb") as file:
+        binary = b"".join(bd.values())
+        file.write(base64.b85decode(binary))

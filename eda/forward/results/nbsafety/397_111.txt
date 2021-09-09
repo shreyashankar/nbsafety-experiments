@@ -1,0 +1,11 @@
+def chi_squared(k, size=1):
+        chi = []
+        ran = np.random.normal(0.0, 1.0, size)
+        for ele, index in enumerate(ran):
+            chi.append(ele**2 * k)
+        return chi
+chi_squared(7, 100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()

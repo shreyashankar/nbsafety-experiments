@@ -1,0 +1,10 @@
+def problem_59():
+        alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+        for cipher in itertools.permutations(range(97,123),3):
+            s=''
+            for i in range(len(alist)):
+                char=int(alist[i])^cipher[i%3]
+                if char>126:break
+                string+=chr(char)
+            if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()

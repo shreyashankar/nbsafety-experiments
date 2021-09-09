@@ -1,0 +1,2 @@
+lf = pd.DataFrame(cancer.target)
+lf.head(30)

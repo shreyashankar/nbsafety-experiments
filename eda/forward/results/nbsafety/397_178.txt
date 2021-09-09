@@ -1,0 +1,1 @@
+slop,y = opt.curve_fit(f,x,y,p0=(-4,-2))

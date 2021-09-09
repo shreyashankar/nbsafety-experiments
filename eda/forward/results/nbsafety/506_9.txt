@@ -1,0 +1,12 @@
+class MajorityClassifier(BaseEstimator, ClassifierMixin):
+        def __init__(self):
+            pass
+        def fit(self, X, y):
+            c = Counter(y)
+            self.mode_ = c.most_common(1)[0][0]
+            self.fraction = np.array(list(c.values())) / X.shape[0]
+            return self
+        def predict(self, X):
+            return self.mode_ * np.ones(X.shape[0])
+        def predict_proba(self, X):
+            return np.dot(np.ones((X.shape[0], 1)), self.fraction.reshape(1, 3))

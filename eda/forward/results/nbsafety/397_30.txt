@@ -1,0 +1,5 @@
+def greatest(s):
+        e = s.split(' ')
+        [e.replace(char, '') for char in e if char == '\n']
+        print(e)
+greatest(d1000)

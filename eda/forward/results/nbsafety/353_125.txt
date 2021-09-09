@@ -1,0 +1,47 @@
+def buildMDP(length, Rl, Rr, Rg, p=0.8):
+        def adjointStates(lr,j):
+            adj = [mdp.StatesMatrix[R][j] if lr == L else mdp.StatesMatrix[L][j]]
+            if j < length - 1:
+                adj.append(mdp.StatesMatrix[lr][j+1])
+            if j > 0:
+               adj.append(mdp.StatesMatrix[lr][j-1])
+            return adj
+        def validIndex(lr, j, offset):
+            return 0 <= lr + offset[0] <= 1 and 0 <= j + offset[1] <= length -1
+        def addLRtransition(sl, sr, p, i):
+            mdp.Transitions[sl][right] = [(p, sr)]
+        def getOffsetState(lr, j, offset):
+            return mdp.StatesMatrix[lr + offset[0]][j + offset[1]]
+        def addTransitions(lr, j):
+            s = mdp.StatesMatrix[lr][j]
+            for action, goalOffset in action_goals.iteritems():
+                if validIndex(lr, j, offset):
+                    # Valid action
+                    adjStates = adjointStates(lr,j)
+                    goalState = getOffsetState(lr, j, goalOffset)
+                    mdp.Transitions[s][action]=[(p, goalState)]
+                    adjStates.remove(goalState)
+                    for otherState in adjStates:
+                        mdp.Transitions[s][action].append(p/len(adjStates), otherState)
+        L = 0; R = 1
+        # Make MDP
+        mdp = MDP()
+        # Def actions
+        up, down, left, right = (MDP_action(name) for name in ['up','down','left','right'])
+        # Def action goals
+        action_goals = {up: (0,1), down:(0,-1), left:(-1, 0), right:(1,0)}
+        # build states
+        mdp.StatesMatrix = [ [MDP_state("i:{}, j:{}".format(i,j), rand()) for j in range(length)]
+                            for i in range(2)]
+        mdp.States = mdp.StatesMatrix[0] + mdp.StatesMatrix[1]
+        # build transitions and rewards
+        for s in mdp.States:
+            mdp.Transitions[s] = dict()
+        for i in range(length):
+            # Transitions
+            addTransitions(L,i)
+            addTransitions(R,i)
+            # Rewards
+            mdp.StatesMatrix[L][i].reward = Rl if i < length - 1 else Rg
+            mdp.StatesMatrix[R][i].reward = Rr if i < length - 1 else Rg
+        return mdp

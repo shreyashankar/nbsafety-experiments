@@ -1,0 +1,2 @@
+ran=range(df.shape[0])
+print(ran)

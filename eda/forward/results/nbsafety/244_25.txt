@@ -1,0 +1,2 @@
+df_test_1[['PassengerId','Survived']].to_csv('titanic/sub-03.csv', index=False, float_format="%f")
+    # Submit and you will get 0.75120

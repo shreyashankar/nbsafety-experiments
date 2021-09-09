@@ -1,0 +1,1 @@
+s.dt.strftime('%Y/%m/%d')

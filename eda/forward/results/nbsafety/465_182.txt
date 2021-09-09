@@ -1,0 +1,3 @@
+def cubic_complement(root, n):
+        return root + root * (n - root ** 3) / float(n)
+cubic_complement(3, 28)

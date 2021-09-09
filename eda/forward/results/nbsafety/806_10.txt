@@ -1,0 +1,1 @@
+vinv = m_rocket/burn_rate -     (U - v_initial)/g*np.real(lambertw(         m_rocket/burn_rate*        g/(U - v_initial)*        np.exp((f_engine - m_rocket*g)/(burn_rate*(U - v_initial)))))

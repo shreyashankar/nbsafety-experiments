@@ -1,0 +1,1 @@
+sp.binomial(4,2)

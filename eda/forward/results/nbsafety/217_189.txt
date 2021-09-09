@@ -1,0 +1,1 @@
+pd.DataFrame({'a': 1 }, index=list(range(2))).dtypes

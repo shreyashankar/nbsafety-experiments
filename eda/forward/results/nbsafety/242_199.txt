@@ -1,0 +1,2 @@
+index = pd.MultiIndex.from_arrays(arrays, names=['first', 'second'])
+ts = pd.Series(np.random.normal(0.5, 2, 1100), index)

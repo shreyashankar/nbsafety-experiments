@@ -1,0 +1,1 @@
+change_evens_to_zeros(range(10))

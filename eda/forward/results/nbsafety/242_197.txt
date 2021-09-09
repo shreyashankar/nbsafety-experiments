@@ -1,0 +1,1 @@
+df2.groupby(['X'], sort=False).sum()

@@ -1,0 +1,1 @@
+utils.reject_vector(vec, on_vec)

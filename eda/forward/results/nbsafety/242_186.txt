@@ -1,0 +1,3 @@
+s1 = pd.Series(np.random.randn(5))
+s1
+s1.idxmin(), s1.idxmax()

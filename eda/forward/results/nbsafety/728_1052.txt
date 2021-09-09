@@ -1,0 +1,2 @@
+sci.sparse.linalg.eigsh(liou.data,which='SR',k=1,tol=1e-5,maxiter=1e4,ncv=5,
+                                           return_eigenvectors=False)

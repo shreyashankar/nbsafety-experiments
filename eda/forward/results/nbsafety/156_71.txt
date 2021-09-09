@@ -1,0 +1,11 @@
+def change_evens_to_zeros(lst):
+        modified_lst = []
+        for i in lst:
+            if type(i) == type(''):
+                print = "Can not transform list with non-numeric elements"
+            elif i % 2 == 0:
+                modified_lst.append(0)
+            else:
+                modified_lst.append(i)
+        return modified_lst
+assert change_evens_to_zeros([1,2,3,4,"five"]) == "Can not transform list with non-numeric elements"

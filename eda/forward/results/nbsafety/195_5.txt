@@ -1,0 +1,1 @@
+hasattr(a,attr1)

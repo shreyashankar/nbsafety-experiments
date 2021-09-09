@@ -1,0 +1,1 @@
+ccu = np.loadtxt("phase_diagram.weight.cu_solvus_v1_K.dat")

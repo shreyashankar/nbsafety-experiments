@@ -1,0 +1,9 @@
+def inner_product(v, w):
+        """Compute the inner/dot product of two 1d NumPy arrays v, w."""
+        return np.cumsum(v*w)
+similarity(wordvecs['horse'], wordvecs['pony'])
+similarity(wordvecs['kitten'], wordvecs['puppy'])
+similarity(wordvecs['kitten'], wordvecs['kitten'])
+similarity(wordvecs['kitten'], wordvecs['puppy'])
+similarity(wordvecs['cat'], wordvecs['cat'])
+most_similar('horse', wordvecs)

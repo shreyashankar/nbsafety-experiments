@@ -1,0 +1,28 @@
+def char_probs(s):
+        """Find the probabilities of the unique characters in the string s.
+        Parameters
+        ----------
+        s : str
+            A string of characters.
+        Returns
+        -------
+        probs : dict
+            A dictionary whose keys are the unique characters in s and whose values
+            are the probabilities of those characters.
+        """
+        checked = []
+        dic = {}
+        for i in s:
+            if i not in checked:
+                checked.append(i)
+                dic[i] = s.count(i)
+        print(dic)
+        for i in dic:
+            dic[i] = dic[i]/len(s)
+        dic_normal = dic
+        return(dic_normal)
+interact(char_probs, s="Type Something")
+x = interact(char_probs, s="Type Something")
+x = interact(char_probs, s="Type Something")
+interact(char_probs, s="Type Something")
+x = interact(char_probs, s="Type Something")

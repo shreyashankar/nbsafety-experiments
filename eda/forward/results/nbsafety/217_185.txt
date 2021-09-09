@@ -1,0 +1,1 @@
+major_mean = wp.mean(axis='major')

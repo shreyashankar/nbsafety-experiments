@@ -1,0 +1,7 @@
+df = pd.DataFrame()
+df.from_csv('mitfcu_savings.csv')
+df.head()
+df.from_csv('mitfcu_savings.csv')
+df.from_csv('mitfcu_savings.csv', inplace=True)
+df = df.from_csv('mitfcu_savings.csv')
+df.head()

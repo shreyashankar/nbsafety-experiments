@@ -1,0 +1,1 @@
+combiner = lambda x, y: np.where(pd.isnull(x), y, x)

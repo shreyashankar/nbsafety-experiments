@@ -1,0 +1,1 @@
+addresses = [s.strip() for s in parts]

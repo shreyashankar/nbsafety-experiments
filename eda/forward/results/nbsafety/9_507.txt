@@ -1,0 +1,15 @@
+s
+d = [{"y":132,"o":0,"a":0,"t":0},{"y":132,"o":0,"a":0,"t":0},{"y":132,"o":0,"a":0,"t":0},{"y":133,"o":0,"a":0,"t":0}]
+d[0].pop('0')
+d
+d
+s = json.dumps(d)
+d
+s
+s = json.dumps(d, indent=2)
+s
+print(s)
+s = json.dumps(d)
+s
+d
+d == json_array

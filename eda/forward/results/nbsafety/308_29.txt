@@ -1,0 +1,8 @@
+axesa.plot(x,y1,'r')
+axesa.set_title('Axes a title')
+axesa.plot(x,y2,'b')
+axesa.set_title("Axesa")
+axesa.plot(x,y1)
+axesa.plot(x,y1)
+axesa=fig.add_axes([.1,.1,.9,.4])
+axesa.plot(x,y1)

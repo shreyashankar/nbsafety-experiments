@@ -1,0 +1,1 @@
+print(type(x), x.ndim, x.shape, type(y),y.ndim, y.shape)

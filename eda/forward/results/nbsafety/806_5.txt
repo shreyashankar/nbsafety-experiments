@@ -1,0 +1,1 @@
+a_shot, tantheta_shot = 0.05, -0.9

@@ -1,0 +1,6 @@
+def prepare_list():
+        afile = open('data/cipher.txt', 'r')
+        string = afile.read()
+        string = string.replace(',', ' ')
+        string = string.split()
+        return list(tmap(int, string))

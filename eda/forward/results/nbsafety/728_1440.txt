@@ -1,0 +1,1 @@
+[e for e in itertools.combinations('A'*4 + 'B'*4, 4)]

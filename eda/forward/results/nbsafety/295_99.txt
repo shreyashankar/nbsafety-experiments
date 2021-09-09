@@ -1,0 +1,1 @@
+print(mean_score(test_scores))

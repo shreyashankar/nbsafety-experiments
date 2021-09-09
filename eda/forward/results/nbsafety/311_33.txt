@@ -1,0 +1,1 @@
+print( meshgrid(arange(0,3),arange(0,3)) )

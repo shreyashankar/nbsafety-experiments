@@ -1,0 +1,2 @@
+index=pd.MultiIndex.from_tuples(tuples,names=['first','second','third'])
+ts=pd.Series(np.random.normal(0.5,2,1100),index)

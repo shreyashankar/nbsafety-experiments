@@ -1,0 +1,1 @@
+np.savetxt('test_list.th', d_np.T, fmt="%d %.2f %.2f", delimiter="\t")

@@ -1,0 +1,2 @@
+for key, grp in it.groupby([1,1,1,2,2,2,3]):
+        print('{}:{}'. format(key, list(grp)))

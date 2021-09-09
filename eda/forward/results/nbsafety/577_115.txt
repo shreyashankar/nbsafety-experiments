@@ -1,0 +1,4 @@
+rng = numpy.random
+W = tf.Variable(rng.randn(), name="weight")
+b = tf.Variable(rng.randn(), name="bias")
+pred = tf.add(tf.mul(X, W), b)

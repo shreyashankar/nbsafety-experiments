@@ -1,0 +1,4 @@
+def calc_saturating_A(R_m, P, P_0, lamb):
+        """ Calculate saturating with lower feeding threshold P_0 """
+        grazing = (R_m*(P - P_0)) / (lamb + P - P_0)
+        return grazing

@@ -1,0 +1,23 @@
+def bootstrap_function(data, f, n):
+        """Compute a function on data bootstrapped n times.
+        Parameters
+        ----------
+        data: ndarray
+            The input data to be resampled.
+        f: function(data)
+            The function to be applied to the boostrapped data. The function should take a single
+            argument (the data) and return a float.
+        n: int
+            The number of times to resample the data
+        Returns
+        -------
+        result: ndarray
+            An n element array of the values of the function applied to the resampled data.
+        """
+        result = np.array(None)
+        for sample in range(n):
+            resample = np.array( [np.random.choice(data) for r in range(len(data))] )
+            resample_functioned = f(resample)
+            np.append(result, resample_functioned)
+        return result
+fair_boot = bootstrap_function(data, fair, 200)

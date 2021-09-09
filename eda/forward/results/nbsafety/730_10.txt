@@ -1,0 +1,4 @@
+arr1=np.array(data1)
+np.dot(arr1,arr2.T)
+arr1.T
+arr1

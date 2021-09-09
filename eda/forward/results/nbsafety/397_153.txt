@@ -1,0 +1,4 @@
+def uniform2(mu, sigma, size=1):
+        """Return uniform random variates with mean mu and standard dev sigma."""
+        var = np.random.uniform(mu,sigma, size)
+        return var

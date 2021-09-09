@@ -1,0 +1,1 @@
+change_predict = clf_test_predict != df_test_1['Survived']

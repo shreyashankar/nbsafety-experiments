@@ -1,0 +1,6 @@
+snap_id = 'snap-f0e51c8a'
+if snap_id not in snap_vol[vol_id]:
+        snap_vol[vol_id].append(snap_id)
+conn.get_snapshot_attribute(snap_id, attribute='Name')
+conn.get_snapshot_attribute(snap_id, attribute='description')
+conn.get_snapshot_attribute(snap_id, attribute='Description')

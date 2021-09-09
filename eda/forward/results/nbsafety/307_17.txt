@@ -1,0 +1,2 @@
+firends.insert(1, 'Wang')
+firends

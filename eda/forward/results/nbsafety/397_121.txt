@@ -1,0 +1,7 @@
+def plot_poisson(λ):
+        X = np.random.poisson(λ, size=200)
+        sns.distplot(X, bins=range(100))
+        plt.xlabel("Number of events")
+        plt.ylabel("Count")
+        plt.xlim(0.0, 100.0)
+interact(plot_poisson, λ=(0, 100), __manual=True);

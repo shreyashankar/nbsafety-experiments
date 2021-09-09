@@ -1,0 +1,1 @@
+getrandbits(1)

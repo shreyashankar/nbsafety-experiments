@@ -1,0 +1,3 @@
+grouped=df.groupby(['A','B'])
+grouped.mean()
+grouped.std()

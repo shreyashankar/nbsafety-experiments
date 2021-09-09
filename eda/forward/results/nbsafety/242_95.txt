@@ -1,0 +1,2 @@
+for x in sim1:
+        print (x)

@@ -1,0 +1,15 @@
+df
+grouped=df.groupby('A')
+grouped=df.groupby(['A','B'])
+grouped = df.groupby(get_letter_type,axis=1)
+df.groupby('A').groups
+df.groupby(get_letter_type,axis=1).groups
+grouped = df.groupby(['A','B'])
+df
+weight=np.random.normal(166,20,size=n)
+df=pd.DataFrame({'height':height,'weight':weight,
+                     'gender': gender},index=time)
+df
+gb=df.groupby('gender')
+grouped.sum()
+grouped=df.groupby(['A'])

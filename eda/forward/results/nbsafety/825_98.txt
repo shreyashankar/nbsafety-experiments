@@ -1,0 +1,1 @@
+type(df2.iloc[np.array([2])])

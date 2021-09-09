@@ -1,0 +1,1 @@
+predict_class(train_X, mu, sigma, priors)

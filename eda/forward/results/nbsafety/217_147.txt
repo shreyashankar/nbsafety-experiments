@@ -1,0 +1,5 @@
+def y_model(X,a,b,c):
+        y_model = a * X**2 + b*X + c + np.random.normal(0,2.0, size=30)
+        return y_model
+Y = y_model(X,a,b,c)
+best, cov = opt.curve_fit(y_model,X,Y)

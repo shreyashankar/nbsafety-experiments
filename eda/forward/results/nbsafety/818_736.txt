@@ -1,0 +1,1 @@
+bar.add('title-1',list(range(6,12)))

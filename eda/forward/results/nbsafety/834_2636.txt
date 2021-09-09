@@ -1,0 +1,2 @@
+pattern2 = re.compile(r'[^|\]]([a-z]+)[$|\[]')
+pattern2.findall(s)

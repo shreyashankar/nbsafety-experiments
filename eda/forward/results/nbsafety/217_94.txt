@@ -1,0 +1,1 @@
+chi_squared(7,100)

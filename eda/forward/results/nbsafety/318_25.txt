@@ -1,0 +1,1 @@
+clf = clf.fit(clf_data,clf_target)

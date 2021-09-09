@@ -1,0 +1,4 @@
+def calc_saturating_C(R_m, P, lamb):
+        """ Calculate acclimating to ambient food - relatively linear at high P """
+        grazing = R_m*lamb*P*(1 - math.exp(-lamb*(P)))
+        return grazing

@@ -1,0 +1,1 @@
+interact(entropy,d=(char_probs('aaaccc') or char_probs('aabbbbbccccc')))

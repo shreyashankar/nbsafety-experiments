@@ -1,0 +1,1 @@
+likelihood(data+peak, 10, 500, 10)

@@ -1,0 +1,20 @@
+img = np.zeros((100, 100, 100))
+sk.imsave('unko.tif', img.astype(np.uint8))
+unko = seg.random_walker(img, label)
+unko = seg.random_walker(img, label, maltichannel=True)
+unko = seg.random_walker(img, label, multichannel=False)
+unko = seg.random_walker(img, label, multichannel=True)
+distance = ndimage.distance_transform_edt(img)
+distance
+distance.shape
+local_maxi = peak_local_max(distance, indices=False, footprint=np.ones((3, 3)), labels=img)
+local_maxi = peak_local_max(distance, indices=False, footprint=np.ones((3, 3)), labels=img)
+local_maxi = peak_local_max(distance, indices=False, footprint=np.ones((3, 3, 3)), labels=img)
+labels_ws = watershed(-distance, markers, mask=img)
+sk.imsave('hoge.tif', labels_ws)
+sk.imsave('hoge.tif', labels_ws.astype(np.float32))
+markers[~img] = -1
+markers[-img] = -1
+markers[img] = -1
+image = sk.imsave('unkodist-watershed.tif')
+image = sk.imread('unkodist-watershed.tif')
