@@ -1,0 +1,2 @@
+ax.set_aspect('equal')
+ax.plot_wireframe(x,y,z)

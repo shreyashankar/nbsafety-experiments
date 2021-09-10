@@ -1,3 +1,1 @@
-d = []
-sorted(d)
-d
+daat

@@ -1,0 +1,8 @@
+import numpy as np
+print(np.finfo(float).eps)
+print(np.finfo(float).eps)*3
+print(np.finfo(float32).eps)*3
+print(np.finfo(np.float32).eps)
+print(np.finfo(np.float32).eps)*2
+print(np.finfo(np.float32).eps)*3
+a + np.finfo(np.float32).eps

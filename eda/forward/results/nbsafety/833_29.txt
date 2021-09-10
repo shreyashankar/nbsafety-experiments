@@ -1,2 +1,7 @@
-t1 = 'asdf'
-id(t1)
+a.b = b
+objgraph.find_ref_chain(a,b)
+objgraph.find_backref_chain(a)
+objgraph.find_backref_chain(a, lambda x:True)
+objgraph.show_refs(a)
+objgraph.show_refs(a)
+a

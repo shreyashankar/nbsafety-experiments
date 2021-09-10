@@ -1,1 +1,1 @@
-print(mean_score(test_scores))
+svc_2.score(X_test, y_test)

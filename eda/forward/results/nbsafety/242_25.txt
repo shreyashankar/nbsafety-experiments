@@ -1,1 +1,8 @@
-print (mse([0,0],[1,1]))
+def vector_scalar_mul(a, x):
+        """Compute a*x as a Python list."""
+        results = []
+        i = 0
+        for term in x:
+            results.append(term*a)
+            i += 1
+        return results

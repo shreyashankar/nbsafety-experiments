@@ -1,1 +1,1 @@
-print(remove_punctuation(['!!----data;----']))
+import types

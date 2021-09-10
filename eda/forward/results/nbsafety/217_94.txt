@@ -1,1 +1,1 @@
-chi_squared(7,100)
+plot_chi_squared(7)

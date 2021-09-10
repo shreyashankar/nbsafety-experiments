@@ -1,1 +1,1 @@
-dp = diff(p(t),t)
+sols = solve(simplify(dp/sin(n*t)),t)

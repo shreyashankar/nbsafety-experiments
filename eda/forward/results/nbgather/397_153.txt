@@ -1,0 +1,217 @@
+    """Return uniform random variates with mean mu and standard dev sigma."""
+def uniform2(mu, sigma, size=1):
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    mu : float
+        The mean of the normal distribution.
+    sigma : float
+    """Return uniform random variates with mean mu and standard dev sigma."""
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    """
+    r = []
+    b = np.sqrt(sigma**2 + mu)
+    for i in range(200):
+        r.append(uniform2(mu,sigma))
+    return mp.array(r)
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    mu : float
+        The mean of the normal distribution.
+    return b
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    """
+def uniform2(mu, sigma, size=1):
+    r = []
+    for i in range(200):
+        r.append(uniform2(mu,sigma))
+    return np.array(r)
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    mu : float
+    """Return uniform random variates with mean mu and standard dev sigma."""
+        The mean of the normal distribution.
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    b = mu + np.sqrt(3*sigma**2)
+    """
+    r = uniform2(mu,sigma,200)
+    return np.array(r)
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    mu : float
+    return b
+        The mean of the normal distribution.
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+def uniform2(mu, sigma, size=1):
+    """
+    r = uniform2(mu,sigma,200)
+    return np.array(r)
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    mu : float
+    """Return uniform random variates with mean mu and standard dev sigma."""
+        The mean of the normal distribution.
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    var = np.random.uniform(mu,sigma, size)
+    b = mu + np.sqrt(3*sigma**2)
+    """
+    r = []
+    for i in range(200):
+         r.append(uniform2(mu,sigma))
+    return np.array(r)
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    return np.sqrt(b)
+    mu : float
+        The mean of the normal distribution.
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+def uniform2(mu, sigma, size=1):
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    """
+    r = uniform2(mu,sigma)
+    return np.array(r)
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    """Return uniform random variates with mean mu and standard dev sigma."""
+    mu : float
+        The mean of the normal distribution.
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    var = np.random.uniform(mu,sigma)
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    """
+    r = uniform2(mu,sigma)
+    return r
+def normal2(mu, sigma, size=1):
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    mu : float
+        The mean of the normal distribution.
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    return var
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    """
+    r = uniform2(mu,sigma,size)
+    return r
+def plot_cdf(data, **kwargs):
+    """Plot the CDF of a 1d distribution of data.
+    You can use kwargs to pass keyword arguments to the Matplotlib plotting function.
+    """
+def uniform2(mu, sigma, size=1):
+    m = len(data)
+    plt.step(sorted(data), np.arange(m), **kwargs)
+plt.plot(nyp,plot_cdf)
+plt.plot(npy,plot_cdf)
+plot_cdf(npy)
+    """Return uniform random variates with mean mu and standard dev sigma."""
+    a = mu - sqrt(3*sigma**2)
+    b = mu + sqrt(3*sigma**2)
+    var = np.random.uniform(a,b,size)
+    return var
+def uniform2(mu, sigma, size=1):
+    """Return uniform random variates with mean mu and standard dev sigma."""
+    a = mu - np.sqrt(3*sigma**2)
+    b = mu + np.sqrt(3*sigma**2)
+    var = np.random.uniform(a,b,size)
+    return var
+def normal2(mu, sigma, size=1):
+    return var
+    """Return random variates from N(mu, sigma^2) using the CLT.
+    Parameters
+    ----------
+    mu : float
+        The mean of the normal distribution.
+    sigma : float
+        The standard deviation of the normal distribution.
+    size : int
+        The number of random variates to return as a NumPy array.
+def uniform2(mu, sigma, size=1):
+    Take n random variates, Xi from any distribution with μ and σ2 and average them.
+    Subtract μ
+    Multiply by n⎯⎯√
+    Add μ
+    As n becomes large, each time you do that process you will get a single random variate from N(μ,σ2)
+    """
+    dis = np.random.uniform(mu,sigma,200)
+    avg = dis.avg()
+    r = avg-mu
+    r *= np.sqrt(200)
+    """Return uniform random variates with mean mu and standard dev sigma."""
+    r += mu
+    return r
+def normal2(mu, sigma, size=1):
+    b = np.sqrt(sigma**2 + mu)
+    return b

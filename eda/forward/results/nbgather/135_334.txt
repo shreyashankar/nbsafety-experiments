@@ -1,0 +1,2 @@
+s.unpack(b'\xff\xff\xff\xff')
+s.pack(100)

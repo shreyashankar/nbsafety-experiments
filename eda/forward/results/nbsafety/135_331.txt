@@ -1,1 +1,1 @@
-import array
+ab.buffer_info()

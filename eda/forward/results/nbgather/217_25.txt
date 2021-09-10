@@ -1,0 +1,10 @@
+def mse(x, y):
+    """Compute the mean squared error between x and y."""
+    result = 0
+    i = 0
+    for term in x:
+        result += (term-y[i])**2
+        i += 1
+    result *= 1/float(len(mylist)-1)
+    return result
+print (mse([0,0],[1,1]))

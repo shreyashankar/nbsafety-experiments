@@ -1,0 +1,63 @@
+def distance_travelled_at_closest_approach(x_desired, y_desired, a, theta, l):
+    return (x_desired - a)*np.sin(theta) + (y_desired - l/2)*np.cos(theta)
+def min_distance(a,l,x_desired, y_desired):
+    return np.sqrt(2)*np.abs((a-x_desired)*np.cos(theta) + (y_desired - l/2.0)*np.sin(theta))
+def min_distance(a,l,x_desired, y_desired, theta):
+    return np.sqrt(2)*np.abs((a-x_desired)*np.cos(theta) + (y_desired - l/2.0)*np.sin(theta))
+def min_distance(a,l,x_desired, y_desired, theta):
+    return np.abs((a-x_desired)*np.cos(theta) + (y_desired - l/2.0)*np.sin(theta))
+min_distance(0.1, 0.3, 1.4, -0.2, 0.4)
+min_distance(0.1, 0.0, 1.4, 0.1, 0.3)
+min_distance(0.1, 0.0, 1.4, 0.1, 0.3)
+min_distance(0.1, 0.0, 1.4, 0.1, 0.3)
+def min_distance(a, theta,l,x_desired, y_desired):
+    print((a - x_desired)*np.cos(theta))
+    print((y_desired - l/2.0)*np.sin(theta))
+    return np.abs((a-x_desired)*np.cos(theta) + (y_desired - l/2.0)*np.sin(theta))
+min_distance(0.1, 0.0, 1.4, 0.1, 0.3)
+def min_distance(a, theta,l,x_desired, y_desired):
+    #print((a - x_desired)*np.cos(theta))
+    #print((y_desired - l/2.0)*np.sin(theta))
+    return np.abs((a-x_desired)*np.cos(theta) + (y_desired - l/2.0)*np.sin(theta))
+min_distance(0.1, 0.0, 1.4, 0.1, 0.3)
+def min_distance(a, theta,l,x_desired, y_desired):
+    return np.abs((a-x_desired)*np.cos(theta) + (y_desired - l/2.0)*np.sin(theta))
+min_distance(0.1, 0.0, 1.4, 0.1, 0.3)
+min_distance(a, thetamax, 1.4, 0.1, 0.3)
+Theta < A
+imshow(A)
+plt.imshow(A)
+plt.imshow(Theta < np.arctan2(wg/2.0 - A))
+plt.imshow(Theta < np.arctan2(wg/2.0 - A, l/2.0))
+plt.imshow(Theta < np.arctan2(wg/2.0 - A, l/2.0))
+plt.imshow(Theta > np.arctan2(-(wg/2.0 + a), l/2.0))
+plt.imshow((Theta > np.arctan2(-(wg/2.0 + A), l/2.0))&(Theta < np.arctan2(wg/2.0 - A, l/2.0)))
+np.zeros(3, dtype="float64")
+np.zeros(3, dtype="int32")
+np.zeros(3, dtype="int64")
+np.zeros(3, dtype="bool")
+plt.imshow(mask)
+plt.pcolor(A, Theta, mask*min_distance(A, Theta, l, 0.1, 0.3))
+plt.pcolor(A, Theta, mask*min_distance(A, Theta, l, 0.1, 0.3))
+plt.pcolor(A, Theta, min_distance(A, Theta, l, 0.1, 0.3))
+def min_distance_regulated(a, theta,l,x_desired, y_desired, n_bounce_limit):
+    return np.abs((a-x_desired)*np.cos(theta) + (y_desired - l/2.0)*np.sin(theta))
+plt.plot([-0.5*w, -0.5*w, 0.5*w, 0.5*w], [0.5*l, 0, 0, 0.5*l])
+plt.plot(d, np.sqrt((a + d*np.sin(theta) - x_desired)**2 + (0.5*l - d*np.cos(theta) - y_desired)**2))
+plt.plot(d, np.sqrt((a + d*np.sin(theta) - x_desired)**2 + (0.5*l - d*np.cos(theta) - y_desired)**2))
+plt.plot(d, np.sqrt((a + d*np.sin(theta) - x_desired)**2 + (0.5*l - d*np.cos(theta) - y_desired)**2))
+def min_distance_regulated(a, theta,l,x_desired, y_desired, n_bounce_limit):
+    return np.abs((a-x_desired)*np.cos(theta) - (y_desired - l/2.0)*np.sin(theta))
+def min_distance(a, theta,l,x_desired, y_desired):
+    return np.abs((a-x_desired)*np.cos(theta) - (y_desired - l/2.0)*np.sin(theta))
+distances = float('inf')*(~mask) + min_distance(A, Theta, l, 0.1, 0.3)
+distances = 100*(~mask) + min_distance(A, Theta, l, 0.1, 0.3)
+distances = 3*(~mask) + min_distance(A, Theta, l, 0.1, 0.3)
+distances = 1.5*(~mask) + min_distance(A, Theta, l, 0.1, 0.3)
+distances = 1.0*(~mask) + min_distance(A, Theta, l, 0.1, 0.3)
+distances = 0.6*(~mask) + min_distance(A, Theta, l, 0.1, 0.3)
+distances = 0.6*(~mask) + mask*min_distance(A, Theta, l, 0.1, 0.3)
+distances = 0.8*(~mask) + mask*min_distance(A, Theta, l, 0.1, 0.3)
+distances = 0.8*(~mask) + mask*min_distance(A, Theta, l, 0.1, 0.3)
+distances = 0.8*(~mask) + mask*min_distance(A, Theta, l, 0.1, 0.3)
+plt.scatter(np.zeros(50), np.tan(phi))

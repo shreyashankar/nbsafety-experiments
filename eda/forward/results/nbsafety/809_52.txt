@@ -1,1 +1,1 @@
-np.ones((5,), dtype=int)
+train_errors, val_errors = [], []

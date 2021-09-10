@@ -1,0 +1,19 @@
+args.tag()
+vars(args)
+vars(args)
+for k, v in dict(args).items():
+vars(args)
+vars(args)['addentry']
+vars(args).items()
+for k, v in vars(args):
+for k, v in vars(args).items():
+for k, v in vars(args).items():
+args.addentry
+def moro(*args):
+    for a in args:
+        print(a)
+moro(*args.addentry)
+def moro(*args):
+    for a in args[1:]:
+        print(a)
+moro(*args.addentry)

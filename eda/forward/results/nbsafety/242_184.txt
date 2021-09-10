@@ -1,1 +1,1 @@
-df1.idxmin(axis=0)
+pd.Series(['foo', 'bar', 'baz']) == 'foo'

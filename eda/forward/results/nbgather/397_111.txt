@@ -1,0 +1,48 @@
+def chi_squared(k, size=1):
+    chi = []
+    ran = np.random.normal(0.0, 1.0, size)
+    for ele, index in enumerate(ran):
+        chi.append(ele**2 * k)
+    return chi
+def chi_squared(k, size=1):
+    chi = []
+    ran = np.random.normal(0.0, 1.0, size)
+    for ele, index in enumerate(ran):
+        chi.append(ele**2 * k)
+    chi = np.array(chi)
+    return chi
+chi_squared(7, 100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()
+chi_squared(7, 100).mean(), np.random.chisquare(7,100).mean()
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    X = chi_squared(k, 300)
+    sns.distplot(X, bins=20, rug=True);
+    print("mean =", X.mean(), "var =", X.var())
+    plt.xlim(-15.0, 15.0)
+    plt.xlabel('X')
+interact(plot_normal, mu=(-5.0,5.0), sigma=(1.0, 5.0), __manual=True);
+def plot_chi_squared(k):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    X = chi_squared(k, 300)
+    sns.distplot(X, bins=20, rug=True);
+    print("mean =", X.mean(), "var =", X.var())
+    plt.xlim(0, 20.0)
+    plt.xlabel('chi-')
+plot_chi_squared(7)
+plot_normal = plot_chi_squared(7)
+interact(plot_normal, mu=0.0, sigma=1.0, __manual=True);
+plot_normal = plot_chi_squared(7)
+interact(plot_normal, mu=0.0, sigma=1.0, __manual=True);
+interact(plot_normal, mu=0.0, sigma=1.0, __manual=True);
+interact(plot_chi_squared, mu=0.0, sigma=1.0, __manual=True);
+def plot_chi_squared(k, mu, sigma):
+    """Plot the chi-squared distribution as a distplot with 300 points."""
+    X = chi_squared(k, 300)
+    sns.distplot(X, bins=20, rug=True);
+    print("mean =", X.mean(), "var =", X.var())
+    plt.xlim(0, 20.0)
+    plt.xlabel('chi-squared distribution')
+interact(plot_chi_squared, 7, __manual=True);

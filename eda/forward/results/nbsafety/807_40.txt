@@ -1,1 +1,1 @@
-predictions = [determine(f(w, phi_i(d))) for d in concatnate([test_c1, test_c2])]
+update(init_w, X, t)

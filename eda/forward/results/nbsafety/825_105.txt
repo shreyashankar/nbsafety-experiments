@@ -1,1 +1,1 @@
-s3.index.values
+df.index.equals(df.sort('col1', ascending=False).index)

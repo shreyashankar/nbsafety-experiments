@@ -1,0 +1,8 @@
+obj2['d'] = 6
+obj2
+obj2[obj2>0]
+obj2*2
+np.exp(obj2)
+np.exp(obj2)
+'b' in obj2
+'e' in obj2

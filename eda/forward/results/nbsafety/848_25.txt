@@ -1,1 +1,1 @@
-clf = clf.fit(clf_data,clf_target)
+df_train.drop('Sex',inplace=True,axis=1)

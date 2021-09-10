@@ -1,0 +1,2 @@
+a.extend([*range(10)])
+a

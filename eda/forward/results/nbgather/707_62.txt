@@ -1,0 +1,17 @@
+x.rfind('{', '')
+x.find('{')
+x
+x.rfind('{')
+x.rfind('}')
+x.find('}')
+y = x.split(',')
+y
+y.find('{')
+type(y)
+y.remove('{')
+y
+y.remove('9')
+y
+x
+y = x[1:-1]
+y

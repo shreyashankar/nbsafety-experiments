@@ -1,1 +1,1 @@
-np.random.poisson(λ)
+interact(plot_dirichlet, alpha1=(0.1, 10.0, 0.1), alpha2=(0.1, 10.0, 0.1));

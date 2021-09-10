@@ -1,0 +1,9 @@
+import array, fcntl, termios
+buf = array.array('H', [0,0,0,0])
+fcntl.ioctl(sys.stdout, termios.TIOCGWINSZ, buf)
+buf
+fcntl.ioctl(sys.stdout, termios.TIOCGWINSZ, arg=buf)
+fcntl.ioctl(sys.stdout, termios.TIOCGWINSZ, arg=buf)
+fcntl.ioctl(sys.stdout, termios.TIOCGWINSZ, buf)
+fcntl.ioctl(sys.stdout, termios.TIOCGWINSZ, buf)
+buf

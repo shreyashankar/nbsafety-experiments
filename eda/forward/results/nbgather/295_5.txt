@@ -1,0 +1,6 @@
+pylab.show()
+pylab.plot(function)
+pylab.show()
+pylab.show()
+pylab.plot(function)
+pylab.show()

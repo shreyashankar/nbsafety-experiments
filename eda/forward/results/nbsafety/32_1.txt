@@ -1,1 +1,10 @@
+ga = "Four_score_and_seven_years_ago"
 ga
+ga_2 = 'Three' + ga[4:]
+ga_2
+ga.split()
+ga
+a,b,c = ga.split()[:3]
+list(ga)
+ga
+list(ga)

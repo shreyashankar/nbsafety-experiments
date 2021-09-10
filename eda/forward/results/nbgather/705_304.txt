@@ -1,0 +1,17 @@
+merge3 = pd.merge(students, aliases, left_index = True, right_on = 'student').drop('student', axis = 1)
+merge3
+merge3 = pd.merge(students, aliases, 'left',left_index = True, right_on = 'student').drop('student', axis = 1)
+merge3
+merge3 = pd.merge(students, aliases, 'right',left_index = True, right_on = 'student').drop('student', axis = 1)
+merge3
+merge3 = pd.merge(students, aliases, how='left',left_index = True, right_on = 'student').drop('student', axis = 1)
+merge3
+merge4 = pd.merge(students, classes, how='left',left_index = True, right_on = 'student')
+merge4 = pd.merge(students, courses, how='left',left_index = True, right_on = 'student')
+concact1 = pd.concat(students, ssns)
+concact1 = pd.concat([students, ssns])
+concat1 = pd.concat([students, ssns])
+concat1
+concat1 = pd.concat([students, ssns], axis = 'col')
+concat1 = pd.concat([students, ssns], axis='col')
+merge3

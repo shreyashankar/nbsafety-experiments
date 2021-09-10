@@ -1,0 +1,4 @@
+sns.countplot(data)
+sns.countplot(data)
+sns.distplot(fair_boot)
+sns.countplot(data)

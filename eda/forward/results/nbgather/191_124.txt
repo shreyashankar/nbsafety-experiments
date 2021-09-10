@@ -1,0 +1,94 @@
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    for cipher in itertools.permutations(range(97,123),3):
+        s=''
+        for i in range(len(alist)):
+            char=int(alist[i])^cipher[i%3]
+            if char>126:break
+            string+=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    for cipher in itertools.permutations(range(97,123),3):
+        s=''
+        for i in range(len(alist)):
+            char=int(alist[i])^cipher[i%3]
+            if char>126:break
+            string +=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()
+problem_59()
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    for cipher in itertools.permutations(range(97,123),3):
+        string=''
+        for i in range(len(alist)):
+            char=int(alist[i])^cipher[i%3]
+            if char>126:break
+            string +=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    print(alist)
+    for cipher in itertools.permutations(range(97,123),3):
+        string=''
+        for i in range(len(alist)):
+            char=int(alist[i]) ^ cipher[i%3]
+            if char>126:break
+            string +=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    print(alist)
+    xlist = open('data/cipher.txt')
+    xlist = xlist.read().split(',')
+    for cipher in itertools.permutations(range(97,123),3):
+        string=''
+        for i in range(len(alist)):
+            char=int(alist[i]) ^ cipher[i%3]
+            if char>126:break
+            string +=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    print(alist)
+    xlist = open('data/cipher.txt')
+    xlist = xlist.read().split(',')
+    print(xlist)
+    for cipher in itertools.permutations(range(97,123),3):
+        string=''
+        for i in range(len(alist)):
+            char=int(alist[i]) ^ cipher[i%3]
+            if char>126:break
+            string +=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    xlist = open('data/cipher.txt')
+    xlist = xlist.read().split(',')
+    print(xlist)
+    for cipher in itertools.permutations(range(97,123),3):
+        string=''
+        for i in range(len(alist)):
+            char=int(alist[i]) ^ cipher[i%3]
+            if char>126:break
+            string +=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()
+def problem_59():
+    alist = list(csv.reader(open('data/cipher.txt'), delimiter=','))[0]
+    xlist = open('data/cipher.txt')
+    xlist = xlist.read().split(',')
+    print(xlist)
+    for cipher in itertools.permutations(range(97,123),3):
+        string=''
+        for i in range(len(xlist)):
+            char=int(alist[i]) ^ cipher[i%3]
+            if char>126:break
+            string +=chr(char)
+        if ' the ' in string: return sum([ord(i) for i in string])
+problem_59()

@@ -1,0 +1,19 @@
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+assert np.isclose(
+    compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train),
+    7.5974094557701459)
+compute_CV_error(lm.LinearRegression(), X_train[['TAX', 'INDUS', 'CRIM']],Y_train)

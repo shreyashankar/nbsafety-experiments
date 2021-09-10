@@ -1,0 +1,7 @@
+b = doc.xpath("//embed")
+b[0].items()
+b
+type(b[0])
+isinstance(b[0], html.HtmElement)
+isinstance(b[0], html.Element)
+isinstance(b[0], html.HtmlElement)

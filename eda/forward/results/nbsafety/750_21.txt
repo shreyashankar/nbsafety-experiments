@@ -1,1 +1,1 @@
-c['a'], c['z']
+buy_grocery_list(grocery_list)

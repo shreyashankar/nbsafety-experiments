@@ -1,0 +1,6 @@
+x2 = np.array([0.8, 0.5, 0.675, 0.95])
+plt.barh(y+0.1, x2, color = "yellow", height = 0.1, label = "Train:Test=320:40", align = "center")
+plt.barh(y-0.1, x2, color = "yellow", height = 0.1, label = "Train:Test=320:40", align = "center")
+plt.barh(y-0.1, x2, color = "#40ffdd", height = 0.1, label = "Train:Test=320:40", align = "center")
+plt.barh(y-0.2, x2, color = "#40ffdd", height = 0.2, label = "Train:Test=320:40", align = "center")
+plt.barh(y-0.2, x2, color = "#40ffdd", height = 0.2, label = "Train:Test=320:40", align = "center")

@@ -1,0 +1,47 @@
+predict_class(train_X, mu, sigma, priors)
+get_ipython().magic(u'debug')
+yhat = predict_class(train_X, mu, sigma, priors)
+yhat = predict_class(train_X, mu, sigma, priors)
+def main4():   
+    # Load the data
+    test = np.genfromtxt('./classification_test.txt')
+    train = np.genfromtxt('./classification_train.txt')
+    test_X = test[:,:-1]
+    train_X = train[:, :-1]    
+    train_b = train[:, -1]
+    test_b = test[:,-1]
+    # Calc stats
+    train_mu, train_sigma = max_likelihood(train_X, train_b)
+    train_priors = calc_priors(train_X, train_b)
+    test_mu, test_sigma = max_likelihood(test_X, test_b)
+    test_priors = calc_priors(test_X, test_b)
+    # Make predictions
+    train_yhat = predict_class(train_X, train_mu, train_sigma, train_priors)
+    test_yhat = predict_class(test_X, test_mu, test_sigma, test_priors)
+    # Print errors
+    'Training classification error rate: %f' % calc_errors(train_yhat, train_b)
+    'Test classification error rate: %f' % calc_errors(test_yhat, test_b) 
+yhat = predict_class(train_X, mu, sigma, priors)
+yhat = predict_class(train_X, mu, sigma, priors)
+yhat = predict_class(train_X, mu, sigma, priors)
+def main4():   
+    # Load the data
+    test = np.genfromtxt('./classification_test.txt')
+    train = np.genfromtxt('./classification_train.txt')
+    test_X = test[:,:-1]
+    train_X = train[:, :-1]    
+    train_b = train[:, -1]
+    test_b = test[:,-1]
+    # Calc stats
+    train_mu, train_sigma = max_likelihood(train_X, train_b)
+    train_priors = calc_priors(train_X, train_b)
+    test_mu, test_sigma = max_likelihood(test_X, test_b)
+    test_priors = calc_priors(test_X, test_b)
+    # Make predictions
+    train_yhat = predict_class(train_X, train_mu, train_sigma, train_priors)
+    test_yhat = predict_class(test_X, test_mu, test_sigma, test_priors)
+    # Print errors
+    'Training classification error rate: %f' % calc_errors(train_yhat, train_b)
+    'Test classification error rate: %f' % calc_errors(test_yhat, test_b) 
+yhat = predict_class(train_X, mu, sigma, priors)
+yhat = predict_class(train_X, mu, sigma, priors)

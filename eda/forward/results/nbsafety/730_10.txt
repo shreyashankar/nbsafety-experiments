@@ -1,4 +1,12 @@
-arr1=np.array(data1)
+arr.sort()
+np.save('some_array',arr)
+np.load('some_array.npy')
+arr1=np.array([1,2,3,4,5])
+arr2=np.array([2,3,4,5,6])
 np.dot(arr1,arr2.T)
 arr1.T
 arr1
+matrix=np.array([[1,2],[3,5]])
+matrix
+np.linalg.eign(matrix)
+np.linalg.eig(matrix)

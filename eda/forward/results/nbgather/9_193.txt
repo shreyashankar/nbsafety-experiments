@@ -1,0 +1,6 @@
+ids = df_metadata_1['id'].values
+df_data[df['id'] == ids[0]]
+df_metadata_1.loc[df_metadata_1['id'] == ids[0], 't0']
+df_metadata_1.loc[df_metadata_1['id'] == ids[0], 't0'].values
+df_metadata_1.loc[df_metadata_1['id'] == ids[0], 't0'].values[0]
+df_metadata_1.loc[df_metadata_1['id'] == ids[0], 't0'].values

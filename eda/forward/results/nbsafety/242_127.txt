@@ -1,1 +1,6 @@
-from ipywidgets import interact
+def entropy(d):
+        """Compute the entropy of a dict d whose values are probabilities."""
+        # YOUR CODE HERE
+        values = list(d.values())
+        values = np.array(values)
+        return -(np.sum(values * np.log2(values)))

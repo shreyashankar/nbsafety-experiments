@@ -1,0 +1,1 @@
+np.save('5siteISINGgroundstate.npy', _eigenVec)

@@ -1,1 +1,1 @@
-df
+s.sum(level='second')

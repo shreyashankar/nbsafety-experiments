@@ -1,1 +1,1 @@
-expr.as_coefficient(a)
+interact(factorit, n=(2,40));

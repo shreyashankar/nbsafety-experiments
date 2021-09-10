@@ -1,0 +1,95 @@
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+answer.apply(myprint, "guess")
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+np.random(3)
+np.random.rand(3)
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", np.arange(tries)+1, 
+    "remaining", np.arange(tries)+1))
+def myprint(i):
+    if(i==0):
+        return "car"
+    elif(i==1):
+        return "first goat"
+    else:
+        return "second goat"
+answer = (Table().with_columns(
+    "trial", np.arange(tries)+1, 
+    "guess", guess, 
+    "exposed", exposed, 
+    "remaining",remaining))
+exposed
+exposed
+remaining

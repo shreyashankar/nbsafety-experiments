@@ -1,0 +1,35 @@
+s = pd.Series([0,1,1,np.nan])
+s
+s.astype(bool)
+s.astype(int)
+s = s.astype('category')
+s
+s.cat.categories
+s
+s = pd.Series([0,5,5,np.nan])
+s = s.astype('category')
+s.cat.categories
+s
+s.cat.codes
+s = s.cat.codes
+s.cat.categories
+df2['c'] = pd.Series(np.zeros((len(df2))))
+df2
+df2['c'] = pd.Series(np.zeros((len(df2))), index=df2.index)
+df2
+train = pd.read_pickle('../data/train.pkl')
+train.head()
+train.available_for_user_media_api.unique()
+train.user_country_user_api.unique()
+train.available_for_user_media_api.replace(0, -1, inplace=True)
+train.available_for_user_media_api.unique()
+train.available_for_user_media_api.replace(-1, 0, inplace=True)
+train.available_for_user_media_api.unique()
+train.available_for_user_media_api = train.available_for_user_media_api - 1
+train.to_pickle('../data/train.pkl')
+train.head()
+test = pd.read_pickle('../data/test.pkl')
+test.head()
+test.available_for_user_media_api = test.available_for_user_media_api - 1
+test.head()
+test.to_pickle('../data/test.pkl')

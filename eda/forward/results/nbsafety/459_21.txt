@@ -1,1 +1,2 @@
-import numpy as np
+for i,g in enumerate(grad):
+        print("Gradient fuer %i in Prozent: %4.1f" % (i,g))

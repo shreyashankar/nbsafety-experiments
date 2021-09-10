@@ -1,0 +1,11 @@
+merge3=pd.merge(students,aliases)
+merge3=pd.merge(students,ali)
+merge3=pd.merge(students,ali,left_index=True, right_index=True)
+merge3
+concat1=pd.concat(objs=[students,ssns],axis=1)
+concat1=pd.concat
+concat1
+concat1=pd.concat(objs=[students,ssns],axis=1)
+concat1
+concat2=pd.concat(objs=[students,ssns,addresses],axis=1)
+concat2

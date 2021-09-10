@@ -1,1 +1,1 @@
-merge3 = students.join(aliases)
+merge3 = pd.merge(students, aliases, left_index = True, right_on = 'student').drop('student', axis = 1)

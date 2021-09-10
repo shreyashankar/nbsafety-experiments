@@ -1,1 +1,1 @@
-print (spread)
+spread = [x-y for x in check2 for y in check1]

@@ -1,0 +1,12 @@
+np.concatenate([b, np.zeros((2,3,1))], axis=1)
+np.concatenate([b, np.zeros((2,3,1))], axis=2)
+c = np.concatenate([b, np.zeros((2,3,1))], axis=2)
+c[:,:,0]
+c[:,0,:]
+c[0,:,:]
+b = np.random.rand(2,3,4)
+newdata = np.zeros((1,1,1))
+b
+b[0,0]
+np.concatenate(b, newdata, axis=2)
+np.concatenate([b, newdata], axis=2)

@@ -1,0 +1,10 @@
+A = np.arange(0,10,0.01)
+A
+A[0] = None
+A
+A
+A[0]
+A[0] == True
+A[1] == True
+A[1]
+A[0]

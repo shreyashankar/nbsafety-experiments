@@ -1,1 +1,5 @@
-tries = 10
+answer = (Table().with_columns(
+        "trial", np.arange(tries)+1, 
+        "guess", guess, 
+        "exposed", np.arange(tries)+1, 
+        "remaining", np.arange(tries)+1))

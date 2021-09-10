@@ -1,0 +1,8 @@
+import scipy
+scipy.integrate.quad(DeltaRepGauss, -numpy.inf, numpy.inf, args=1)
+scipy.integrate.quad(DeltaRepGauss, -numpy.inf, numpy.inf, args=1)
+scipy.integrate.quad(DeltaRepGauss, -numpy.inf, numpy.inf, args=2)
+scipy.integrate.quad(DeltaRepGauss, -numpy.inf, numpy.inf, args=4)
+scipy.integrate.quad(DeltaRepGauss, -numpy.inf, numpy.inf, args=0.1)
+scipy.integrate.quad(DeltaRepGauss, -numpy.inf, numpy.inf, args=0.4)
+scipy.integrate.quad(DeltaRepGauss, -numpy.inf, numpy.inf, args=0.5)

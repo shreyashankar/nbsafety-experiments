@@ -1,1 +1,1 @@
-x.size
+sp.rot90(x)

@@ -1,0 +1,447 @@
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char.isdigit() == False:
+            print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char.isdigit() == True:
+            print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char.isdigit() == True:
+            char.replace(char, '')
+            print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char.isdigit() == True:
+            char.replace(char, '')
+            print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char == '\n':
+            print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char != '\n':
+            print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    g = [0]
+    m = 13
+    for i in range(0,10):
+        n = e[i::]
+        print(n)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    g = [0]
+    m = 13
+    print(e)
+    for i in range(0,10):
+        n = e[i::]
+        print(n)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    g = [0]
+    m = 13
+    print(e[1::])
+    print(e[2::])
+    print(e[3::])
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    print(e)
+    print(e[1::])
+    print(e[2::])
+    print(e[3::])
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    print(e)
+    print(int(e)[1::])
+    print(int(e)[2::])
+    print(int(e)[3::])
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    print(''.join(e))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    print('\n'.join(e))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    print(''.join(e))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    print(''.join(e))
+    print(int(e))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    s = ''.join(e)
+    print(int(s))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    val = 1
+    s = '\n'.join(e)
+    print(int(s))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = e.split('\n')
+    val = 1
+    s = '\n'.join(e)
+    print(int(s))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    s = '\n'.join(e)
+    print(int(s))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    s = '\n'.join(e)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join()
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    print(int(e))
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    [print(char) for char in e]
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for char in e:
+        for i in range(14):
+            val *= int(char)
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    print(values[len(values) - 1])    
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for char in e:
+        for i in range(14):
+            val *= int(char)
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    print(values)
+    print(values[len(values) - 1])    
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for char in e:
+        for i in range(14):
+            val *= int(char)
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    print(values[len(values) - 1])    
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        for i in range(14):
+                print()
+    print(len(e))
+greatest(d1000)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for i in range(14):
+            val *= int(n[i])
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    print(values[len(values) - 1])    
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for x in range(14):
+            val *= int(n[x])
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    print(values[len(values) - 1])    
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        print(n)
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for x in range(14):
+            if 13 % len(N) == 1 and x == 12:
+                break
+            val *= int(n[x])
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for x in range(14):
+            if 13 % len(n) == 1 and x == 12:
+                break
+            val *= int(n[x])
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+def greatest(s):
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    e = s.split(' ')
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for x in range(14):
+            if 13 % len(n) > 0 and x == 12:
+                break
+            val *= int(n[x])
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    [e.replace(char, '') for char in e if char == '\n']
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for x in range(14):
+            if 13 % len(n) > 0 and x == len(n):
+                break
+            val *= int(n[x])
+        if values[len(values) - 1] < val:
+            values.append(val)
+        val = 1
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+    e = ''.join(e)
+    print(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for x in range(14):
+            if 13 % len(n) > 0 and x + 1 == len(n):
+                break
+            val *= int(n[x])
+        if values[len(values) - 1] < val:
+greatest(d1000)
+            values.append(val)
+        val = 1
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    e = ''.join(e)
+    e = e.split('\n')
+def greatest(s):
+    e = ''.join(e)
+    values = [0]
+    val = 1
+    for i in range(len(e)):
+        n = e[i::]
+        for x in range(14):
+            if x < len(n):
+                val *= int(n[x])
+        if values[len(values) - 1] < val:
+    e = s.split(' ')
+            values.append(val)
+        val = 1
+    print(1000%13)
+    print(values[len(values) -1])   
+greatest(d1000)
+    for char in e:
+        if char == '\n':
+            e = e.replace(char, '') 
+    print(e)
+greatest(d1000)
+greatest(d1000)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        print(char)
+        if char == '\n':
+            e = e.replace(char, '')
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char == '\n':
+            e = e.replace(char, '')
+            print(char)
+    print(e)
+greatest(d1000)
+def greatest(s):
+    e = s.split(' ')
+    for char in e:
+        if char.isdigit() == False:
+            e = e.replace(char, '')
+            print(char)

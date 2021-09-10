@@ -1,0 +1,19 @@
+def vector_scalar_mul(a, x):
+    """Compute a*x as a Python list."""
+    results = []
+    i = 0
+    for term in x:
+        results.append(term*a)
+        i += 1
+    return results
+def vector_dot(x, y):
+def mse(x, y):
+    """Compute the mean squared error between x and y."""
+    result = 0
+    i = 0
+    for term in x:
+        result += (term-y[i])**2
+        result *= 1/float(len(mylist))
+        i += 1
+    return results
+def mse(x, y):

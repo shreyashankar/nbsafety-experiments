@@ -1,2 +1,1 @@
-for day in calendar.day_name:
-        print(day)
+df3=df1.loc[:,['gender','age']]

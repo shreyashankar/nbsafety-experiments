@@ -1,0 +1,20 @@
+height=np.random.normal(60,10,size=n)
+time=pd.data_range('1/1/2000',periods=n)
+time=pd.date_range('1/1/2000',periods=n)
+gender=tm.choice(['male','female'],size=n)
+gender=np.choice(['male','female'],size=n)
+gender=np.random.choice(['male','female'],size=n)
+df=pd.DataFrame({'height':height,'weight':weight,
+                 'gender': gender},index=time)
+df
+gb=df.groupby('gender')
+index=pd.MultiIndex.from_arrays(arrays,names=['first','second'])
+index=pd.MultiIndex.from_arrays(arrays,names=['first','second'])
+s=pd.Series(np.random.randn(8),index=index)
+s
+grouped=s.groupby(level=0)
+grouped.sum()
+s.groupby(level='second').sum()
+s.sum(level='second')
+s
+s.groupby(level=['first','second']).sum()

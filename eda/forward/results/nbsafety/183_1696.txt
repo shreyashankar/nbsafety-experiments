@@ -1,1 +1,1 @@
-m=archive.MyArchive()
+p.joinpath('tmp').joinpath('hello')

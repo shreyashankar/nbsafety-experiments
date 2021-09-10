@@ -1,1 +1,1 @@
-np.ones((N,N))
+x = X - np.ones((D,D))@X*(1/N)

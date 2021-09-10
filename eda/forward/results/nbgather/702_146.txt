@@ -1,0 +1,13 @@
+    """
+    searchstart = ""
+    for block in model.blocks.values():
+        if block.name == name:
+            searchstart =  block.name+"-"+block.parent.name
+    for block in model.blocks.values():
+        if (block.name[:len(searchstart)] == searchstart) and (block.type==type):
+            if block.portnumber == port:
+                return block.name
+model.connections
+def get_port(name, port, type):
+    """
+    Find the correct input or output port in the model to connect to.

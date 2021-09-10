@@ -1,1 +1,3 @@
-merge3=pd.merge(students,aliases)
+merge2=pd.merge
+merge2
+merge2

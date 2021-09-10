@@ -1,1 +1,1 @@
-a.decode('unicode-escape')
+c = b.decode('unicode-escape')

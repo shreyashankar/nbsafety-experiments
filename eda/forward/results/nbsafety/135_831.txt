@@ -1,1 +1,1 @@
-crickline = sympy.Line(p1, p4)
+crickeq.as_independent()

@@ -1,1 +1,1 @@
-df_metadata_1['id'][0]
+ids = df_metadata_1['id'].values

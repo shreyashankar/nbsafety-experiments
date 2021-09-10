@@ -1,0 +1,3 @@
+Binv = np.linalg.inv(B)
+B
+Binv

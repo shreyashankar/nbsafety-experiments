@@ -1,0 +1,58 @@
+df = pd.DataFrame({'height': height, 'weight': weight,
+                   'gender': gender}, index=time)
+df
+gb = df.groupby('gender')
+df = pd.DataFrame({'A' : ['foo', 'bar', 'foo', 'bar',
+                             'foo', 'bar', 'foo', 'foo'],
+                      'B' : ['one', 'one', 'two', 'three',
+                             'two', 'two', 'one', 'three'],
+                      'C' : np.random.randn(8),
+                      'D' : np.random.randn(8)})
+index = pd.MultiIndex.from_arrays(arrays, names=['first', 'second'])
+s = pd.Series(np.random.randn(8), index=index)
+s
+grouped = s.groupby(level=0)
+grouped.sum()
+s.groupby(level='second').sum()
+s.sum(level='second')
+s
+s.groupby(level=['first', 'second']).sum()
+grouped = df.groupby(['A'])
+grouped_C = grouped['C']
+grouped_D = grouped['D']
+df['C'].groupby(df['A'])
+grouped.get_group('bar')
+df.groupby(['A', 'B']).get_group(('bar', 'one'))
+grouped = df.groupby('A')
+grouped.aggregate(np.sum)
+grouped = df.groupby(['A', 'B'])
+grouped.aggregate(np.sum)
+grouped = df.groupby(['A', 'B'], as_index=False)
+grouped.aggregate(np.sum)
+df.groupby('A', as_index=False).sum()
+df.groupby(['A', 'B']).sum().reset_index()
+grouped.size()
+grouped.describe()
+grouped = df.groupby('A')
+grouped['C'].agg([np.sum, np.mean, np.std])
+grouped['D'].agg({'result1' : np.sum,
+                     'result2' : np.mean})
+grouped.agg([np.sum, np.mean, np.std])
+grouped.agg({'C' : np.sum,'D' : lambda x: np.std(x, ddof=1)})
+grouped.agg({'C' : 'sum', 'D' : 'std'})
+df.groupby('A').sum()
+df.groupby(['A', 'B']).mean()
+index = pd.date_range('10/1/1999', periods=1100)
+ts = pd.Series(np.random.normal(0.5, 2, 1100), index)
+ts = ts.rolling(window=100,min_periods=100).mean().dropna()
+ts.head()
+ts.tail()
+transformed = ts.groupby(key).transform(zscore)
+grouped = ts.groupby(key)
+grouped.mean()
+grouped.std()
+grouped_trans = transformed.groupby(key)
+grouped_trans.mean()
+grouped_trans.std()
+compare = pd.DataFrame({'Original': ts, 'Transformed': transformed})
+compare.plot()

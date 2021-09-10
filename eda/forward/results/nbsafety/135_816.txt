@@ -1,1 +1,1 @@
-x.T == X
+import pandas as pd

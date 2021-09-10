@@ -1,0 +1,8 @@
+ab.buffer_info()
+ab.tobytes()
+ab.byteswap()
+ab
+ab
+ab.byteswap()
+ab = ab.byteswap()
+ab

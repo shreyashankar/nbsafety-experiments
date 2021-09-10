@@ -1,1 +1,1 @@
-k2 = (ip * p -1) // q
+p = getPrime(1024)

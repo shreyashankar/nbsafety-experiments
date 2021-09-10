@@ -1,3 +1,1 @@
-s_to_i = set([3,4])
-s_to_i.intersection_update(nodes_to_watch)
-s_to_i
+ig.plot(graph)

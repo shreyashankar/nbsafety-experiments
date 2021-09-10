@@ -1,0 +1,35 @@
+def count_words(words):
+    mydict = counting_words(words)
+    return mydict
+assert count_words(tokenize_line('This, and The-this from, and A a a')) ==     {'a': 3, 'and': 2, 'from': 1, 'the': 1, 'this': 2}
+def sort_word_counts(wc):
+    mydict = count_words(wc)
+    mydict = wc.keys()
+    return mydict
+assert set(sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))) ==     {('a', 3), ('and', 2), ('this', 2), ('the', 1), ('from', 1)}
+sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))
+def sort_word_counts(wc):
+    mydict = count_words(wc)
+    mydict = wc.values()
+    return mydict
+sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))
+assert set(sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))) ==     {('a', 3), ('and', 2), ('this', 2), ('the', 1), ('from', 1)}
+def sort_word_counts(wc):
+    mydict = count_words(wc)
+    mydict = sorted(mydict.items(), key=lambda x: x[1])
+    return mydict
+sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))
+def sort_word_counts(wc):
+    mydict = count_words(wc)
+    mydict = mydict.values()
+    return mydict
+sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))
+def sort_word_counts(wc):
+    mydict = count_words(wc)
+    mydict = mydict.values()
+    return mydict
+sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))
+def sort_word_counts(wc):
+    mydict = count_words(wc)
+    return mydict
+sort_word_counts(count_words(tokenize_line('This, and The-this from, and A a a')))

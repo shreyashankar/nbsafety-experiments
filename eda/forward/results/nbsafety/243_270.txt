@@ -1,1 +1,2 @@
-week=cal.Calendar()
+for day in calendar.day_name:
+        print(day)

@@ -1,0 +1,1 @@
+df_test_1[['PassengerId','Survived']].to_csv('titanic/sub-04.csv', index=False, float_format="%f")

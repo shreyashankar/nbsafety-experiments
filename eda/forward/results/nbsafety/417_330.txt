@@ -1,1 +1,1 @@
-conn._make_request(action='ModifyDBParameterGroup', verb='POST', path='/', params=params)
+conn = cm.get_connection('opsqa', service='rds2')

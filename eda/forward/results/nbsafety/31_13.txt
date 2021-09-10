@@ -1,2 +1,1 @@
-lf = pd.DataFrame(cancer.target)
-lf.head(30)
+df2 = DataFrame(X_train)

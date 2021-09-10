@@ -29,7 +29,7 @@ lines = [line[1:-1].split(",") for line in lines]
 nbsafety_processed_trace_sessions = {
     (int(line[0].strip()), int(line[1].strip())): (
         int(line[-3].strip()),
-        ",".join(line[2:-4])[2:],
+        ",".join(line[2:-3])[2:-1],
     )
     for line in lines
 }

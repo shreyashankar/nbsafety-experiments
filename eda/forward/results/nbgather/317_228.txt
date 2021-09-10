@@ -1,0 +1,3 @@
+def group_sorted(iterable, key=None):
+    return groupby(sorted(iterable, key=key), key=key)
+def group_sorted(iterable, key=None):

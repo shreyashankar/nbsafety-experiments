@@ -1,0 +1,4 @@
+K = K0 * pMass * sMass**(-2./3.) * P**(-1./3.)
+K
+K
+plt.plot(P,K)

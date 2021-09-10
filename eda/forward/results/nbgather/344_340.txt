@@ -1,0 +1,32 @@
+data = csv.reader(f)
+for i in data:
+    l.append(i)
+l
+shape(l)
+data = csv.reader(f)
+shape(data)
+l = [i for i in data]
+l
+l[0][0]
+l[0][0][0]
+data = csv.reader(f)
+data = csv.reader(f)
+a = data
+a
+for i in data:
+    l = i
+l
+l[0]
+for i in range(len(l)):
+    l2 = []
+    for j in range(len(l[i])):
+        if l[i][j] != '[' or l[i][j] != ']':
+            l2.append(l[i][j])
+    l1.append(l2)
+l1
+shape(l1)
+l1[0]
+l[0]
+l1[0]
+l1[0][0]
+l

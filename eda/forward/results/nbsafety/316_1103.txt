@@ -1,1 +1,1 @@
-doc = parse(a)
+b = doc.xpath("//embed")

@@ -1,1 +1,6 @@
-99.2177423325 + 99.1377443017 + 592.4399999999999
+for i in range(len(l)):
+        if int(l[i][3]) == sum+2:
+            sum += 1
+            count.append(c)
+            c = 0
+        c += 1

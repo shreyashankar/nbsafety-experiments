@@ -1,6 +1,1 @@
-z,x = torch.max(y,1)
-z
-x
-z.sum()
-z
-z.size(0)
+y = x.view(-1,5)

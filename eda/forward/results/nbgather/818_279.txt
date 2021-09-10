@@ -1,0 +1,16 @@
+t = Template(txt.read())
+t = Template(txt.read())
+t.render({'nom_fond':'SG VALEURS', 'titres': ['titre-'+str(x) for x in range(5)]})
+t = Template(txt.read())
+from jinja2 import Template
+t = Template('./home.html')
+t.render({nom_fond:'SG VALEURS'})
+t.render({'nom_fond':'SG VALEURS'})
+t = Template(txt.read())
+t
+t.render({'nom_fond':'SG VALEURS'})
+t = Template(txt.read())
+t.render({'nom_fond':'SG VALEURS', 'tires': ['titre-'+str(x) for x in range(5)]})
+txt.close()
+t = Template(txt.read())
+t.render({'nom_fond':'SG VALEURS', 'titres': ['titre-'+str(x) for x in range(5)]})

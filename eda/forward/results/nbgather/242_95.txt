@@ -1,0 +1,5 @@
+sns.distplot(spread)
+print (len(spread))
+print (spread)
+spread < 0
+(spread < 0).sum()

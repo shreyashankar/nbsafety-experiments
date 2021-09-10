@@ -1,27 +1,17 @@
-class KongJob(Base):
-        """ Declarative mapping to `tbl_job` to `KongJob` class."""
-        __tablename__ = 'tbl_job'
-        job_type_seed = 0
-        job_type_rule = 1
-        job_status_ready = 0
-        job_status_assigned = 1
-        job_status_done = 2
-        job_status_err = 3
-        id = Column(sqla.types.Integer, primary_key = True)
-        type = Column(sqla.types.Integer, default = job_type_seed)
-        idx_beg = Column(sqla.types.Integer, nullable = False)
-        idx_end = Column(sqla.types.Integer, nullable = False)
-        status = Column(sqla.types.Integer, default = job_status_ready)
-        worker = Column(sqla.types.String(50), nullable = True)
-        ctime = Column(sqla.types.DateTime, default = func.now())
-        atime = Column(sqla.types.DateTime, default = func.now())
-        def __repr__(self):
-            return  '<User (id = {0}, type={1}, idx_b={2}, '                'idx_e = {3}, status={4}, worker={5}, '                'ctime={6}, atime={7}>'.format(
-                        self.id,
-                        self.type,
-                        self.idx_beg,
-                        self.idx_end,
-                        self.status,
-                        self.worker,
-                        self.ctime,
-                        self.atime)
+class KongDataBroker:
+        def __init__(self):     
+            self._engine_job_db = None
+            self._session_job = None
+        def initialize_job_session(self):
+            """ initialize `KongJob` db session. """
+            self._engine_job_db = sqla.create_engine('sqlite:///:memory:', echo = True)
+            self._session_job = sessionmaker(bind=self._engine_job_db)()
+        def init_med_session(self):
+            """ initialize `MED` db session. """
+            pass
+        def get_ready_job(self, worker_name):
+            """ """
+            time.sleep(10)
+        def update_job_status(self, status):
+            """ """
+            time.sleep(10)

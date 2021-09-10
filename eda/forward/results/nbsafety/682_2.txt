@@ -1,1 +1,1 @@
-participate.extend(['Joan','Kimani','jacob'])
+print(x)

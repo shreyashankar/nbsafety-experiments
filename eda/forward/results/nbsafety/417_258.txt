@@ -1,1 +1,1 @@
-from cgm.aws.ec2 import security_groups as cgmsg
+sg = conn.get_all_security_groups('devzzz')[0]

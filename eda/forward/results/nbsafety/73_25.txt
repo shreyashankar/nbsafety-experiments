@@ -1,1 +1,2 @@
-change_predict = clf_test_predict != df_test_1['Survived']
+df_test[['PassengerId','Survived']].to_csv('titanic/sub-01.csv', index=False, float_format="%f")
+    # Submit and you will get 0.23445 & be rediculed forever ;o(

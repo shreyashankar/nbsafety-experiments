@@ -1,0 +1,13 @@
+def squaresTo(num):
+    squares = 0
+    #add your code with the required loop here
+    for m in range(1,num+1):
+        squares+=m
+    return squares
+def squaresTo(num):
+    squares = 0
+    #add your code with the required loop here
+    for m in range(1,num+1):
+        squares+=i
+    return squares
+def squaresTo(num):

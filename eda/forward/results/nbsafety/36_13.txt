@@ -1,6 +1,6 @@
 def nums_reversed(n):
         x = n
-        y = ''
+        y = ' '
         while x >= 1:
             y = y + str(x)
             x -= 1

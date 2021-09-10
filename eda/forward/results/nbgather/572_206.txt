@@ -1,0 +1,6 @@
+wsm.plot().ccd_map(rhea.CCDMapOffset, backImage = arcFile)
+wsm.plot().ccd_map(rhea.CCDMapOffset, backImage = arcFile)
+wsm.plot().ccd_map(rhea.CCDMapOffset, backImage = arcFile)
+wsm.plot().ccd_map(rhea.CCDMapOffset, backImage = arcFile)
+wsm.plot().ccd_map(rhea.CCDMapOffset, backImage = arcFile)
+wsm.plot().ccd_map(rhea.CCDMapOffset, backImage = arcFile)

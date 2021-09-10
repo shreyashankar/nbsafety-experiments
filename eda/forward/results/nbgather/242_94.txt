@@ -1,0 +1,4 @@
+interact(plot_chi_squared, alpha1=(-1000, 10.0, 1000));
+interact(plot_chi_squared, k=(-1000, 10.0, 1000));
+interact(plot_chi_squared, k=(10, -1000, 1000));
+interact(plot_chi_squared, k=(-1000, 1000, 10));

@@ -1,0 +1,29 @@
+update(init_w, X, t)
+w = update(init_w, X, t)
+w
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.solve(H, gradient)
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.solve(H, gradient)
+DIM
+def sigmod(x):
+    return (1 + tanh(x/2)) / 2
+def update(w, X, t):
+    y = make_y(w, X)
+    gradient = make_gradient(w, X, t, y)
+    H = make_H(w, X, y)
+    return w - linalg.solve(H, gradient)
+init_w = array([1]*DIM)
+def determine(sigmod_value):
+    return 1 if sigmod_value >= 0.5 else 0
+predictions = [determine(f(w, phi_i(d))) for d in concatnate([test_c1, test_c2])]
+len(predictions)
+hits = len(filter(lambda a, b: a == b, zip(predictions, correct_labels)))
+hits = len(filter(lambda d: d[0] == d[1], zip(predictions, correct_labels)))
+hits = len(filter(lambda d: d[0] == d[1], zip(predictions, correct_labels)))

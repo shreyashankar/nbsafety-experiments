@@ -1,1 +1,5 @@
+def hat(x,a,b):
+        return (-a*x**2)+(b*x**4)
 plt.plot(x,hat(x,a,b))
+plt.plot(hat(x,a,b))
+plt.plot(x, hat(x,a,b))

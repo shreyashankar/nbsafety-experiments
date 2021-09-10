@@ -1,1 +1,1 @@
-sk.privkey
+sk.privkey.secret_multiplier

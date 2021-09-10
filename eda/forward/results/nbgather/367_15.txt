@@ -1,0 +1,3 @@
+copycomplete_dict = {}
+                tmp_dict['total'] = row['copy_total']
+                copycomplete_dict[row['copy_complete_dt']] = tmp_dict

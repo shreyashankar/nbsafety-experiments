@@ -1,1 +1,1 @@
-change_evens_to_zeros([1,2,3,4,"five"])
+change_evens_to_zeros(range(20))

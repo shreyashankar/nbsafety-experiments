@@ -1,0 +1,3 @@
+interact(entropy,interact(char_probs, x=('aaabbb' or 'addcccddee')))
+interact(char_probs, x=('aaabbb' or 'addcccddee'))
+interact(char_probs, x=('aaabbb', 'addcccddee'))

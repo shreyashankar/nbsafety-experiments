@@ -1,8 +1,7 @@
 def plot_scaling(old, new):
         sns.set(font_scale=3)
         sns.axes_style()
-        #sns.set_style("darkgrid", {"axes.facecolor": ".9"})
-        sns.set_style('darkgrid', {'axes.linewidth':'3'})
+        sns.set_style('darkgrid', {'axes.linewidth':3})
         #sns.set_style('whitegrid')
         f = plt.figure(figsize=(10,10))
         old_mean = old_pd.mean(level='sim')
@@ -23,5 +22,4 @@ def plot_scaling(old, new):
         plt.ylabel(u'Time [$s$]')
         plt.xlabel(u'Number of Cores')
         plt.legend()
-        sns.despine(trim=True)
 plot_scaling(old_pd, new_pd)

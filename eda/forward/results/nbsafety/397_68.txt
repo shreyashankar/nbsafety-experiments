@@ -1,1 +1,4 @@
+def files_to_lines(files):
+        lines = gen_files(files)
+        return lines
 list(files_to_lines(['file1.txt', 'file2.txt']))

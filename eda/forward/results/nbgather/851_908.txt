@@ -1,0 +1,2 @@
+c=0.01
+print (c*np.log(c))/((1-c)*np.log(1-c))

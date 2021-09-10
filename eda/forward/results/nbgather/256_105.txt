@@ -1,0 +1,27 @@
+dtarr = np.random.random(1000)
+np.random.choice(5, 3, p=[0.1, 0.3, 0.6, 0])
+np.random.choice(5, 3, p=[0.1, 0,  0.3, 0.6, 0])
+np.meshgrid((np.arange(1,5), np.arange(5,9)))
+np.mgrid((np.arange(1,5), np.arange(5,9)))
+np.mgrid[(np.arange(1,5), np.arange(5,9))]
+np.mgrid[np.arange(1,5), np.arange(5,9)]
+np.mgrid[0:5, 5:9]
+np.mgrid[0:5, 5:9].T
+grd1, grd2 = np.mgrid[0:5, 5:9].T
+grd1, grd2 = np.mgrid[0:5, 5:9]
+np.dstack([1,2,3], [4,5,6])
+np.dstack([1,2,3], [4,5,6])
+np.dstack(([1,2,3], [4,5,6]))
+rpt1 = np.tile([1,2,3], [4,5,6])
+def interact_func2(n, xlim):
+    sample = weight.rvs(n)
+    std_resampler = StdResampler(sample, xlim=xlim)
+    print ( std_resampler.sample_stat(np.array([1,2,3,3,5,67])) )
+    std_resampler.plot_sampling_distribution()
+interact_func2(n=100, xlim=[50, 100])
+def interact_func2(n, xlim):
+    sample = weight.rvs(n)
+    std_resampler = StdResampler(sample, xlim=xlim)
+    std_resampler.plot_sampling_distribution()
+interact_func2(n=100, xlim=[50, 100])
+bool = np.allclose([1,2,3],[1,2,3])

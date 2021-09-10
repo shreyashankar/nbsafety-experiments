@@ -1,1 +1,1 @@
-X.var(), sigma**2
+X.var()

@@ -1,1 +1,36 @@
+a
+a
+shape(a)
+a[0]
+list(a[0])
+a[0]
+shape(a[0])
+a[0][1]
+a[0][0]
+a
+data = csv.reader(f)
+st = a
+st.join('a')
+st
 st.join('aa')
+st.join('aaa')
+st
+st.join('aaaa')
+a
+for i in a[0]:
+        if i == '[' or i == ']':
+            del i
+a
+for i in range(a[0]):
+        if a[0][i] == '[' or a[0][i] == ']':
+            del a[0][i]
+for i in range(a[0]):
+                if a[0][i] == '[' or a[0][i] == ']':
+                   a[0][i].pop()
+a[0][0]
+a[0][0].pop()
+a
+a = data
+a
+for i in data:
+        l = i

@@ -1,0 +1,488 @@
+def plot_salt(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_salt(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=1)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=1)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('Salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+def plot_salt(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_salt(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('Salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+def calc_dsdx(beta, s0, alpha=2):
+    x = np.linspace(0, 75, 150)
+    s = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return x, s
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('Salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_dsdx(15, 30)
+plot_dsdx(30)
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('Salinity (S) [psu]')
+    #ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+plot_dsdx(30)
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('dsdx (S) [psu/m]')
+    #ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+x, s = calc_dsdx(15, 30)
+plot_dsdx(30)
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('dsdx (S) [psu/m]')
+    #ax.set_xlim([0, 75])
+    ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+x, s = calc_dsdx(15, 30)
+plot_dsdx(30)
+def calc_dsdx(beta, s0, alpha=2):
+    x = np.linspace(0, 1, 100)
+    s = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return x, s
+def plot_salt(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_salt(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('Salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('dsdx (S) [psu/m]')
+    #ax.set_xlim([0, 75])
+    ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+x, s = calc_dsdx(15, 30)
+plot_dsdx(30)
+x
+s[1]*x[1]
+def calc_dsdx(beta, s0, alpha=2):
+    x = np.linspace(0, 75, 150)
+    s = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return x, s
+def calc_dsdx(beta, s0, alpha=2):
+    x = np.linspace(0, 75, 150)
+    dsdx = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return x, dsdx
+def calc_dsdx(beta, s0, alpha=2):
+    x = np.linspace(0, 75, 150)
+    dsdx = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return x, dsdx
+x, s = calc_dsdx(15, 30)
+plot_dsdx(30)
+def plot_bound_salt(s0):
+    x, dsdx = calc_dsdx(b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+#   plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+x, s = calc_dsdx(15, 30)
+plot_dsdx(30)
+plot_bound_salt(30)
+def plot_bound_salt(s0, b):
+    x, dsdx = calc_dsdx(b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+#   plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+plot_bound_salt(30, 15)
+def plot_bound_salt(s0, b):
+    x, dsdx = calc_dsdx(b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+        plt.plot(salt, bound)
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+#   plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+x, s = calc_dsdx(15, 30)
+plot_dsdx(30)
+plot_bound_salt(30, 15)
+def calc_dsdx(x, beta, s0, alpha=2):
+    dsdx = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return x, dsdx
+def calc_dsdx(x, beta, s0, alpha=2):
+    dsdx = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return dsdx
+def plot_bound_salt(s0, b):
+    dsdx = calc_dsdx(100, b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+        plt.plot(salt, bound)
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+#   plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+x, s = calc_dsdx(15, 30)
+x, s = calc_dsdx(100, 15, 30)
+dsdx = calc_dsdx(100, 15, 30)
+calc_dsdx(100, 15, 30)
+plot_bound_salt(30, 15)
+calc_dsdx(10, 15, 30)
+calc_dsdx(1, 15, 30)
+calc_dsdx(0.1, 15, 30)
+calc_dsdx(100, 15, 30)
+calc_dsdx(100, 15, 30)*100
+calc_dsdx(100, 0, 30)*100
+calc_dsdx(100, 1, 30)*100
+calc_dsdx(100, 15, 30)*100
+calc_dsdx(100, 30, 30)*100
+def calc_dsdx(x, beta, s0, alpha=2):
+    dsdx = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return dsdx
+def calc_dsdx(x, beta, s0, alpha=2):
+    dsdx1 = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    dsdx2 = s0/(2.0*beta) * np.sech(alpha - x/beta)
+    return dsdx1, dsdx2
+def calc_dsdx(x, beta, s0, alpha=2):
+    dsdx1 = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return dsdx1
+def calc_dsdx(x, beta, s0, alpha=2):
+    dsdx1 = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return dsdx1
+def calc_salt(beta, s0, alpha=2):
+    x = np.linspace(0, 75, 150)
+    s = s0/2.0 * (1 + np.tanh(alpha - x/beta))
+    return x, s
+def plot_salt(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_salt(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('Salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('dsdx (S) [psu/m]')
+    #ax.set_xlim([0, 75])
+    ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+def plot_bound_salt(s0, b):
+    dsdx = calc_dsdx(100, b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+        plt.plot(salt, bound)
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+#   plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+plot_bound_salt(30, 15)
+def plot_bound_salt(s0, b):
+    dsdx = calc_dsdx(100, b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+        plt.plot(salt, bound)
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+def calc_dsdx(x, beta, s0, alpha=2):
+    in_term = alpha - x/beta
+    dsdx1 = s0/(2.0*beta) * 1/(np.cosh(alpha - x/beta))
+    return dsdx1
+def calc_dsdx(x, beta, s0, alpha=2):
+    in_term = alpha - x/beta
+    # Using Taylor series expansion of sech^2(x)
+    dsdx1 = s0/(2.0*beta) * (1 - in_term**2 + (2*in_term**4)/3.0)
+    return dsdx1
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('dsdx (S) [psu/m]')
+    #ax.set_xlim([0, 75])
+    ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+def plot_bound_salt(s0, b):
+    dsdx = calc_dsdx(100, b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+        plt.plot(salt, bound)
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)
+def calc_salt(beta, s0, alpha=2):
+    x = np.linspace(0, 75, 150)
+    s = s0/2.0 * (1 + np.tanh(alpha - x/beta))
+    return x, s
+def calc_dsdx(x, beta, s0, alpha=2):
+    in_term = alpha - x/beta
+    # Using Taylor series expansion of sech^2(x)
+    dsdx1 = s0/(2.0*beta) * (1 - in_term**2 + (2*in_term**4)/3.0)
+    return dsdx1
+def plot_salt(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_salt(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('Salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+def plot_dsdx(s0):
+    for b in np.arange(26):
+        if b == 0:
+            b = 0.01
+        x, s = calc_dsdx(b, s0)
+        if b == 0.01:
+            plt.plot(x, s, label='0.01', color='k', linewidth=2)
+        if b == 15:
+            plt.plot(x, s, label='15', color='k', linewidth=3)
+        if b == 25:
+            plt.plot(x, s, label='25', color='k', linewidth=2)
+        else:
+            plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('dsdx (S) [psu/m]')
+    #ax.set_xlim([0, 75])
+    ax.set_ylim([0, 50])
+    plt.legend()
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + \text{tanh}\left(\alpha - \frac{X}{\beta}\right)\right]$")
+#    plt.title(r"$S = \frac{S_0}{2} \left[1 + tanh\left(2 - \frac{X}{\beta}\right)\right]$")
+def plot_bound_salt(s0, b):
+    dsdx = calc_dsdx(100, b, s0)
+    for salt in range(30):
+        bound = salt - dsdx*100
+        plt.plot(salt, bound)
+    ax = plt.gca()
+    ax.set_xlabel('Salinity [psu]')
+    ax.set_ylabel('Bound salt [psu]')
+    #ax.set_xlim([0, 75])
+    #ax.set_ylim([0, 50])
+    plt.legend()
+x, s = calc_salt(15, 25)
+plot_salt(25)
+plot_salt(30)

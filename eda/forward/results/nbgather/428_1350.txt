@@ -1,0 +1,21 @@
+def plot_salt(s0):
+    for b in np.arange(25):
+        x, s = calc_salt(b, s0)
+        plt.plot(x, s)
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+x, s = calc_salt(15, 25)
+def plot_salt(s0):
+    for b in np.arange(25):
+        x, s = calc_salt(b, s0)
+        if b == 15:
+            plt.plot(x, s, label='25')
+    ax = plt.gca()
+    ax.set_xlabel('Distance (X) [km]')
+    ax.set_ylabel('salinity (S) [psu]')
+    ax.set_xlim([0, 75])
+    plt.legend()
+x, s = calc_salt(15, 25)
+plot_salt(25)

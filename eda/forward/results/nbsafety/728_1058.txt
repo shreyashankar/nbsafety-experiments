@@ -1,1 +1,1 @@
-a.norm()
+np.abs(_)

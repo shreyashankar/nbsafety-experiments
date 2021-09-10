@@ -1,1 +1,7 @@
-df1.equals(df2)
+dfmi.index=pd.MultiIndex.from_tuples([(1,'a'),(1,'b'),(1,'c'),(2,'a')],
+                                        names=['first','second'])
+df
+df.select_dtypes(include=[bool])
+df.select_dtypes(include=['bool'])
+df.select_dtypes(include=['number','bool'],exclude=['unsignedinteger'])
+df.select_dtypes(include=['object'])

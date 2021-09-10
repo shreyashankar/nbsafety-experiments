@@ -1,0 +1,14 @@
+ga = "Four_score_and_seven_years_ago"
+ga
+ga[1:5:5]
+ga[1:10:1]
+ga[0:4]
+ga[20:26]
+ga[15:21]
+ga[15:20]
+ga[:4] = "Three"
+ga[:4]
+ga[:5] = 'Three'
+ga[0:4] = 'Three'
+ga[0:5] = 'Three'
+ga

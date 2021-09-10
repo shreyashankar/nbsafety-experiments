@@ -1,0 +1,21 @@
+plt.scatter(X,Y)
+best, cov = opt.curve_fit(y_model,X,Y)
+def y_model(X,a,b,c):
+    y_model = a * X**2 + b*X + c + noise
+    return y_model
+Y = y_model(X,a,b,c)
+plt.scatter(X,Y)
+best, cov = opt.curve_fit(y_model,X,Y)
+def y_model(X,a,b,c):
+    y_model = a * X**2 + b*X + c + np.random.normal(0,2.0, size=30)
+    return y_model
+Y = y_model(X,a,b,c)
+plt.scatter(X,Y)
+best, cov = opt.curve_fit(y_model,X,Y)
+best, cov = opt.curve_fit(y_model,X,Y)
+def y_model(X,a,b,c):
+    y_model = a * X**2 + b*X + c + np.random.normal(0,2.0, size=30)
+    return y_model
+Y = y_model(X,a,b,c)
+plt.scatter(X,Y)
+best, cov = opt.curve_fit(y_model,X,Y)

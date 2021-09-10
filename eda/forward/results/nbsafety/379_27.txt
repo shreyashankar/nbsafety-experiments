@@ -1,1 +1,9 @@
-User.__table__
+session.add_all([
+        User(name='somma', fullname='yonghwan, noh', password='passwordzzzzzz'), 
+        User(name='somma1', fullname='yonghwan, noh1', password='passwordzzzzzz1'), 
+        User(name='somma2', fullname='yonghwan, noh2', password='passwordzzzzzz2'), 
+        User(name='somma3', fullname='yonghwan, noh3', password='passwordzzzzzz3'), 
+        User(name='somma4', fullname='yonghwan, noh4', password='passwordzzzzzz4'), 
+        User(name='somma5', fullname='yonghwan, noh5', password='passwordzzzzzz5'), 
+        User(name='somma6', fullname='yonghwan, noh6', password='passwordzzzzzz6'), 
+    ])

@@ -1,1 +1,19 @@
+def chi_squared(k, size=1):
+        """Return random numbers drawn from the chi-squared distribution.
+        Parameters
+        ----------
+        k: int
+            The degrees of freedom of the distribution.
+        size: int
+            The number of random numbers to return as an array.
+        """
+        k = 7
+        X = 0.0
+        result = []
+        for s in size:
+            for i in range(k):
+                X += (np.random.normal(0,1))**2
+            result.append(X)
+        return X
+chi_squared(7,100)
 plot_chi_squared(7)

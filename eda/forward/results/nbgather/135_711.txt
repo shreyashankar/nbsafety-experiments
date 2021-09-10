@@ -1,0 +1,8 @@
+words.count('Hilary')
+words.count('Hillary')
+words.count('Clinton')
+words.count('wall')
+words.count('Wall')
+words.count('Podesta')
+words.count('crooked')
+words.count('Crooked')

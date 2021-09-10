@@ -1,0 +1,9 @@
+def sumOfMultiplesOfTwoFactors(f1,f2,num):
+    sum2F = 0
+    m = f1 * f2 
+    #add your code with loop here
+    for i in range(0,num + 1):
+        if (i * m ) < num:
+            sumf2 += (i * m)
+    return sum2F
+def sumOfMultiplesOfTwoFactors(f1,f2,num):

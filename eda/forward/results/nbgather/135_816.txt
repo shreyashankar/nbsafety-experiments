@@ -1,0 +1,46 @@
+import pandas as pd
+df = pd.DataFrame({'Time': t, 'x': np.sin(t), 'y': np.cos(t)})
+df
+df.Time
+df
+df[['Time', 'y']]
+data = df[['Time', 'y']]
+data.head()
+data[4:10]
+df[[['Time', 'y']][4:10]]
+df[['Time', 'y']][4:10]
+df[4:10]
+df.iloc[4:10, [0,2]]
+data.values
+df[4]
+df[4:]
+df[4:4]
+df[4:5]
+df.iloc[4]
+type(df[4:5])
+type(df.iloc[4])
+type(df.loc['x'])
+df
+data = pd.DataFrame({
+'Gender': ['f', 'f', 'm', 'f', 'm',
+'m', 'f', 'm', 'f', 'm', 'm'],
+'TV': [3.4, 3.5, 2.6, 4.7, 4.1, 4.1,
+5.1, 3.9, 3.7, 2.1, 4.3]
+})
+data
+grouped = data.groupby('Gender')
+grouped
+grouped.describe()
+grouped.boxplot()
+grouped.boxplot()
+df_female = grouped.get_group('f')
+df_female
+vals_female = grouped.get_group('f').values
+vals_female
+x = np.arange(100)
+y = 0.5*x - 20 + np.random.randn(len(x))
+df = pd.DataFrame({'x':x, 'y':y})
+df
+sm.ols('y~x', data=df).fit()
+model = sm.ols('y~x', data=df).fit()
+print(model.summary())

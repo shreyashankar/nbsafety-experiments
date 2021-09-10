@@ -1,0 +1,6 @@
+s = s.str.lower()
+s.replace('f','female')
+s.unique()
+s = s.astype('category')
+s
+addresses = [s.strip() for s in parts]

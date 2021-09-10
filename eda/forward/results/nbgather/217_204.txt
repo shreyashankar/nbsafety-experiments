@@ -1,0 +1,12 @@
+right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
+                         'key2': ['K0', 'K0', 'K0', 'K0'],
+                         'C': ['C0', 'C1', 'C2', 'C3'],
+                         'D': ['D0', 'D1', 'D2', 'D3']})
+result = pd.merge(left, right, on=['key1', 'key2'])
+result = pd.merge(left, right, how='left', on=['key1', 'key2'])
+result = pd.merge(left, right, how='right', on=['key1', 'key2'])
+result = pd.merge(left, right, how='outer', on=['key1', 'key2'])
+result = pd.merge(left, right, how='inner', on=['key1', 'key2'])
+df1 = pd.DataFrame({'col1':[0,1], 'col_left':['a','b']})
+df2 = pd.DataFrame({'col1':[1,2,2],'col_right':[2,2,2]})
+merge(df1, df2, on='col1', how='outer', indicator=True)

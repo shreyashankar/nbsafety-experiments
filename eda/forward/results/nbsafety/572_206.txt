@@ -1,1 +1,1 @@
-rhea.camera.offsetX
+wsm.plot().ccd_map(rhea.CCDMapOffset, backImage = arcFile)

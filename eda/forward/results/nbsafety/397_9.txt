@@ -1,6 +1,5 @@
 def mse(x, y):
         for i in range(len(x)):
-            x[i] += y[i]
+            x[i] -= y[i]
             x[i] = x[i]**2
-        print(math.sum(x))
-        return math.sqrt(math.sum(x))
+        return math.fsum(x)/ len(x)

@@ -1,1 +1,1 @@
-data = DataFrame({'email':emails.split(',')})
+s = s.str.lower()

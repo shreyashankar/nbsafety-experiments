@@ -1,1 +1,1 @@
-np.hstack( (o, o1))
+plotScatter(housing, 'medianValue')

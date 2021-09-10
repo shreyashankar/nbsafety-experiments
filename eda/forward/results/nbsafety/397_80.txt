@@ -1,1 +1,5 @@
-4*np.ones(5)
+def complete_adj(n):
+        a=np.zeros((n, n), int)
+        np.fill_diagonal(a, n-1)
+        a = a.trapose
+        return a

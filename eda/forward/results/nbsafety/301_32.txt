@@ -1,1 +1,12 @@
-df.head()
+df.to_csv('ASR2013.csv', index=False)
+groups = df.groupby('ori_code')
+groups = df.groupby('ori_code')['a_white'].aggregate(np.sum)
+total_whites_by_ori = df.groupby('ori_code')['a_white'].aggregate(np.sum)
+total_whites_by_ori = df.groupby('ori_code')
+ori_groups = df.groupby('ori_code')
+df.iloc[151637]
+df[df.iloc[151637]]
+df.iloc[151637]
+df['a_white'].sum()
+df['a_nonhispanic'].unique()
+df['a_hispanic'].unique()

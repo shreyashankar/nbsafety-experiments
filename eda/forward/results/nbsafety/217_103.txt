@@ -16,8 +16,5 @@ def bootstrap_function(data, f, n):
         """
         result = np.array(None)
         for sample in range(n):
-            resample = np.array( [np.random.choice(data) for r in range(len(data))] )
-            resample_functioned = f(resample)
-            np.append(result, resample_functioned)
-        return result
+            np.append(result, np.array([np.random.choice(data) for r in range(data)]))
 fair_boot = bootstrap_function(data, fair, 200)

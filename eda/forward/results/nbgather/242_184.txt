@@ -1,0 +1,42 @@
+pd.Series(['foo', 'bar', 'baz']) == 'foo'
+pd.Index(['foo', 'bar', 'baz']) == 'foo'
+pd.Series(['foo', 'bar', 'baz']) == pd.Index(['foo', 'bar', 'qux'])
+pd.Series(['foo', 'bar', 'baz']) == np.array(['foo', 'bar', 'qux'])
+np.array([1, 2, 3]) == np.array([2])
+np.array([1, 2, 3]) == np.array([1, 2])
+df1 = pd.DataFrame({'A' : [1., np.nan, 3., 5., np.nan],
+                    'B' : [np.nan, 2., 3., np.nan, 6.]})
+df2 = pd.DataFrame({'A' : [5., 2., 4., np.nan, 3., 7.],
+                    'B' : [np.nan, np.nan, 3., 4., 6., 8.]})
+df1
+df2
+df1.combine_first(df2)
+df1.combine(df2, combiner)
+np.mean(df['one'])
+np.mean(df['one'].values)
+series = pd.Series(np.random.randn(500))
+series[20:500] = np.nan
+series[10:20]  = 5
+series.nunique()
+series = pd.Series(np.random.randn(1000))
+series[::2] = np.nan
+series.describe()
+frame = pd.DataFrame(np.random.randn(1000, 5), columns=['a', 'b', 'c', 'd', 'e'])
+frame.ix[::2] = np.nan
+frame.describe()
+series.describe(percentiles=[.05, .25, .75, .95])
+s = pd.Series(['a', 'a', 'b', 'b', 'a', 'a', np.nan, 'c', 'd', 'a'])
+s.describe()
+frame = pd.DataFrame({'a': ['Yes', 'Yes', 'No', 'No'], 'b': range(4)})
+frame.describe()
+frame.describe(include=['object'])
+frame.describe(include=['number'])
+frame.describe(include='all')
+s1 = pd.Series(np.random.randn(5))
+s1
+s1.idxmin(), s1.idxmax()
+df1 = pd.DataFrame(np.random.randn(5,3), columns=['A','B','C'])
+df1
+df1.idxmin(axis=0)
+df1.idxmax(axis=1)
+df3 = pd.DataFrame([2, 1, 1, 3, np.nan], columns=['A'], index=list('edcba'))

@@ -1,1 +1,1 @@
-plt.plot(hat(x,a,b))
+opt.minimize(hat, 3, args=(a,b))

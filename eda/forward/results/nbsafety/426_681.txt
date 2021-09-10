@@ -1,1 +1,1 @@
-2*omega
+math.asin(1.5)

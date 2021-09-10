@@ -1,0 +1,5 @@
+def get_letter_type(letter):
+        if letter.lower() in 'aeiou':
+            return 'vowel'
+        else:
+            return 'consonant'

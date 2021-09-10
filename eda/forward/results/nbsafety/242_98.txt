@@ -1,1 +1,5 @@
+def plot_phones(p):
+        phone_os = np.random.choice(['iOS', 'Android'], 200, p=(p,1-p))
+        sns.countplot(x=phone_os)
+        plt.ylim(0.0,200)
 interact(plot_phones, p=(0.01,0.99,0.01), __manual=True);

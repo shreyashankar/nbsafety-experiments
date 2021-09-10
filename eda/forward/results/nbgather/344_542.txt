@@ -1,0 +1,16 @@
+sk.imsave('unko.tif', img.astype(np.uint8))
+labels_ws.sum()
+plt.figure()
+plt.imshow(labels_ws)
+sk.imsave('hoge.tif', labels_ws)
+sk.imsave('hoge.tif', labels_ws.astype(np.float32))
+markers[~image] = -1
+image = sk.imsave('unkodist-watershed.tif')
+image = sk.imread('unkodist-watershed.tif')
+image.shape
+            if image[i][j][k] == 1:
+                sum1 += 1
+            if image[i][j][k] == 3:
+                sum3 +=1
+sum1
+sum3

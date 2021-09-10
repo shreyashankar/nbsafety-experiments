@@ -1,1 +1,1 @@
-list(a.items())[1]
+links = [item.attr.href for item in doc('a[href^="http"]').items()]

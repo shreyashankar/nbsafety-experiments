@@ -1,0 +1,3 @@
+init = tf.initialize_all_variables()
+with tf.Session() as sess:
+        sess.run(init)

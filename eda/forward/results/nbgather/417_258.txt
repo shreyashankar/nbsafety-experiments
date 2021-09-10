@@ -1,0 +1,27 @@
+sg = conn.get_all_security_groups('devzzz')[0]
+conn.get_all_security_groups()
+conn.get_all_security_groups()
+conn.get_all_security_groups()[0]
+type = conn.get_all_security_groups()[0]
+type(type)
+type(conn.get_all_security_groups()[0])
+type(name)
+type(a)
+type
+type
+type(a)
+type(name)
+type(conn.get_all_security_groups()[0])
+sg_names = conn.get_all_security_groups()
+type(sg_names)
+sg_names
+sg_names
+sg_names
+conn.get_all_security_groups('devzzz')
+sg = conn.get_all_security_groups('devzzz')
+sg_names.index
+sg_names.index()
+sg_names.index('devzz')
+sg_names.index('devzzz')
+sg
+sg.status

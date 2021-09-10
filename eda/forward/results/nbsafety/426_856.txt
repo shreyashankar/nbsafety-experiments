@@ -1,1 +1,1 @@
-stats.norm(0,1).pdf(0.975)
+stats.norm(0,1).pdf(3)

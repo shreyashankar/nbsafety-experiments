@@ -1,1 +1,1 @@
-q = linalg.pinv(a).dot(p)
+np.linalg.solve(a, np.array([12., 10., 6.]))

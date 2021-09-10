@@ -1,0 +1,4 @@
+timeit.Timer(lista.count).timit()
+timeit.Timer(lista.count).timeit()
+timeit.Timer(lista.count()).timeit()
+timeit.Timer(lista.count(0)).timeit()

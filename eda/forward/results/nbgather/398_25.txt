@@ -1,0 +1,7 @@
+df_train.describe()
+df_train.groupby(['Sex','Survived']).count()[['Survived','Sex']]
+df_train.drop(['Ticket','Cabin','Embarked','Age','Name'],inplace=True,axis=1)
+df_train.head()
+df_train.head()
+df_train.drop('Sex',inplace=True,axis=1)
+df_train.head()

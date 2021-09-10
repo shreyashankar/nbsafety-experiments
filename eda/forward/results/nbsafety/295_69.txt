@@ -1,1 +1,2 @@
-I * np.arange(5)
+Binv = np.linalg.inv(B)
+Binv

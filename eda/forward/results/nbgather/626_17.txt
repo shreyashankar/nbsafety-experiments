@@ -1,0 +1,2 @@
+B.count()
+len(B)

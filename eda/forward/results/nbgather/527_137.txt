@@ -1,0 +1,25 @@
+sols = solve(simplify(dp/sin(n*t)),t)
+sols
+dp = diff(p(t),t)
+sols = solve(simplify(dp/sin(n*t)),t)
+sols
+dp = diff(p(t),t)
+sols = solve(simplify(dp/sin(n*t)),t)
+sols
+dp = diff(p(t),t)
+sols = solve(simplify(dp/sin(n*t)),t)
+sols
+dp = diff(p(t),t)
+sols = solve(simplify(dp/sin(n*t)),t)
+sols
+maxp = p(sols[1])
+collect(expand(maxp),r)
+dp = diff(p(t),t)
+sols = solve(simplify(dp/sin(n*t)),t)
+sols
+maxp = p(sols[1])
+collect(expand(maxp),r)
+maxp = p(sols[0])
+collect(expand(maxp),r)
+maxp = p(sols[1])
+collect(expand(maxp),r)

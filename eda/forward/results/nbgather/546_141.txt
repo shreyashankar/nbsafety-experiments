@@ -1,0 +1,38 @@
+y = x.view(-1,5)
+y
+y = x.view(-1,2)
+y
+y
+torch.max(y)
+torch.max(y,1)
+y
+torch.max(y,0)
+x
+torch.max(x)
+torch.max(x,1)
+x
+torch.max(x,1)
+y
+y = x.view(-1,20)
+y
+y = x.view(-1,1)
+y
+torch.max(y)
+torch.max(y,1)
+z = torch.max(y,1)
+z
+y = x.view(4,5)
+y
+z = torch.max(y,1)
+z
+z,x = torch.max(y,1)
+z
+x
+z.sum()
+z
+z.size(0)
+y
+y.size(0)
+y.size()
+y.size(1)
+y.size()

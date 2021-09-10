@@ -1,0 +1,19 @@
+ig.plot(graph)
+graph.vcount()
+set(range(graph.vcount()-1))
+graph.vs
+graph.vs.get_attribute_values
+graph.vs.get_attribute_values['vid']
+graph.vs.attributes()
+diffusion_run(set(1,2), graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)
+diffusion_run({1,2}, graph=graph, p=0.1, district=125, tests=True, max_iter=1000)

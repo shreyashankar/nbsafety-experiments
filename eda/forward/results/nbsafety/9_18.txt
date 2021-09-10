@@ -1,3 +1,1 @@
-for (k,v) in a:
-        if v < a[0][1]:
-            a.pop((k,v))
+2/6.0

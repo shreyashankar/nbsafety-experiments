@@ -1,0 +1,350 @@
+corr.sort(columns=['crime'])
+corr.sort(columns=['crime']).head(2)
+corr.sort(columns=['crime']).tail(2)
+np.abs(corr.sort(columns=['crime']))
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=40)
+        axes[row, col].set_xlabel(attrib, fontsize=12)
+        axes[row, col].set_ylabel(target, fontsize=12) 
+    f.tight_layout()
+def plotScatter(df, target, cols=3):
+    """ Plot scatter plots for each attribute against target attribute
+    inputs:
+    -------
+    * df - DataFrame of data
+    * target - Name of target column
+    * cols - Number of subplot columns for scatter plots
+    """
+    rows = int(np.ceil(df.shape[-1]/3.0))
+    f, axes = plt.subplots(rows, cols)
+    for ix, attrib in enumerate(housing.columns):
+        if attrib == target:
+            continue
+        row = ix/cols
+        col = np.mod(ix, cols)
+        axes[row, col].scatter(df[attrib], df[target], c='gray', s=50)
+        axes[row, col].set_xlabel(attrib, fontsize=12)
+        axes[row, col].set_ylabel(target, fontsize=12) 
+    f.tight_layout()
+np.abs(corr.sort(columns=['crime', 'residential']))
+A
+A.shape
+b
+b.shape
+np.dat(b,b)
+np.dot(b,b)
+np.dot(A,A)
+np.linalg.lstsq(A, b)
+a = np.linalg.lstsq(A, b)
+a(0)
+a[0]
+def LR_solve(X, y):
+    """ Solves a linear regression problem.
+    params:
+    -------
+    * X - Input matrix where each row corresponds to an example.
+    * y - Target values
+    returns:
+    --------
+    * w - Vector of fitting coefficients for least squares fit
+    notes:
+    ------
+    * A^*A\hat{x} = A^*b
+      \hat{x} = A^* A A^* b
+    """
+    rtn = np.linalg.lstsq(X, y)
+    return rtn[0]
+X*a[0]
+X
+def LR_solve(X, y):
+    """ Solves a linear regression problem.
+    params:
+    -------
+    * X - Input matrix where each row corresponds to an example.
+    * y - Target values
+    returns:
+    --------
+    * w - Vector of fitting coefficients for least squares fit
+    notes:
+    ------
+    * A^*A\hat{x} = A^*b
+      \hat{x} = A^* A A^* b
+    """
+    A = np.ones_like(X)
+    A[:, 1:-1] = X[:, 1:-1]
+    rtn = np.linalg.lstsq(X, y)
+    return rtn[0]
+LR_solve(A, b)
+w = LR_solve(A, b)
+LR_predict(A, w)
+def LR_predict(X, w):
+    """ Returns prediction for input data using least squares weights w.
+    params:
+    -------
+    * X - Input matrix of test data
+    * w - Weights for least squares fit
+    returns:
+    --------
+    * y - Predictions using LSF coefficients w
+    """
+    rtn = w[0] + w[1]*X[:,0]
+    return rtn
+LR_predict(A, w)
+w
+A
+A = np.array([[0, 6], [1, 0], [2, 0]])
+w = LR_solve(A, b)
+LR_predict(A, w)
+A = np.array([[0, 6], [1, 0], [2, 0]])
+A
+w = LR_solve(A, b)
+w
+def LR_solve(X, y):
+    """ Solves a linear regression problem.
+    params:
+    -------
+    * X - Input matrix where each row corresponds to an example.
+    * y - Target values
+    returns:
+    --------
+    * w - Vector of fitting coefficients for least squares fit
+    notes:
+    ------
+    * A^*A\hat{x} = A^*b
+      \hat{x} = A^* A A^* b
+    """
+    A = np.ones_like(X)
+    A[:, 1:-1] = X[:, 1:-1]
+    rtn = np.linalg.lstsq(A, y)
+    return rtn[0]
+def LR_predict(X, w):
+    """ Returns prediction for input data using least squares weights w.
+    params:
+    -------
+    * X - Input matrix of test data
+    * w - Weights for least squares fit
+    returns:
+    --------
+    * y - Predictions using LSF coefficients w
+    """
+    rtn = w[0] + w[1]*X[:,0]
+    return rtn
+w = LR_solve(A, b)
+LR_predict(A, w)
+A
+w
+w = LR_solve(A, b)
+A[:,1:-1]
+A[:,0:-1]
+A[:,0]
+A[:,1]
+A[:,1:-1]
+A[:,1:]
+w = LR_solve(A, b)
+LR_predict(A, w)
+w = LR_solve(A, b)
+LR_predict(A, w)
+w
+np.linalg.lstsq(A, b)
+A
+b
+def LR_predict(X, w):
+    """ Returns prediction for input data using least squares weights w.
+    params:
+    -------
+    * X - Input matrix of test data
+    * w - Weights for least squares fit
+    returns:
+    --------
+    * y - Predictions using LSF coefficients w
+    """
+    rtn = w[0] + w[1]*X[:,0]
+    return rtn
+w = LR_solve(A, b)
+w = LR_solve(A, b)
+A.shape
+A.shape[0]
+np.ones(A.shape[0])
+w = LR_solve(A, b)
+w = LR_solve(A, b)
+X = np.array([ np.ones(A.shape[0])])
+np.array([ np.ones(A.shape[0])])
+np.array([ np.ones(A.shape[0]), A])
+A
+np.array(A)
+np.array([A[:,0], A[:,0]])
+np.array([A[:,0], A[:,0]]).shape
+A.shape
+np.array([A[:,0], A[:,0]])
+np.array([[A[:,0]], [A[:,0]]])
+np.array([A[:,1], A[:,1]]).T
+A
+np.hstack( np.ones(A.shape[0]), A)
+np.hstack( np.ones((A.shape[0]), A))
+np.hstack( (np.ones(A.shape[0]), A) )
+o = np.ones(A.shape[0])
+o
+o.shape
+np.hstack( (np.ones(A.shape[0]).T, A) )
+np.hstack( (o,o) )
+np.hstack( (o.T,o.T) )
+np.vstack( (o.T,o.T) )
+np.vstack( (o,o) )
+np.hstack( (o,o) )
+o = np.array([[1],[2],[3]])
+o
+o.shape
+np.hstack( (o,o) )
+o1 = np.ones((3,1))
+o1.shape
+np.hstack( (o, o1))
+np.hstack( (o, o1, A))
+w = LR_solve(A, b)
+A = np.array([[0], [1], [2]])
+A
+A
+w = LR_solve(A, b)
+LR_predict(A, w)
+a = np.linalg.lstsq(A, b)
+a
+def main3_2(trainFile, testFile, columnNames=None):
+    """ Driver function that loads training and test sets and computes MSE of predictor.
+    params:
+    -------
+    * trainFile - Path to training set
+    * testFile - Path to test set
+    returns:
+    --------
+    * w - Training weights
+    * test_MSE - MSE for test set
+    * train_MSE - MSE for training set
+    notes:
+    ------
+    * Target assumed to be last column in data sets.
+    """
+    # Load and prep data
+    trainingSet = pd.io.parsers.read_csv(trainFile, sep='\s+')
+    testSet = pd.io.parsers.read_csv(testFile, sep='\s+')
+    if columnNames:
+        trainingSet.columns = columnNames
+        testSet.columns = columnNames
+    X = trainingSet[:-1]
+    y = trainingSet[-1]
+    # Generate weights
+    w = LR_solve(X, y)
+def calc_MSE(y, yhat):
+    """ Calculate MSE between two observations.
+    params:
+    -------
+    * y - Observations
+    * yhat - Predicted value
+    returns:
+    --------
+    * mse - Mean Square Error
+    """
+    mse = ((y - yhat)**2).mean(ax=0)
+    return mse
+main3_2('./housing_train.txt', './housing_test.txt')
+main3_2('./housing_train.txt', './housing_test.txt')
+main3_2('./housing_train.txt', './housing_test.txt')
+main3_2('./housing_train.txt', './housing_test.txt')
+main3_2('./housing_train.txt', './housing_test.txt')
+np.linalg.lstsq(housing.ix[:,:-1], housing.ix[:,-1])
+np.linalg.lstsq(trainingSet.ix[:,:-1], trainingSet.ix[:,-1])
+A
+b
+linalg.lstsq(A, b)
+np.linalg.lstsq(A, b)
+LR_predict(A, b)
+b
+A = np.hstack( (np.ones(440,1), traininSet.ix[:, :-1]))
+A = np.hstack( (np.ones(440,1), trainingSet.ix[:, :-1]))
+A = np.hstack( (np.ones(440,1), trainingSet.ix[:, :-1]) )
+np.linalg.lstsq(trainingSet.ix[:,:-1], trainingSet.ix[:,-1])
+np.linalg.lstsq(A, b)
+A = np.hstack( (np.ones(440,1), trainingSet.ix[:, :-1]) )
+testA = np.genfromtext('./housing_test.txt')
+testA = np.genfromtxt('./housing_test.txt')
+testA.shape
+main3_2('./housing_train.txt', './housing_test.txt')
+main3_2('./housing_train.txt', './housing_test.txt')
+def calc_MSE(y, yhat):
+    """ Calculate MSE between two observations.
+    params:
+    -------
+    * y - Observations
+    * yhat - Predicted value
+    returns:
+    --------
+    * mse - Mean Square Error
+    """
+    mse = ((y - yhat)**2).mean()
+    return mse
+main3_2('./housing_train.txt', './housing_test.txt')
+main3_2('./housing_train.txt', './housing_test.txt')
+out = main3_2('./housing_train.txt', './housing_test.txt')
+out.shape
+out[0].shape
+main3_2('./test.txt', './pred.txt')
+out = main3_2('./housing_train.txt', './housing_test.txt')
+out = main3_2('./housing_train.txt', './housing_test.txt')
+out = main3_2('./housing_train.txt', './housing_test.txt')
+out = main3_2('./housing_train.txt', './housing_test.txt')
+out = main3_2('./housing_train.txt', './housing_test.txt')
+def LR_solve(X, y):
+    """ Solves a linear regression problem.
+    params:
+    -------
+    * X - Input matrix where each row corresponds to an example.
+    * y - Target values
+    returns:
+    --------
+    * w - Vector of fitting coefficients for least squares fit
+    notes:
+    ------
+    * A^*A\hat{x} = A^*b
+      \hat{x} = A^* A A^* b
+    """
+    A = np.hstack( (np.ones((X.shape[0],1)), X) )
+    rtn = np.linalg.lstsq(A, y)
+    return rtn[0]
+def LR_predict(X, w):
+    """ Returns prediction for input data using least squares weights w.
+    params:
+    -------
+    * X - Input matrix of test data
+    * w - Weights for least squares fit
+    returns:
+    --------
+    * y - Predictions using LSF coefficients w
+    """
+    rtn = w[0] + w[1]*X[:,0]
+    return rtn
+def calc_MSE(y, yhat):
+    """ Calculate MSE between two observations.
+    params:
+    -------
+    * y - Observations
+    * yhat - Predicted value
+    returns:
+    --------
+    * mse - Mean Square Error
+    """
+    mse = ((y - yhat)**2).mean()
+    return mse
+out = main3_2('./housing_train.txt', './housing_test.txt')
+w

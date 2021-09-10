@@ -1,1 +1,5 @@
-combiner = lambda x, y: np.where(pd.isnull(x), y, x)
+frame = pd.DataFrame(np.random.randn(1000, 5), columns=['a', 'b', 'c', 'd', 'e'])
+frame.describe()
+frame.describe(include=['object'])
+frame.describe(include=['number'])
+frame.describe(include='all')

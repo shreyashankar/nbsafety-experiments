@@ -1,1 +1,1 @@
-np.unique(Htensor.full())
+np.unique(q.tensor(q.create(3), q.destroy(3), q.qeye(3)).full())

@@ -1,1 +1,1 @@
-pd.Series(['foo', 'bar', 'baz']) == np.array(['foo', 'bar', 'qux'])
+series[10:20]  = 5

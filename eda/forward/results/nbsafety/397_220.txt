@@ -1,0 +1,3 @@
+grouped_trans=transformed.groupby(key)
+grouped_trans.mean()
+grouped_trans.mean()

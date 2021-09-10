@@ -1,1 +1,1 @@
-init_session()
+integrate(exp(x) * sin(x) + exp(x) * cos(x), x)

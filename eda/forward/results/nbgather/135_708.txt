@@ -1,0 +1,4 @@
+bitslots
+bitslots = []
+    bitslots.append((ctr, bitval))
+bitslots

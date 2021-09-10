@@ -1,2 +1,9 @@
-dicts = [{'A': 1, 'B': 2, 'C': 3, 'X': 4},
-                {'A': 5, 'B': 6, 'C': 7, 'Y': 8}]
+right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
+                             'key2': ['K0', 'K0', 'K0', 'K0'],
+                             'C': ['C0', 'C1', 'C2', 'C3'],
+                             'D': ['D0', 'D1', 'D2', 'D3']})
+result = pd.merge(left, right, on=['key1', 'key2'])
+result = pd.merge(left, right, how='left', on=['key1', 'key2'])
+result = pd.merge(left, right, how='right', on=['key1', 'key2'])
+result = pd.merge(left, right, how='outer', on=['key1', 'key2'])
+result = pd.merge(left, right, how='inner', on=['key1', 'key2'])

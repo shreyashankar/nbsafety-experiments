@@ -1,12 +1,1 @@
-grouped = s.groupby(level=0)
-lst = [1, 2, 3, 1, 2, 3]
-s = pd.Series([1, 2, 3, 10, 20, 30], lst)
-grouped = s.groupby(level=0)
-s
-grouped = s.groupby(level=0)
-s.groupby(level='second').sum()
-s.sum(level='second')
-s
-s.groupby(level=['first', 'second']).sum()
-grouped.mean()
-grouped.std()
+df3.groupby(['X']).get_group('A')

@@ -1,0 +1,3 @@
+result=df1.append(s2,ignore_index=True)
+result = df1.append(dicts,ignore_index=True)
+result = df1.append(dicts,ignore_index=True)

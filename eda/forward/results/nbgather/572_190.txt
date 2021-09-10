@@ -1,0 +1,30 @@
+a=np.array([[]])
+a = np.append(a,[5,6],1)
+a = np.append(a,[[5,6]],0)
+a = np.append(a,[[5,6]],1)
+a=np.array([[]])
+a=np.array([])
+a = np.append(a,[[5,6]],1)
+a = np.append(a,[[5,6]],0)
+a=np.array([])
+a = np.append(a,[[5,6]],0)
+a=np.array([[]])
+a = np.append(a,[[5,6]],0)
+a=np.array([[]])
+a = np.append(a,[[5,6]],1)
+a
+a = np.append(a,[[5,6]],1)
+a
+a=np.array([[]])
+a = np.append(a,[[5,6]],1)
+a = np.append(a,[[5,6]],0)
+a
+a=np.array([[]])
+a=np.array([[]])
+a
+a = np.append(a,[[5,6]],0)
+a = np.append(a,[[5,6]],0)
+a = np.append(a,[[5,6]],1)
+a
+a = np.append(a,[[5,6]],0)
+a

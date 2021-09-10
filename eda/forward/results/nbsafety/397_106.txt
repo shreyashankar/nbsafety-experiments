@@ -1,1 +1,1 @@
-np.random.beta(α, β)
+sns.jointplot(X1, X2);

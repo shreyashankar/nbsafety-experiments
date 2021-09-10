@@ -1,1 +1,1 @@
-a.__repr__()
+arrtypes[0].buffer_info()

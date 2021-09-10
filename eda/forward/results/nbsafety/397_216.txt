@@ -1,1 +1,1 @@
-grouped.agg({'C':'sum','D':'std'})
+grouped.sum()

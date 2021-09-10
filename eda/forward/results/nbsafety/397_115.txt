@@ -1,1 +1,7 @@
-interact(plot_beta, α=(0.1, 5.0, 0.1), β=(0.1, 5.0, 0.1), __manual=True);
+def plot_exponential(β):
+        X = np.random.exponential(β, 200)
+        sns.distplot(X, rug=True)
+        print("mean =", X.mean())
+        plt.xlabel("Time between Poisson events")
+        plt.xlim(0.0, 50.0)
+interact(plot_exponential, β=(1.0, 20.0), __manual=True);

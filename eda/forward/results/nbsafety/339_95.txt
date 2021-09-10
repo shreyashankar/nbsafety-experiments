@@ -1,1 +1,1 @@
-type(close)
+data = ts.get_k_data('600690')

@@ -1,0 +1,43 @@
+def rmse(actual_y, predicted_y):
+    """
+    Args:
+        predicted_y: an array of the prediction from the model
+        actual_y: an array of the groudtruth label
+    Returns:
+        The root mean square error between the prediction and the groudtruth
+    """
+    return np.sqrt((1/len(actual_y))*np.sum((actual_y-predicted_y)**2))
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))
+def rmse(actual_y, predicted_y):
+    """
+    Args:
+        predicted_y: an array of the prediction from the model
+        actual_y: an array of the groudtruth label
+    Returns:
+        The root mean square error between the prediction and the groudtruth
+    """
+    return np.sqrt((1/len(actual_y))*np.sum((actual_y-predicted_y)**2))
+print(boston_data['DESCR'])
+def rmse(actual_y, predicted_y):
+    """
+    Args:
+        predicted_y: an array of the prediction from the model
+        actual_y: an array of the groudtruth label
+    Returns:
+        The root mean square error between the prediction and the groudtruth
+    """
+    return np.sqrt((1/len(actual_y))*np.sum((actual_y-predicted_y)**2))
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))
+def rmse(actual_y, predicted_y):
+    """
+    Args:
+        predicted_y: an array of the prediction from the model
+        actual_y: an array of the groudtruth label
+    Returns:
+        The root mean square error between the prediction and the groudtruth
+    """
+    return np.sqrt((1/len(actual_y))*np.sum((actual_y-predicted_y)**2))
+assert np.allclose((train_error, test_error), (4.56291225689, 5.88492861688))

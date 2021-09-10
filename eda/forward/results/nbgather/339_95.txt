@@ -1,0 +1,25 @@
+data = ts.get_k_data('600690')
+data.head()
+len(data)
+len(data)
+data.tail()
+data2 = ts.get_hist_data('600690', start='1993-11-19')
+data2.head()
+data2.tail()
+data.index()
+data.index
+data['date']
+data.set_index('date')
+data.set_index('date')
+data = data.set_index('date')
+data.head()
+data.index
+data.index.dtype = pd.DatetimeIndex
+data.info()
+data.info
+data.info()
+data.index.info()
+data.index
+data.index = pd.DatetimeIndex(data.index)
+data.index
+data.info()

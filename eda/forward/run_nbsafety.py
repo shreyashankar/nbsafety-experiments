@@ -126,7 +126,7 @@ def modify_cell_source(cell_source):
 def run_reactively(
     safety: nbsafety.safety.NotebookSafety,
     cell_id: int,
-    cell: typing.Optional[str] = None,
+    successful_execs: dict,
 ) -> typing.Set[int]:
     """
     Simulates running `cell_id` and all dependent cells reactively.
@@ -141,9 +141,9 @@ def run_reactively(
     fresh_cells = {cell_id}
     while len(fresh_cells) > 0:
         cell_id = next(iter(sorted(fresh_cells)))
-        if cell is None:
-            cell = safety.cell_content_by_cell_id[cell_id]
-        timeout_run_cell(cell_id, cell, safety)
+        # cell = successful_execs[cell_id]
+        cell = safety.cell_content_by_cell_id[cell_id]
+        timeout_run_cell(cell_id, cell, safety=safety)
         executed_cells.add(cell_id)
         cell_id, cell = None, None
         cur_fresh_cells = set(
@@ -167,11 +167,12 @@ def timeout_run_cell(cell_id, cell_source, safety=None):
         return safety.test_and_clear_detected_flag()
 
 
-def run_cells(cell_num_to_code, verify_slicer=False):
+def run_cells(cell_num_to_code):
     safety = nbsafety.safety.NotebookSafety.instance(
         cell_magic_name="_NBSAFETY_STATE",
         skip_unsafe=False,
         store_history=False,
+        mark_stale_symbol_usages_unsafe=False,
     )
     successful_execs = {}
     all_cell_counter = 1
@@ -218,15 +219,23 @@ def run_cells(cell_num_to_code, verify_slicer=False):
     # Pick a cell to randomly rerun and compute dependencies
     cell_to_rerun = random.choice(list(successful_execs))
     print(f"Cell to rerun: {cell_to_rerun}")
-    print(successful_execs[cell_to_rerun])
-    print(safety.cell_content_by_cell_id[cell_to_rerun])
+    # print(successful_execs[cell_to_rerun])
+    # print(safety.cell_content_by_cell_id[cell_to_rerun])
 
-    cell_deps = sorted(run_reactively(safety, cell_to_rerun))
-    print(cell_deps)
+    # print(successful_execs)
+    # print(
+    #     {
+    #         cell_id: safety.cell_content_by_cell_id[cell_id]
+    #         for cell_id in safety.cell_content_by_cell_id.keys()
+    #     }
+    # )
+
+    cell_deps = sorted(run_reactively(safety, cell_to_rerun, successful_execs))
     cell_deps = {
         cell_id: safety.cell_content_by_cell_id[cell_id]
         for cell_id in cell_deps
     }
+    print(cell_deps)
 
     slice_size = len(cell_deps.keys())
     slice_cells = "\n".join(cell_deps.values())

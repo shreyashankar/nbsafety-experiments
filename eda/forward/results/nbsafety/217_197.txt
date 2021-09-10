@@ -1,1 +1,3 @@
-grouped.get_group('bar')
+grouped = df.groupby('A')
+grouped.mean()
+grouped.std()

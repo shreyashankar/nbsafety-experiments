@@ -1,4 +1,10 @@
-def uniform2(mu, sigma, size=1):
-        """Return uniform random variates with mean mu and standard dev sigma."""
-        var = np.random.uniform(mu,sigma, size)
-        return var
+def plot_cdf(data, **kwargs):
+        """Plot the CDF of a 1d distribution of data.
+        You can use kwargs to pass keyword arguments to the Matplotlib plotting function.
+        """
+        m = len(data)
+        plt.step(sorted(data), np.arange(m), **kwargs)
+plt.plot(nyp,plot_cdf)
+plt.plot(npy,plot_cdf)
+plot_cdf(npy)
+plot_cdf(my_npy)

@@ -1,1 +1,1 @@
-v_initial
+np.real(lambertw(-0.1))

@@ -1,0 +1,17 @@
+import time
+time.time()
+s = time.time()
+time.time() -s
+s = time.time()
+time.time() -s
+time.time() -s
+time.time() -s
+time.time() -s
+time.time() -s
+time.time() -s
+time.time() -s
+s = time.clock()
+s
+time.clock() - s
+time.clock() - s
+time.clock() - s

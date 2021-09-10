@@ -1,1 +1,1 @@
-george_dupe
+df.iloc[0]['Player']

@@ -1,0 +1,13 @@
+    if letter.lower() in 'aeiou':
+        return 'vowel'
+    else:
+        return 'consonant'
+grouped = df.groupby(get_letter_type,axis=1)
+df.groupby('A').groups
+df.groupby(get_letter_type,axis=1).groups
+grouped = df.groupby(['A','B'])
+grouped.groups
+len(grouped)
+grouped=df.groupby('A')
+grouped=df.groupby(['A','B'])
+def get_letter_type(letter):

@@ -1,0 +1,16 @@
+a.b = b
+objgraph.find_ref_chain(a,b)
+objgraph.find_backref_chain(a)
+objgraph.find_backref_chain(a, lambda x:True)
+objgraph.show_refs(a)
+objgraph.show_refs(a)
+objgraph.show_backrefs(aaa)
+objgraph.show_backrefs(aaa)
+objgraph.show_backrefs(pr.PromptManager)
+a
+objgraph.show_backrefs(Zxcvb)
+gc.get_referents(Zxcvb)
+gc.get_referents(zz)
+zz.__class__
+gc.get_referrers(pr.PromptManager)
+gc.get_referrers(Zxcvb)

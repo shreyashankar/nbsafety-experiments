@@ -1,0 +1,26 @@
+pattern.search(s).groups()
+pattern.findall(s)
+s
+s
+pattern
+pattern.search(s)
+pattern.search(s).groups()
+pattern.findall(s)
+s
+pattern2.search(s).groups()
+pattern.search(s).groups()
+pattern2.findall(s)
+s
+pattern2.findall(s)
+pattern2.findall(s)
+[x for x in pattern2.findall(s)]
+pattern2.findall(s)[0]
+pattern2.findall(s)[1]
+pattern2.findall(s)[2]
+pattern2.findall(s)[3]
+pattern2.findall(s)[4]
+pattern
+pattern2
+s
+pattern.findall(s)
+pattern2.findall(s)

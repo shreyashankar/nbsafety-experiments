@@ -1,0 +1,1041 @@
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+features.shape
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.sigmoid(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.relu(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = self.error # tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        get_ipython().magic(u'pinfo tf.train.GradientDescentOptimizer')
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        get_ipython().magic(u'pinfo tf.train.GradientDescentOptimizer')
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+session.run(model.error, {data: test, target: test_labels})
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+session.run(model.error, {data: test, target: test_labels})
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target, weight, bias, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.weight = weight
+        self.bias = bias
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        incoming = tf.matmul(self.data, self.weight) + self.bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    """
+    def __init__(self, data, target, weight, bias, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.weight = weight
+        self.bias = bias
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        incoming = tf.matmul(self.data, self.weight) + self.bias
+        return tf.nn.tanh(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+session.run(model.weight)
+session.run(model.bias)
+train[0]
+session.run(train[0] * model.weight + model.bias)
+session.run(tf.matmul(train[0], model.weight) + model.bias)
+class ExampleModel:
+    """Simple Tensorflow model
+    """
+    def __init__(self, data, target, weight, bias, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.weight = weight
+        self.bias = bias
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        incoming = tf.matmul(self.data, self.weight) + self.bias
+        return tf.nn.softmax(tf.nn.tanh(incoming))
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    """
+    def __init__(self, data, target, weight, bias, step_size=0.03):
+        self.data = data
+        self.target = target
+        self.weight = weight
+        self.bias = bias
+        self.step_size = step_size
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        incoming = tf.matmul(self.data, self.weight) + self.bias
+        return tf.nn.softmax(tf.nn.tanh(incoming))
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(self.step_size)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+train[0] * session.run(model.weight) + session.run(model.bias)
+np.tanh(train[0] * session.run(model.weight) + session.run(model.bias))
+train[:3]
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.5)
+        train = optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+np.dstack(data, labels)
+np.dstack([data, labels])
+np.dstack((data, labels))
+np.dstack((np.array(data), np.array(labels)))
+np.array(data).size()
+np.array(data).size
+data
+data
+np.dstack((data, labels))
+np.dstack((data, labels))[0]
+np.dstack((data, labels))[0].T
+np.dstack((data, labels))[0].T[:10]
+np.dstack((data, labels))[0].T[:10,]
+np.dstack((incoming, labels))[0].T[:10,]
+np.dstack((incoming, labels))[0].T[:10]
+np.dstack((incoming, labels))[0][:10].T
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.5)
+        train = optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+np.random.choice(test, 3)
+test[0]
+np.random.choice(test[0], 3)
+test[np.random.choice(test.shape[0], 2, replace=False),:]
+test[:,np.random.choice(test.shape[1], 2, replace=False)]
+test[:,np.random.choice(test.shape[1], 2, replace=False)]
+test[:,np.random.choice(test.shape[1], 2, replace=False)]
+test[:,np.random.choice(test.shape[1], 2, replace=False)]
+test[:,np.random.choice(test.shape[1], 2, replace=False)]
+labels
+labels
+np.random.choice(train.shape[1], 3)
+np.random.choice(train.shape[0], 3)
+selector[:,np.random.choice(train.shape[0], 3)]
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[None, 1])
+        target_size = int(self.target.get_shape()[None, 2])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.5)
+        train = optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.5)
+        train = optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+incoming = (x_values * y_values).T.shape
+np.array[x_values * y_values].T.shape
+np.array(x_values * y_values).T.shape
+np.matrix(x_values * y_values).T.shape
+labels.shape
+labels.shape
+labels.shape
+incoming.shape, labels.shape
+incoming.shape, labels.shape
+train.shape, labels.shape
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.5)
+        train = optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+session.close()
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.5)
+        return optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.5)
+        return optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+for epoch in range(10):
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+for epoch in range(10):
+session.run(model.predict, {data: test, target: labels[:50]})
+session.run(model.prediction, {data: test, target: labels[:50]})
+tf.argmax(session.run(model.prediction, {data: test, target: labels[:50]}))
+tf.argmax(session.run(model.prediction, {data: test, target: labels[:50]}), 1)
+session.run(model.prediction, {data: test, target: labels[:50]})
+(session.run(model.prediction, {data: test, target: labels[:50]}) - test_labels)[:,1]
+np.argmax(session.run(model.prediction, {data: test, target: labels[:50]}) - test_labels)
+np.argmax(session.run(model.prediction, {data: test, target: labels[:50]}))
+np.argmax(session.run(model.prediction, {data: test, target: labels[:50]}), 1)
+(np.argmax(session.run(model.prediction, {data: test, target: labels[:50]}), 1) - 
+ np.argmax(test_labels, 1))
+(np.argmax(session.run(model.prediction, {data: test, target: labels[:50]}), 1) - 
+ np.argmax(test_labels, 1))[15]
+test[15]
+test[15], session.run(model.prediction, {data: test[15], target: labels[0]})
+test[15], session.run(model.prediction, {data: test[15:16], target: labels[0:1]})
+def gen_plane(x1_max, x2_max, n):
+    """Return n points on the plane.
+    - xi_max: The maximum absolute value of x_i in the returned points.
+    """
+    x1_values = np.random.rand(n) * 2 * x1_max - x1_max
+    x2_values = np.random.rand(n) * 2 * x2_max - x2_max
+    return np.dstack(x1_values, x2_values)
+def gen_plane_points(x1_max, x2_max, n):
+    """Return n points on the plane.
+    - xi_max: The maximum absolute value of x_i in the returned points.
+    """
+    x1_values = np.random.rand(n) * 2 * x1_max - x1_max
+    x2_values = np.random.rand(n) * 2 * x2_max - x2_max
+    return np.dstack(x1_values, x2_values)
+gen_plane_points(1, 1, 5)
+def gen_plane_points(x1_max, x2_max, n):
+    """Return n points on the plane.
+    - xi_max: The maximum absolute value of x_i in the returned points.
+    """
+    x1_values = np.random.rand(n) * 2 * x1_max - x1_max
+    x2_values = np.random.rand(n) * 2 * x2_max - x2_max
+    return np.dstack((x1_values, x2_values))
+gen_plane_points(1, 1, 5)
+def gen_plane_points(x1_max, x2_max, n):
+    """Return n points on the plane.
+    - xi_max: The maximum absolute value of x_i in the returned points.
+    """
+    x1_values = np.random.rand(n) * 2 * x1_max - x1_max
+    x2_values = np.random.rand(n) * 2 * x2_max - x2_max
+    return np.matrix(x1_values, x2_values)
+gen_plane_points(1, 1, 5)
+def gen_plane_points(x1_max, x2_max, n):
+    """Return n points on the plane.
+    - xi_max: The maximum absolute value of x_i in the returned points.
+    """
+    x1_values = np.random.rand(n) * 2 * x1_max - x1_max
+    x2_values = np.random.rand(n) * 2 * x2_max - x2_max
+    return np.matrix((x1_values, x2_values))
+gen_plane_points(1, 1, 5)
+def gen_plane_points(x1_max, x2_max, n):
+    """Return an (n x 2) matrix of points on the plane.
+    - xi_max: The maximum absolute value of x_i in the returned points.
+    """
+    x1_values = np.random.rand(n) * 2 * x1_max - x1_max
+    x2_values = np.random.rand(n) * 2 * x2_max - x2_max
+    return np.matrix((x1_values, x2_values)).T
+gen_plane_points(1, 1, 5)
+product_feature(gen_plane_points(1, 1, 5))
+def product_feature(pt):
+    return pt[0]
+product_feature(gen_plane_points(1, 1, 5))
+def product_feature(pts):
+    """Return a column vector of the product of the coords of pts.
+    - pts: An (n x 2) matrix of points
+    """
+    return pt[:,0] * pt[:,1]
+product_feature(gen_plane_points(1, 1, 5))
+def product_feature(pts):
+    """Return a column vector of the product of the coords of pts.
+    - pts: An (n x 2) matrix of points
+    """
+    return pts[:,0] * pts[:,1]
+product_feature(gen_plane_points(1, 1, 5))
+def product_feature(pts):
+    """Return a column vector of the product of the coords of pts.
+    - pts: An (n x 2) matrix of points
+    """
+    return pts[:,0][0] * pts[:,1][0]
+product_feature(gen_plane_points(1, 1, 5))
+def gen_plane_points(x1_max, x2_max, n):
+    """Return an (n x 2) matrix of points on the plane.
+    - xi_max: The maximum absolute value of x_i in the returned points.
+    """
+    x1_values = np.random.rand(n) * 2 * x1_max - x1_max
+    x2_values = np.random.rand(n) * 2 * x2_max - x2_max
+    return np.array((x1_values, x2_values)).T
+def product_feature(pts):
+def x2_feature(pts):
+    """Return an array of the second coordinate of each point
+    - pts: An (n x 2) array of points
+    """
+    return pts[:,1]
+x1_feature(pts)
+x2_feature(pts)
+product_feature(pts)
+x1_feature(pts)**2
+def sin_feature(pts, dimension):
+    """Return an array of the sin of the "dimension" coordinate of each point
+    - pts: An (n x 2) array of points
+    """
+    return np.sin(project_feature(pts, dimension))
+sin_feature(pts, 1)
+def sin_feature(pts, dimension):
+    """Return an array of the sin of the "dimension" coordinate of each point
+    - pts: An (n x 2) array of points
+    """
+    return np.sin(projection_feature(pts, dimension))
+sin_feature(pts, 1)
+sin_feature(pts, 0)
+def product_sign_label(pts):
+    """Return an array of the sign of the product of the coordinates of each pt
+    - pts: An (n x 2) array of points
+    """
+    prd = product_feature(pts)
+    return np.array([[1.0, 0.0] if _ > 0 else [0.0, 1.0] for _ in prd])
+def product_sign_label(pts):
+    """Return an array of one-hot labels for the sign of the product of the coordinates
+    - pts: An (n x 2) array of points
+    - output: An (n x 2) array with [1.0, 0.0] rows corresponding to positive product
+    """
+    prd = product_feature(pts)
+    return np.array([[1.0, 0.0] if _ > 0 else [0.0, 1.0] for _ in prd])
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+        #cross_entropy = -tf.reduce_sum(self.target * tf.log(self.prediction))
+        #optimizer = tf.train.RMSPropOptimizer(0.03)
+        #return optimizer.minimize(cross_entropy)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+train
+test
+np.array(train, ndim=2)
+np.array(train, ndmin=2)
+np.array([train])
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+train
+train
+train, labels
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+X
+X, labels
+X, Y
+selector
+train.shape
+train
+train.shape
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.constant(0.1, shape=[target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros[target_size])
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)
+        return optimizer.minimize(loss)
+    @lazy_property
+    def error(self):
+        #return tf.reduce_mean(tf.square(self.prediction - self.target))
+        mistakes = tf.not_equal(
+            tf.argmax(self.target, 1), tf.argmax(self.prediction, 1))
+        return tf.reduce_mean(tf.cast(mistakes, tf.float32))
+class ExampleModel:
+    """Simple Tensorflow model
+    - data
+    """
+    def __init__(self, data, target):
+        self.data = data
+        self.target = target
+        self.prediction
+        self.optimize
+        self.error
+    @lazy_property
+    def prediction(self):
+        data_size = int(self.data.get_shape()[1])
+        target_size = int(self.target.get_shape()[1])
+        weight = tf.Variable(tf.truncated_normal([data_size, target_size]))
+        bias = tf.Variable(tf.zeros([target_size]))
+        incoming = tf.matmul(self.data, weight) + bias
+        return tf.nn.softmax(incoming)
+    @lazy_property
+    def optimize(self):
+        loss = tf.reduce_mean(tf.square(self.target - self.prediction))
+        optimizer = tf.train.GradientDescentOptimizer(0.1)

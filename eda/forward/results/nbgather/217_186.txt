@@ -1,0 +1,38 @@
+s = pd.Series(['a', 'a', 'b', 'b', 'a', 'a', np.nan, 'c', 'd', 'a'])
+s.describe()
+frame = pd.DataFrame({'a': ['Yes', 'Yes', 'No', 'No'], 'b': range(4)})
+frame.describe()
+frame.describe(include=['object'])
+frame.describe(include=['number'])
+frame.describe(include='all')
+s1 = pd.Series(np.random.randn(5))
+s1
+s1.idxmin(), s1.idxmax()
+df1 = pd.DataFrame(np.random.randn(5,3), columns=['A','B','C'])
+df1
+df1.idxmin(axis=0)
+df1.idxmax(axis=1)
+df3 = pd.DataFrame([2, 1, 1, 3, np.nan], columns=['A'], index=list('edcba'))
+df3
+df3['A'].idxmin()
+s = pd.Series(data)
+s.value_counts()
+pd.value_counts(data)
+s5 = pd.Series([1, 1, 3, 3, 3, 5, 5, 7, 7, 7])
+s5.mode()
+df5 = pd.DataFrame({"A": np.random.randint(0, 7, size=50),
+                    "B": np.random.randint(-10, 15, size=50)})
+df5.mode()
+factor = pd.cut(arr, 4)
+factor
+factor = pd.cut(arr, [-5, -1, 0, 1, 5])
+factor
+factor = pd.qcut(arr, [0, .25, .5, .75, 1])
+factor
+pd.value_counts(factor)
+factor = pd.cut(arr, [-np.inf, 0, np.inf])
+factor
+tsdf = pd.DataFrame(np.random.randn(1000, 3), columns=['A', 'B', 'C'], index=pd.date_range('1/1/2000', periods=1000))
+tsdf.apply(lambda x: x.idxmax())
+tsdf
+tsdf.apply(pd.Series.interpolate)

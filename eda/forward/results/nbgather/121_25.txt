@@ -1,0 +1,19 @@
+df_test.head()
+df_test.count()
+df_test.head()
+df_test[['PassengerId','Survived']].to_csv('titanic/sub-01.csv', index=False, float_format="%f")
+df_test.groupby(by=['Sex','Survived']).count()[['Sex','Survived']]
+df_test[['PassengerId','Survived']].to_csv('titanic/sub-02.csv', index=False, float_format="%f")
+df_test.groupby(by=['Sex','Survived']).count()[['Sex','Survived']]
+df_test.head(n=1)
+df_test.count()
+df_test.describe()
+df_test_1 = df_test.fillna(35) # might be better to filin with average
+df_test_1.head()
+change_predict = clf_test_predict != df_test_1['Survived']
+change_predict.groupby
+df_test_1['Survived'] = clf_test_predict
+df_test_1[['PassengerId','Survived']].to_csv('titanic/sub-03.csv', index=False, float_format="%f")
+df_test_1['Survived'] = clf_test_predict
+df_test_1[['PassengerId','Survived']].to_csv('titanic/sub-04.csv', index=False, float_format="%f")
+df_test_1.head()

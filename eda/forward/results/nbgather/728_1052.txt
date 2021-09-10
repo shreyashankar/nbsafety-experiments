@@ -1,0 +1,7 @@
+result = {}
+result(1,0.5,1)
+result[1,0.5,1]
+result[1,0.5,1]
+result[1,0.5,1]
+result[1,0.5,1]
+result[1,1,1]

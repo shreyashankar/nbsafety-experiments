@@ -1,1 +1,1 @@
-graph.write_png('titanic/titanic.png')
+from sklearn.ensemble import RandomForestClassifier

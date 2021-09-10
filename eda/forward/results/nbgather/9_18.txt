@@ -1,0 +1,7 @@
+for (k,v) in a:
+a
+a.pop('d')
+a.pop(1)
+a
+a.remove(('d',4))
+a

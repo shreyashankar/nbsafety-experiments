@@ -1,1 +1,1 @@
-bin(1)
+s.unpack(b'\xff\xff\xff\xff')

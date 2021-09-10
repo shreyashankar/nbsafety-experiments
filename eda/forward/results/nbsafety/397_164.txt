@@ -1,1 +1,1 @@
-plt.plot(np.range(-3,3),hat(np.range(-3,3),a,b))
+interact(hat,b=1.0,a=5.0,x=(-3,3))

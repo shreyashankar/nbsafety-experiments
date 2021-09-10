@@ -1,0 +1,5 @@
+svc_2.score(X_train, y_train)
+svc_2.score(X_test, y_test)
+gs_svc.best_params_, gs_svc.best_score_
+display_grid_scores(gs_svc.grid_scores_, top=20)
+gs_svc.score(X_test, y_test)

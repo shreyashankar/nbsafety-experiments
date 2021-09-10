@@ -1,0 +1,9 @@
+df.index.equals(df.sort('col1', ascending=False).index)
+df.index
+df.index.sort
+df.index.sort()
+df.index.difference(s.index)
+df.index.difference(s3.index)
+df.index.difference(s3.index)
+df.index.difference(s3.index).size()
+len(df.index.difference(s3.index))

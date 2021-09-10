@@ -1,1 +1,1 @@
-plt.scatter(X,Y)
+y_model = a*X**2+b*X+c+noise

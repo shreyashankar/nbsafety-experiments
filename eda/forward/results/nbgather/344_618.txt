@@ -1,0 +1,55 @@
+for i in range(len(l)):
+    if int(l[i][3]) == sum+2:
+        sum += 1
+        count.append(c)
+        c = 0
+    c += 1
+sum
+count
+np.shape(count)
+plt.plot(count, range(len(count)))
+plt.plot(range(len(count)), count)
+plt.figure()
+plt.plot(range(len(count)), count)
+plt.xlabel('Time')
+plt.xlabel('Time', fsize=18)
+plt.xlabel('Time', fs=18)
+plt.xlabel('Time', size=18)
+plt.xlabel('Time', size=15)
+plt.xlabel('Number of Nuclei', size=15)
+plt.xlabel('Time', size=15)
+plt.ylabel('Number of Nuclei', size=15)
+plt.imsave('unko.pdf')
+plt.savefig('unko.pdf')
+count
+plt.plot(range(14), count[:14])
+plt.figure()
+plt.plot(range(14), count[:14])
+count[:14]
+count[:30]
+count[:50]
+count[:300]
+count[:350]
+count[:335]
+count[:338]
+count[:340]
+count[:345]
+count[:341]
+count[:341]
+count[:340]
+plt.plot(range(340), count[:340])
+plt.plot(range(340), count[:340], label='Grount Truth')
+plt.legend()
+plt.xlabel('Time', size=15)
+plt.ylabel('Number of Nuclei', size=15)
+plt.savefig('numberofNuclei.pdf')
+plt.plot(range(340), count[:340], label='Ground Truth')
+plt.figure()
+plt.plot(range(340), count[:340], label='Ground Truth')
+plt.xlabel('Time', size=15)
+plt.ylabel('Number of Nuclei', size=15)
+plt.legend()
+plt.savefig('numberofNuclei.pdf')
+plt.xlabel('Time [timepoint / 10 min]', size=15)
+plt.xlabel('Time Point [/ 10 min]', size=15)
+plt.savefig('numberofNuclei.pdf')

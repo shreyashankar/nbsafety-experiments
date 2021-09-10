@@ -1,3 +1,4 @@
 def build_ngrams(itr, n=2):
-        for i in range(len(itr)-1):
-            yield islice(itr, i, n+i)
+        """Return the sequence of n-grams from the source iterator."""
+        gram = islice(itr, 0, len(itr), n)
+        return gram

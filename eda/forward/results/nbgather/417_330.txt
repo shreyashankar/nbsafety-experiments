@@ -1,0 +1,71 @@
+conn = cm.get_connection('opsqa', service='rds2')
+conn.build_complex_list_params(params, parameters, 'Parameters.member', ('ParameterName', 'ParameterValue', 'Description', 'Source', 'ApplyType', 'DataType', 'AllowedValues', 'IsModifiable', 'MinimumEngineVersion', 'ApplyMethod'))
+params
+conn._make_request(action='ModifyDBParameterGroup', verb='POST', path='/', params=params)
+conn.build_complex_list_params(params, parameters, 'Parameters.member', ('ParameterName', 'ParameterValue', 'Description', 'Source', 'ApplyType', 'DataType', 'AllowedValues', 'IsModifiable', 'MinimumEngineVersion', 'ApplyMethod'))
+params
+conn._make_request(action='ModifyDBParameterGroup', verb='POST', path='/', params=params)
+conn.build_complex_list_params(params, parameters, 'Parameters.member', ('ParameterName', 'ParameterValue', 'Description', 'Source', 'ApplyType', 'DataType', 'AllowedValues', 'IsModifiable', 'MinimumEngineVersion', 'ApplyMethod'))
+params
+conn._make_request(action='ModifyDBParameterGroup', verb='POST', path='/', params=params)
+conn.build_complex_list_params(params, parameters, 'Parameters.member', ('ParameterName', 'ParameterValue', 'Description', 'Source', 'ApplyType', 'DataType', 'AllowedValues', 'IsModifiable', 'MinimumEngineVersion', 'ApplyMethod'))
+params
+conn.build_complex_list_params(params, parameters, 'Parameters.member', ('ParameterName', 'ParameterValue', 'Description', 'Source', 'ApplyType', 'DataType', 'AllowedValues', 'IsModifiable', 'MinimumEngineVersion', 'ApplyMethod'))
+params
+conn._make_request(action='ModifyDBParameterGroup', verb='POST', path='/', params=params)
+params
+conn.build_complex_list_params(params, parameters, 'Parameters.member', ('ParameterName', 'ParameterValue', 'Description', 'Source', 'ApplyType', 'DataType', 'AllowedValues', 'IsModifiable', 'MinimumEngineVersion', 'ApplyMethod'))
+params
+conn._make_request(action='ModifyDBParameterGroup', verb='POST', path='/', params=params)
+conn.modify_db_parameter_group('devzpy', parameters)
+conn.modify_db_parameter_group('devzpy', parameters)
+params
+params
+parameters
+conn.modify_db_parameter_group('devzpy', parameters)
+conn.modify_db_parameter_group('devzpy', parameters)
+conn.modify_db_parameter_group('devzpy', parameters)
+params
+parameters
+conn.describe_db_instances('devzpy')
+conn.describe_db_instances('qatnvd')
+conn.describe_db_instances(db_instance_identifier='qatnvd')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd2')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+inst = conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+inst.DescribeDBInstancesResponse
+inst['DescribeDBInstancesResponse']
+inst['DescribeDBInstancesResponse']['DBInstances']
+inst['DescribeDBInstancesResponse']['DBInstances']
+inst
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances']
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances']['AvailabilityZone']
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['AvailabilityZone']
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd1.ckrhazjjumil.us-east-1.rds.amazonaws.com')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd')
+conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+inst = conn.describe_db_instances(db_instance_identifier='aws1qatnvd1')
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['AvailabilityZone']
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['AvailabilityZone']
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0].Engine
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['Engine']
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['Endpoint']
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['DBInstanceStatus']
+inst
+inst.__dict__
+inst()
+inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['DBInstanceStatus']
+inst
+r = inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]['DBInstanceStatus']
+r
+r = inst['DescribeDBInstancesResponse']['DescribeDBInstancesResult']['DBInstances'][0]
+r
+r['DBInstanceIdentifier']
+params

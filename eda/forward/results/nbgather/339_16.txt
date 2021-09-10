@@ -1,0 +1,25 @@
+N = 5
+ones(N)
+weights = ones(N) / N
+weights
+sma = np.convolve(weights, c)
+sma = np.convolve(weights, c17)
+sma
+len(sma)
+len(c17)
+sma = sma[N-1:-N+1]
+sma
+len(sma)
+t = np.arange(N-1, len(c17))
+t
+plot(t, c[N-1:], lw=1.0)
+plot(t, c17[N-1:], lw=1.0)
+plot(t, sma, lw=2.0)
+x = np.arange(5)
+x
+np.exp(x)
+np.linspace(-1., 0., N)
+np.exp(obj2)
+a = np.exp(obj2)
+a
+type(a)

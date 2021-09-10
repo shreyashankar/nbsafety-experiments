@@ -1,4 +1,1 @@
-w = LR_solve(A, b)
-X = np.array([ np.ones(A.shape[0])])
-X
-X
+A.shape

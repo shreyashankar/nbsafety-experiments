@@ -1,0 +1,35 @@
+s5 = pd.Series([0, 1, 4, 5])
+pd.concat([s3, s4, s5], axis=1)
+pd.concat([s3, s4, s5], axis=1, keys=['red','blue','yellow'])
+result = pd.concat(frames, keys=['x', 'y', 'z'])
+result = pd.concat(pieces)
+result = pd.concat(pieces, keys=['z', 'y'])
+result.index.levels
+result = pd.concat(pieces, keys=['x', 'y', 'z'],levels=[['z', 'y', 'x', 'w']],names=['group_key'])
+result.index.levels
+s2 = pd.Series(['X0', 'X1', 'X2', 'X3'], index=['A', 'B', 'C', 'D'])
+result = df1.append(s2, ignore_index=True)
+result = df1.append(dicts, ignore_index=True)
+left = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                        'A': ['A0', 'A1', 'A2', 'A3'],
+                        'B': ['B0', 'B1', 'B2', 'B3']})
+right = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                         'C': ['C0', 'C1', 'C2', 'C3'],
+                         'D': ['D0', 'D1', 'D2', 'D3']})
+result = pd.merge(left, right, on='key')
+left = pd.DataFrame({'key1': ['K0', 'K0', 'K1', 'K2'],
+                        'key2': ['K0', 'K1', 'K0', 'K1'],
+                        'A': ['A0', 'A1', 'A2', 'A3'],
+                        'B': ['B0', 'B1', 'B2', 'B3']})
+right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
+                         'key2': ['K0', 'K0', 'K0', 'K0'],
+                         'C': ['C0', 'C1', 'C2', 'C3'],
+                         'D': ['D0', 'D1', 'D2', 'D3']})
+result = pd.merge(left, right, on=['key1', 'key2'])
+result = pd.merge(left, right, how='left', on=['key1', 'key2'])
+result = pd.merge(left, right, how='right', on=['key1', 'key2'])
+result = pd.merge(left, right, how='outer', on=['key1', 'key2'])
+result = pd.merge(left, right, how='inner', on=['key1', 'key2'])
+df1 = pd.DataFrame({'col1':[0,1], 'col_left':['a','b']})
+df2 = pd.DataFrame({'col1':[1,2,2],'col_right':[2,2,2]})
+merge(df1, df2, on='col1', how='outer', indicator=True)

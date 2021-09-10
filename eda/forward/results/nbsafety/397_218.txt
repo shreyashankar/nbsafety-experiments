@@ -1,3 +1,1 @@
-grouped=df.groupby(['A','B'],as_index=False)
-grouped.mean()
-grouped.std()
+df2.groupby(['X'], sort=False).sum()

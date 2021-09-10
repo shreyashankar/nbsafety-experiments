@@ -1,0 +1,32 @@
+re.sub('\.[^.]*\.[^.]{2,4}$', 'foo', hn)
+re.sub('\.[^.]*\.[^.]{2,4}$', '', hn)
+re.sub('\.[^.]*\.[^.]{2,4}$', '', hn)
+hn
+re.sub('\.[^.]*\.[^.]{2,4}$', '', hn)
+hn.split('.')
+hn.split('.',1)
+hn.split('.',2)
+reversed(hn.split('.',2))
+".".join(reversed(hn.split('.',2)))
+re.sub('\.?[^.]*\.[^.]{2,4}$', '', hn)
+hn
+re.sub('\.?[^.]*\.[^.]{2,4}$', '', hn2)
+re.match('(.*)\.?[^.]*\.[^.]{2,4}$', '', hn2)
+re.match('(.*)\.?[^.]*\.[^.]{2,4}$', hn2)
+m = re.match('(.*)\.?[^.]*\.[^.]{2,4}$', hn2)
+m.groups()
+m = re.match('(.*)\.?([^.]*\.[^.]{2,4})$', hn2)
+m.groups()
+m = re.match('\.?([^.]*\.[^.]{2,4})$', hn2)
+m.groups()
+m
+m = re.match('(.*?)\.?([^.]*\.[^.]{2,4})$', hn2)
+m.groups()
+m = re.match('(.*?)\.?([^.]*\.[^.]{2,4})$', 'dev-3.foo.newhive.com').groups()
+m
+re.match('(.*?)\.?([^.]*\.[^.]{2,4})$', 'dev-3.foo.newhive.com').groups()
+re.match('(.*?)\.?([^.]*\.[^.]{2,4})$', 'dev-3.foo.thenewhive.com').groups()
+re.match('(.*?)\.?([^.]*\.[^.]{2,4})$', 'dev-3.newhive.com').groups()
+re.match('(.*?)\.?([^.]*\.[^.]{2,4})$', 'newhive.com').groups()
+dev_prefix, server_name = re.match('(.*?)\.?([^.]*\.[^.]{2,4})$', 'newhive.com').groups()
+not dev_prefix

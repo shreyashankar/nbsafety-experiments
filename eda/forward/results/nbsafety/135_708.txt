@@ -1,1 +1,22 @@
+for b in bits:
+        bitval = 2 ** ctr * b
+        bitslots.append((ctr, bitval))
+        ctr -= 1
+bitslots
+for b in bits:
+        bitval = 2 ** ctr
+        bitslots.append((ctr, bitval))
+        ctr -= 1
+for b in bits:
+        bitval = 2 ** ctr
+        bitslots.append((ctr, bitval))
+        ctr -= 1
+bitslots
+bitslots = []
+for b in bits:
+        bitval = 2 ** ctr
+        bitslots.append((ctr, bitval))
+        ctr -= 1
+bitslots
+b
 id(b)

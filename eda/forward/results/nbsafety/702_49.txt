@@ -1,1 +1,1 @@
-results = object_block.parseString(data)#.asDict()
+object_block.parseString(data)

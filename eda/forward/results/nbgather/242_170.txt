@@ -1,0 +1,13 @@
+df.head()
+sns.countplot(x=df.grade);
+counts = df.grade.value_counts().sort_index()
+counts
+df['grade'] = df['grade'].astype('category')
+df
+df.grade
+sns.countplot(x=df.grade);
+counts = df.grade.value_counts().sort_index()
+counts
+assert df.grade.dtype.name=='category'
+sns.countplot(df.labels)
+sns.distplot(df.age)

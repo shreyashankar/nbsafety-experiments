@@ -1,3 +1,1 @@
-clf = RandomForestClassifier(n_estimators=10)
 clf = clf.fit(clf_data,clf_target)
-clf_test_predict = clf.predict(clf_test_data)

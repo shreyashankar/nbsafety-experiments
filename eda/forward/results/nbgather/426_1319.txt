@@ -1,0 +1,9 @@
+salt = np.arange(9).reshape(3,3)
+salt
+salt
+stmp = interp1d( s_x, salt[:, 0])
+stmp = interp1d( s_x, salt[:, 0])
+stmp
+stmp(us_x)
+salt
+us_x

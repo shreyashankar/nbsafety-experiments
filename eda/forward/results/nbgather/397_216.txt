@@ -1,0 +1,2 @@
+df.groupby('A').sum()
+df.groupby(['A','B']).mean()

@@ -1,0 +1,5 @@
+clf = clf.fit(clf_data,clf_target)
+clf_test_predict = clf.predict(clf_test_data)
+df_test_1['Survived'] = clf_test_predict
+df_test_1[['PassengerId','Survived']].to_csv('titanic/sub-04.csv', index=False, float_format="%f")
+df_test_1.head()

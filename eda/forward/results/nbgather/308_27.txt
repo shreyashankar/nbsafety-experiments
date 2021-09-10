@@ -1,0 +1,11 @@
+sp.rot90(x)
+sp.roll(x)
+x=sp.array([1,1])
+y=sp.array([1,0])
+x+y
+sp.sqrt(2)*sp.sqrt(1)*sp.cos(sp.pi/4)
+x.dot(y)
+x=sp.array([2,4])
+y=sp.array([3,9])
+x.dot(y)
+sp.sqrt(2**2+4**2)*sp.sqrt(3**2+9**2)*sp.cos(2)

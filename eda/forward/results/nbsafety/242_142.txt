@@ -1,5 +1,1 @@
-def y_model(X,a,b,c,noise):
-        y_model = a*X**2+b*X+c+noise
-        return y_model
 Y = y_model(X,a,b,c,noise)
-opt.curve_fit(y_model,X,Y)

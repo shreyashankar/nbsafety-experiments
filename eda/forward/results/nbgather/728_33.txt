@@ -1,0 +1,13 @@
+np.allclose( np.array( a * a_dag - a_dag * a ), np.array(qeye(n0)) )
+np.array( a * a_dag - a_dag * a )
+np.array( a * a_dag - a_dag * a )[:,:]
+np.array( (a * a_dag - a_dag * a) )[:,:]
+np.allclose( (a * a_dag - a_dag * a)[:,:], qeye(n0)[:,:] )
+isequal((a * a_dag - a_dag * a), qeye(n0))
+isequal((a * a_dag - a_dag * a) , qeye(n0))
+isequal((a * a_dag - a_dag * a), qeye(n0))
+p = qobj(np.diag([1]*(n0-1) + [0]))
+for i in range(n0):
+    isequal(phi, basis(n0,i))
+    phi = a_dag * phi
+phi = basis(n0, 0)
