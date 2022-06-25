@@ -2,24 +2,9 @@ plist = []
 for i in range(1, 10):
     for j in range(1, 10):
         plist.append((i + ((j - 1) * 10)))
-comm = 'read -r f<flag;echo $f'
 plist = map((lambda x: (x - 1)), plist)
 plist = list(plist)
-out = ([' '] * 100)
-for (j, i) in enumerate(plist):
-    out[i] = comm[j]
-out = ([' '] * 100)
-for (j, i) in enumerate(plist):
-    out[i] = comm[(j + 1)]
-out = ([' '] * 100)
-for (j, i) in enumerate(plist):
-    out[i] = comm[j]
-for i in plist:
-    print(''.join(out)[i], end='')
 comm2 = "echo 'hi'"
-out = ([' '] * 100)
-for (j, i) in enumerate(plist):
-    out[i] = comm[j]
 out = ([' '] * 100)
 for (j, i) in enumerate(plist):
     out[i] = comm2[j]

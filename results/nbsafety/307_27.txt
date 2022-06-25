@@ -1,4 +1,8 @@
 import re
+re.match('test', 'atest')
+re.search('^test', '123test123')
+re.search('123$', 'test123t')
+re.search('.', '\n')
 pattern = '(?P<year>\\d{4})-(?P<month>\\d{2})-(?P<day>\\d{2})'
 m = re.match(pattern, '2018-06-23')
 m.groups()

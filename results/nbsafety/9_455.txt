@@ -1,3 +1,4 @@
 from collections import OrderedDict
 a = OrderedDict()
+a['b'] = 2
 a['c']

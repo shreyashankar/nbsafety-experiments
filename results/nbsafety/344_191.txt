@@ -1,2 +1,11 @@
 import matplotlib.pyplot as plt
+plt.subplots_adjust(bottom=0.2)
+plt.subplots_adjust(bottom=0.1)
+plt.subplots_adjust(bottom=0.15)
+plt.subplots_adjust(right=0.15)
+plt.subplots_adjust(right=1)
+plt.subplots_adjust(right=0.8)
+plt.subplots_adjust(right=0.7)
+plt.subplots_adjust(right=0.75)
+plt.subplots_adjust(right=0.75)
 plt.subplots_adjust(right=0.75)

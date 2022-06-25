@@ -1,1 +1,2 @@
+import tensorflow as tf
 init = tf.initialize_all_variables()

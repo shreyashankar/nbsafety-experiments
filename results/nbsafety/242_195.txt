@@ -1,5 +1,9 @@
 df2 = pd.DataFrame({'x': [1, 2, 3], 'y': [4, 5, 6]})
 df1 = pd.DataFrame(np.random.randn(8, 1), columns=['A'], dtype='float32')
+pd.DataFrame({'a': [1, 2]}).dtypes
 df3 = (df1.reindex_like(df2).fillna(value=0.0) + df2)
+df3['D'] = '1.'
+df3['E'] = '1'
+df3['E'] = df3['E'].astype('int32')
 dfa = df3.copy()
 dfa['A'] = dfa['A'].astype('float32')

@@ -137,6 +137,7 @@ def run_cells(cell_num_to_code, verify_slicer=False):
         cell_magic_name="_NBSAFETY_STATE",
         skip_unsafe=False,
         store_history=False,
+        mark_stale_symbol_usages_unsafe=False,
     )
     successful_execs = {}
     all_cell_counter = 1

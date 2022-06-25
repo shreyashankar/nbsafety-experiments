@@ -4,75 +4,6 @@ def remove_punctuation(words, punctuation=PUNCTUATION):
     a = list(punctuation)
     word = words[0]
     for char in a:
-        while (char == word[0]):
-            word = word[1:]
-        while (char == word[(len(word) - 1)]):
-            word = word[:(len(word) - 1)]
-    word = list(word)
-    for (index, item) in enumerate(word):
-        if (item == '-'):
-            word[index] = ' '
-    return word
-print(remove_punctuation(['!!']))
-def remove_punctuation(words, punctuation=PUNCTUATION):
-    a = list(punctuation)
-    word = words[0]
-    for char in a:
-        while (char == word[0]):
-            word = word[1:]
-        while (char == word[(len(word) - 1)]):
-            word = word[:(len(word) - 1)]
-    word = list(word)
-    for (index, item) in enumerate(word):
-        if (item == '-'):
-            word[index] = ' '
-    if (len(word) == 0):
-        return []
-    word = ''.join(word)
-    word = word.split(' ')
-    return word
-print(remove_punctuation(['!!']))
-def remove_punctuation(words, punctuation=PUNCTUATION):
-    a = list(punctuation)
-    word = words[0]
-    for char in a:
-        while ((char == word[0]) and (len(word) != 0)):
-            word = word[1:]
-        while ((char == word[(len(word) - 1)]) and (len(word) != 0)):
-            word = word[:(len(word) - 1)]
-    word = list(word)
-    for (index, item) in enumerate(word):
-        if (item == '-'):
-            word[index] = ' '
-    if (len(word) == 0):
-        return []
-    word = ''.join(word)
-    word = word.split(' ')
-    return word
-print(remove_punctuation(['!!']))
-def remove_punctuation(words, punctuation=PUNCTUATION):
-    a = list(punctuation)
-    word = words[0]
-    for char in a:
-        if (len(word) != 0):
-            while (char == word[0]):
-                word = word[1:]
-            while (char == word[(len(word) - 1)]):
-                word = word[:(len(word) - 1)]
-    word = list(word)
-    for (index, item) in enumerate(word):
-        if (item == '-'):
-            word[index] = ' '
-    if (len(word) == 0):
-        return []
-    word = ''.join(word)
-    word = word.split(' ')
-    return word
-print(remove_punctuation(['!!']))
-def remove_punctuation(words, punctuation=PUNCTUATION):
-    a = list(punctuation)
-    word = words[0]
-    for char in a:
         while ((len(word) != 0) and (char == word[0])):
             word = word[1:]
         while ((len(word) != 0) and (char == word[(len(word) - 1)])):
@@ -86,6 +17,4 @@ def remove_punctuation(words, punctuation=PUNCTUATION):
     word = ''.join(word)
     word = word.split(' ')
     return word
-print(remove_punctuation(['!!']))
-print(isinstance(remove_punctuation(['!!'])), types.GeneratorType)
 print(isinstance(remove_punctuation(['!!']), types.GeneratorType))

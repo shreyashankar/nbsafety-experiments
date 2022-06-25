@@ -1,1 +1,4 @@
+import torch
+x = torch.randn(4, 5)
+y = x.view(4, 5)
 y.size()

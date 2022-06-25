@@ -15,4 +15,5 @@ class hlist(list):
         if (len(unique_types) != 1):
             raise TypeError('All elements of the list must have the same type.')
 mixed_number_list = hlist((1.0, 2, 3))
+mixed_number_list = hlist((1.0, 2, 3))
 mixed_number_list

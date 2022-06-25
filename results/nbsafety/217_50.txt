@@ -1,2 +1,4 @@
 import numpy as np
+a = np.random.rand(3, 4)
+np.save('array1', a)
 np.random.choice(['m','f'], 20, p=[0.25,0.75])

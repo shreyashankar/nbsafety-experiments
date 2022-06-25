@@ -13,13 +13,21 @@ let validCounters = process.argv[process.argv.length - 1];
 const db = new sqlite3.Database('./data/traces.sqlite');
 let sql = "select source from cell_execs where trace=" + traceID + " and session=" + sessionID + " and counter in (" + validCounters + ") order by counter";
 
+function compareLocations(a, b) {
+    if (a[0] < b[0]) return -1;
+    if (a[0] > b[0]) return 1;
+    return 0;
+}
+
 db.all(sql, [], (err, rows) => {
-    let source = rows.map(elem => elem.source);
+    let source = rows.map(elem => elem.source.trim());
 
     let ast = parse(source.join('\n').trim());
     let locations = slice(ast, new LocationSet(loc(ast.location.last_line - 1, 0)))
     let splitSource = source.join('\n').trim().split('\n');
-    // console.log(splitSource);
+    splitSource.forEach((elem, index) => {
+        console.log(index + 1, elem);
+    });
 
     let splitSourceMap = new Map();
     for (let idx = 0; idx < splitSource.length; idx++) {
@@ -30,12 +38,6 @@ db.all(sql, [], (err, rows) => {
     var locationArr = [];
     for (var item in locations._items) {
         locationArr.push(item.split(",").map(x => parseInt(x)));
-    }
-
-    function compareLocations(a, b) {
-        if (a[0] < b[0]) return -1;
-        if (a[0] > b[0]) return 1;
-        return 0;
     }
 
     locationArr.sort(compareLocations);
@@ -73,11 +75,13 @@ db.all(sql, [], (err, rows) => {
 
     // Filters out any empty lines
     nbgatherSlice = nbgatherSlice.join("\n").split(/\n/).filter(x => x.trim().length > 0);
+    console.log(locationArr);
+    console.log(nbgatherSlice.join("\n"));
 
     let numLinesNeeded = nbgatherSlice.length;
-    fs.appendFileSync('nbgather_stats.txt', "(" + traceID + ", " + sessionID + ", " + numLinesNeeded + ")\n");
+    // fs.appendFileSync('nbgather_stats.txt', "(" + traceID + ", " + sessionID + ", " + numLinesNeeded + ")\n");
 
     // Write out slice
     let sliceFilename = 'results/nbgather/' + traceID + '_' + sessionID + '.txt';
-    fs.writeFileSync(sliceFilename, nbgatherSlice.join("\n"));
+    // fs.writeFileSync(sliceFilename, nbgatherSlice.join("\n"));
 })

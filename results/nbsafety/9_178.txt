@@ -1,2 +1,3 @@
 import pylab as pl
+pl.figure(figsize=(9, 7))
 pl.show()
