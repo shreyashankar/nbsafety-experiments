@@ -1,0 +1,2 @@
+ERROR:resolvers:error: unable to find working package for {'package': 'scikit-learn', 'versions': ['0.21.3', '0.20.4', '0.19.2']}
+ERROR:__main__:Exception occurred in outer context: 'NoneType' object has no attribute 'run_line_magic'
